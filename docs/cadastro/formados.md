@@ -7,12 +7,6 @@ para registrar quem concluiu.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

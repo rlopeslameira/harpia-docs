@@ -8,12 +8,6 @@ percentual de desconto). É a ponte entre a estrutura acadêmica (turma) e o fin
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

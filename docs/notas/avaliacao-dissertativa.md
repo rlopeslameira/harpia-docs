@@ -8,12 +8,6 @@ numérica.
 
 ---
 
-## Quem pode utilizar
-
-Professores, Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

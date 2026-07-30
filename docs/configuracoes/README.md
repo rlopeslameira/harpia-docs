@@ -7,10 +7,6 @@ O módulo **Configurações** define **como o sistema se comporta** em cada áre
 **parâmetros financeiros** e as **fórmulas** de cálculo (notas, frequência, financeiro). São
 ajustes que valem para todo o sistema (ou por período) e afetam o resultado de várias telas.
 
-## Quem pode utilizar
-
-Administrador e Coordenação (área sensível — mudanças impactam boletim, aprovação e financeiro).
-
 ## Como acessar
 
 As telas ficam no grupo **Configurações** do menu lateral.

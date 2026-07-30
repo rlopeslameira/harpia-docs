@@ -8,12 +8,6 @@ turmas que avaliam por conceito.
 
 ---
 
-## Quem pode utilizar
-
-Administrador e Coordenação.
-
----
-
 ## Como acessar
 
 ```

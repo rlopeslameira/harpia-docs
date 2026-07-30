@@ -7,10 +7,6 @@ O módulo **Gerenciador** controla a **administração da plataforma**: as **emp
 usuário pode fazer) e os **usuários** do sistema (quem acessa e com qual perfil). É a área de
 maior responsabilidade, normalmente restrita ao administrador.
 
-## Quem pode utilizar
-
-Administrador / Usuário Master.
-
 ## Como acessar
 
 As telas ficam no grupo **Gerenciador** do menu lateral.

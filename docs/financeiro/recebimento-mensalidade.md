@@ -8,12 +8,6 @@ descontos, e gerar o recibo.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro, Administrador e, em algumas escolas, Secretaria).
-
----
-
 ## Como acessar
 
 ```

@@ -7,12 +7,6 @@ optativas, atividades extras ou agrupamentos especiais), definindo a ordem dos a
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

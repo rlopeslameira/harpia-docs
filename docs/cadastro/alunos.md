@@ -9,13 +9,6 @@ módulos de turmas, notas, frequência, boletim e financeiro.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador. A aba de **Matrícula** envolve dados financeiros (valores, descontos,
-plano de pagamento) e pode depender de permissão adicional.
-
----
-
 ## Como acessar
 
 ```

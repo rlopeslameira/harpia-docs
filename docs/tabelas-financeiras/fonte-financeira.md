@@ -8,12 +8,6 @@ vinculada a uma fonte, e cada fonte tem seu **saldo**.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

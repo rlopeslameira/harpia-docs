@@ -8,12 +8,6 @@ lançamento, mas serve para verificar o que já foi registrado.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação, Professores e Administrador.
-
----
-
 ## Como acessar
 
 ```

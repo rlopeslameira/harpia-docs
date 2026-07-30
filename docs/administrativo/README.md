@@ -6,10 +6,6 @@ O módulo **Administrativo** cuida da estrutura interna da escola: o cadastro de
 (professores e colaboradores), os **setores**, e a gestão dos **períodos letivos** — iniciar um
 novo período, ativar/desativar/ordenar períodos e trocar o período de trabalho atual.
 
-## Quem pode utilizar
-
-Administrador e, conforme a permissão, a Coordenação/Secretaria.
-
 ## Como acessar
 
 As telas ficam nos grupos **Administrativo** e no seletor de **Períodos** do sistema.

@@ -8,12 +8,6 @@ agrupadas em faturas, permitindo a **quitação** (total ou parcial) da fatura. 
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

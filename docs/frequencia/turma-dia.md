@@ -7,12 +7,6 @@ data específica. É a forma mais direta de registrar presença/ausência no dia
 
 ---
 
-## Quem pode utilizar
-
-Professores, Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -8,10 +8,6 @@ cancelamento), fazer a **troca de turma**, ajustar o **status por disciplina** (
 aproveitamento), organizar o **número de ordem** das turmas, cadastrar **disciplinas
 complementares** e gerenciar os **itinerários formativos** por turma e por aluno.
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Secretaria** (Outras Atividades) do menu lateral.

@@ -8,12 +8,6 @@ que o banco reconhece e processa.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro e Administrador).
-
----
-
 ## Como acessar
 
 ```

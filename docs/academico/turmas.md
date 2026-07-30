@@ -8,12 +8,6 @@ de boletim/diário/histórico, o **banco dos boletos** e opções de catraca ele
 
 ---
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

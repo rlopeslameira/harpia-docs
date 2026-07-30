@@ -8,12 +8,6 @@ em [Plano de Pagamento por Turma](../academico/plano-pagamento-turma.md) e escol
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

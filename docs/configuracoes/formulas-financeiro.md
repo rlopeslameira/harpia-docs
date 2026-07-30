@@ -7,12 +7,6 @@ personalize os cálculos conforme suas regras, com opção de **testar** o resul
 
 ---
 
-## Quem pode utilizar
-
-Administrador (área sensível — as fórmulas afetam resultados em todo o sistema).
-
----
-
 ## Como acessar
 
 ```

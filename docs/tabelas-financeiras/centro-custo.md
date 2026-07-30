@@ -8,12 +8,6 @@ para organizar os gastos e alimentar relatórios gerenciais.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

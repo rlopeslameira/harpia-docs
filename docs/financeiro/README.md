@@ -6,11 +6,6 @@ O módulo **Financeiro** concentra tudo o que envolve dinheiro na escola: cobran
 mensalidades, recebimentos, emissão de boletos, envio de arquivos ao banco, contas a pagar,
 controle de caixa e a ficha financeira de cada aluno.
 
-## Quem pode utilizar
-
-Perfis com permissão financeira — tipicamente **Financeiro**, **Administrador** e, em algumas
-escolas, a **Secretaria**. As opções visíveis dependem das permissões do perfil de cada usuário.
-
 ## Como acessar
 
 Todas as telas abaixo ficam no grupo **Financeiro** (e no grupo **Bancário**, no caso do

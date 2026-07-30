@@ -8,12 +8,6 @@ turmas do período.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -8,12 +8,6 @@ Coordenação). Cada usuário recebe um perfil, e é o perfil que controla o que
 
 ---
 
-## Quem pode utilizar
-
-Administrador / Usuário Master.
-
----
-
 ## Como acessar
 
 ```

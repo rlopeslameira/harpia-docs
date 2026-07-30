@@ -8,12 +8,6 @@ saem nos relatórios e documentos. É a base do modelo **multi-tenant** do Harpi
 
 ---
 
-## Quem pode utilizar
-
-Administrador / Usuário Master.
-
----
-
 ## Como acessar
 
 ```

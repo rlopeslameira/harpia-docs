@@ -8,12 +8,6 @@ conheceu a escola) e acompanhar quem foi ou não atendido.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Recepção e Administrador.
-
----
-
 ## Como acessar
 
 ```

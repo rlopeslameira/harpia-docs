@@ -8,12 +8,6 @@ Turma](itinerario-turma.md) para casos individuais.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Coordenação.
-
----
-
 ## Como acessar
 
 ```

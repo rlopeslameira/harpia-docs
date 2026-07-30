@@ -9,12 +9,6 @@ anteriores ou de outras escolas.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

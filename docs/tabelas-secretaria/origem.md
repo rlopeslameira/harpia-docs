@@ -8,12 +8,6 @@ cadastro do aluno e para análises de captação.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

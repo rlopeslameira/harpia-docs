@@ -8,12 +8,6 @@ corretamente os recebimentos em cartão (ver [Entrada de Cartão](../financeiro/
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

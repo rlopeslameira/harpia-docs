@@ -8,12 +8,6 @@ permite a ação inversa quando necessário (reabertura), conforme a permissão.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

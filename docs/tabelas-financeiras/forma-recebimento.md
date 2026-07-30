@@ -8,12 +8,6 @@ indicar em quais operações ela é usada.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

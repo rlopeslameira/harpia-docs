@@ -8,12 +8,6 @@ que está em aberto. Também permite ações sobre as parcelas e a impressão da
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro, Administrador e, em algumas escolas, Secretaria).
-
----
-
 ## Como acessar
 
 ```

@@ -8,12 +8,6 @@ para a oferta de disciplinas nas turmas e para o histórico escolar.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

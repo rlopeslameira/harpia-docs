@@ -7,10 +7,6 @@ As **Tabelas Financeiras** são os **cadastros de apoio** que sustentam todo o m
 recebimento, os planos de pagamento, os convênios, os cartões, os centros de custo e as demais
 tabelas usadas nos lançamentos. São configuradas no início e ajustadas conforme a necessidade.
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Tabelas** (Financeiro) do menu lateral.

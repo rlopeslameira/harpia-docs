@@ -9,12 +9,6 @@ para o controle de acesso.
 
 ---
 
-## Quem pode utilizar
-
-Administrador e RH.
-
----
-
 ## Como acessar
 
 ```

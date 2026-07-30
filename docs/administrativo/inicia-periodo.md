@@ -7,12 +7,6 @@ e prepara as turmas para operar nele. É um passo administrativo feito na virada
 
 ---
 
-## Quem pode utilizar
-
-Administrador.
-
----
-
 ## Como acessar
 
 ```

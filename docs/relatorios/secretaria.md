@@ -8,12 +8,6 @@ Prova). São os documentos do dia a dia da secretaria e da coordenação.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

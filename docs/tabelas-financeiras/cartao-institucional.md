@@ -8,12 +8,6 @@ Ficam vinculados a um centro de custo, uma fonte sugerida e um dia de vencimento
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

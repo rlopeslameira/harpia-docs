@@ -8,12 +8,6 @@ conciliação das vendas em cartão com o que a operadora deposita.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

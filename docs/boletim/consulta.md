@@ -7,12 +7,6 @@ imprimi-lo/entregá-lo ao responsável.
 
 ---
 
-## Quem pode utilizar
-
-Professores, Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

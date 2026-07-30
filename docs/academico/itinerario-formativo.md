@@ -8,12 +8,6 @@ que depois é vinculado a turmas e alunos.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -10,12 +10,6 @@ corrigir dados que foram gerados incorretamente.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira e administrativa (normalmente Administrador).
-
----
-
 ## Como acessar
 
 ```

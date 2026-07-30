@@ -7,10 +7,6 @@ de lançar frequência conforme a rotina da escola: por **dia** (chamada do dia)
 (consolidado), por **disciplina/matéria**, de forma **global** (uma só frequência para a turma)
 ou por **aluno**. Também permite **consultar** a frequência lançada.
 
-## Quem pode utilizar
-
-Professores (lançamento), Secretaria e Coordenação (lançamento e consulta), Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Frequências** do menu lateral.

@@ -7,10 +7,6 @@ As **Tabelas de Secretaria** são os **cadastros de apoio** usados nos processos
 ingresso** do aluno e as **origens** (como o aluno chegou à escola). Alimentam as demais telas de
 matrícula, requerimentos e relatórios.
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Tabelas** (Secretaria) do menu lateral.

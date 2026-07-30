@@ -8,12 +8,6 @@ caixa, usado no controle financeiro do período.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

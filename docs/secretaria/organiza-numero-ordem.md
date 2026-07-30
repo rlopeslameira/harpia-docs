@@ -8,12 +8,6 @@ correta (geralmente em ordem alfabética).
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Coordenação.
-
----
-
 ## Como acessar
 
 ```

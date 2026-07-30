@@ -8,12 +8,6 @@ atendimento e regras (se precisa de anexo, de disciplina, se gera cobrança).
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

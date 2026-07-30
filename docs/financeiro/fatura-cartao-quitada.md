@@ -7,12 +7,6 @@ necessário, **estornar** uma fatura (desfazer a quitação). É o histórico da
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

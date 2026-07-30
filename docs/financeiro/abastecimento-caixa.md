@@ -7,12 +7,6 @@ para iniciar as operações do dia. É o ponto de partida do movimento de caixa.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -8,12 +8,6 @@ incluindo a **Fórmula Nota x Peso**. É a base que as telas de [Notas](../notas
 
 ---
 
-## Quem pode utilizar
-
-Administrador e Coordenação.
-
----
-
 ## Como acessar
 
 ```

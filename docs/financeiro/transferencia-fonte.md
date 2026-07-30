@@ -8,12 +8,6 @@ crédito, mantendo os saldos das fontes corretos.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

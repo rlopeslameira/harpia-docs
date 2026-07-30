@@ -8,12 +8,6 @@ recuperação, etc.) na impressão.
 
 ---
 
-## Quem pode utilizar
-
-Administrador e Coordenação.
-
----
-
 ## Como acessar
 
 ```

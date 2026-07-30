@@ -8,12 +8,6 @@ frequência de forma detalhada por disciplina.
 
 ---
 
-## Quem pode utilizar
-
-Professores, Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

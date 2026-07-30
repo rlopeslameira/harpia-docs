@@ -8,12 +8,6 @@ exibido no topo do sistema (ex.: "ANO BASE 2025 PERÍODO: 1").
 
 ---
 
-## Quem pode utilizar
-
-Todos os usuários (dentro dos períodos ativos e das suas permissões).
-
----
-
 ## Como acessar
 
 No **topo do sistema**, clique sobre o indicador de período (ex.: "ANO BASE 2025 PERÍODO: 1") para

@@ -7,10 +7,6 @@ acadêmica ano a ano (disciplinas, cargas horárias, notas/médias, frequência 
 das **observações** que acompanham esse histórico. É a base para emitir o documento oficial de
 histórico escolar.
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Histórico** (ou Secretaria) do menu lateral.

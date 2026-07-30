@@ -7,11 +7,6 @@ O módulo **Cadastro** reúne o registro das pessoas e informações de base da 
 **estágios** e a lista de **formados**. É o ponto de partida da jornada no sistema — quase todos
 os demais módulos dependem de um aluno cadastrado.
 
-## Quem pode utilizar
-
-Principalmente a **Secretaria**, além de **Administrador**. Algumas informações financeiras da
-matrícula podem exigir permissão do **Financeiro**. As opções visíveis dependem do perfil.
-
 ## Como acessar
 
 As telas ficam no grupo **Cadastro** do menu lateral.

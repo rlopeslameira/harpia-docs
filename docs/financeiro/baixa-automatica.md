@@ -8,12 +8,6 @@ parcelas correspondentes, sem lançamento manual.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

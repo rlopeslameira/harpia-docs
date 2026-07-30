@@ -8,12 +8,6 @@ carga horária, supervisor, remuneração e benefícios. Complementa o cadastro 
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador (coordenação de estágios, conforme a escola).
-
----
-
 ## Como acessar
 
 ```

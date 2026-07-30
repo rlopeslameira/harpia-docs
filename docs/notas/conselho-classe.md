@@ -8,12 +8,6 @@ fechamento (especialmente em Educação Infantil).
 
 ---
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

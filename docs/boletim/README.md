@@ -7,10 +7,6 @@ para consulta e impressão. Ele tem duas etapas: o **processamento** (que calcul
 resultados de cada aluno conforme as regras da escola) e a **consulta** (que exibe o boletim já
 processado).
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador (processamento); professores e secretaria (consulta).
-
 ## Como acessar
 
 As telas ficam no grupo **Boletim** do menu lateral.

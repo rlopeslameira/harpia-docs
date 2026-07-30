@@ -7,12 +7,6 @@ exibição. É o que determina quais períodos aparecem para seleção e como s�
 
 ---
 
-## Quem pode utilizar
-
-Administrador.
-
----
-
 ## Como acessar
 
 ```

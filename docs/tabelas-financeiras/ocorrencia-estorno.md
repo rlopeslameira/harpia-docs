@@ -8,12 +8,6 @@ e permite auditar os estornos.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

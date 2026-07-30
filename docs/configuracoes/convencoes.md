@@ -9,12 +9,6 @@ documentos.
 
 ---
 
-## Quem pode utilizar
-
-Administrador e Coordenação.
-
----
-
 ## Como acessar
 
 ```

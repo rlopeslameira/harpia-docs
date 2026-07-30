@@ -7,12 +7,6 @@ usada depois para vincular alunos aos estágios em [Alunos — Estágios](alunos
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador (e coordenação de estágios, conforme a escola).
-
----
-
 ## Como acessar
 
 ```

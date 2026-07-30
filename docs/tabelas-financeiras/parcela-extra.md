@@ -8,12 +8,6 @@ Definem valor, encargos e como se comportam na ficha financeira.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

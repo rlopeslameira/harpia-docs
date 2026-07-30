@@ -7,12 +7,6 @@ para organizar os [funcionários](funcionarios.md) e apoiar relatórios internos
 
 ---
 
-## Quem pode utilizar
-
-Administrador e RH.
-
----
-
 ## Como acessar
 
 ```

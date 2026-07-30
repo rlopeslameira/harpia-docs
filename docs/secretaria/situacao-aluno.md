@@ -8,12 +8,6 @@ estabelecimento de destino. É a forma oficial de mudar o vínculo do aluno com 
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

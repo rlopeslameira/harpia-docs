@@ -8,12 +8,6 @@ progressão** entre eles — qual é o próximo nível após a aprovação. Tamb
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

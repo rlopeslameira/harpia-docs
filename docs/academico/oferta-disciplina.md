@@ -9,12 +9,6 @@ frequência.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

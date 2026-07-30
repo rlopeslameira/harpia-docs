@@ -8,12 +8,6 @@ pessoas ao Harpia.
 
 ---
 
-## Quem pode utilizar
-
-Administrador / Usuário Master.
-
----
-
 ## Como acessar
 
 ```

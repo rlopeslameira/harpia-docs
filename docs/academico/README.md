@@ -7,11 +7,6 @@ O módulo **Acadêmico** define a **estrutura escolar** sobre a qual todo o rest
 os **itinerários formativos**, as **turmas** e a **oferta de disciplinas** (quais disciplinas e
 professores atuam em cada turma). Também é aqui que se define o **plano de pagamento por turma**.
 
-## Quem pode utilizar
-
-Coordenação Pedagógica, Secretaria e Administrador. É uma área de **configuração**: normalmente
-montada no início do ano letivo e ajustada pontualmente.
-
 ## Como acessar
 
 As telas ficam nos grupos **Tabelas** e **Acadêmico** do menu lateral (a organização exata pode

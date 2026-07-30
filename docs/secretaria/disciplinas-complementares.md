@@ -8,12 +8,6 @@ registrar disciplina, matéria, tipo e carga horária.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Coordenação.
-
----
-
 ## Como acessar
 
 ```

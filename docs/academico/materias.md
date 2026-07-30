@@ -8,12 +8,6 @@ e composição de notas.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

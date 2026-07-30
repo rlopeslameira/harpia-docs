@@ -8,12 +8,6 @@ de registrar as notas de um bimestre/etapa.
 
 ---
 
-## Quem pode utilizar
-
-Professores da disciplina, Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

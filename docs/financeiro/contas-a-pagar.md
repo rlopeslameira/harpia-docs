@@ -8,12 +8,6 @@ efetuar o pagamento, trocar o credor e emitir o relatório de contas a pagar.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro e Administrador).
-
----
-
 ## Como acessar
 
 ```

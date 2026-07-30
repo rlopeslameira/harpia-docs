@@ -8,12 +8,6 @@ validações e opções de documentos/assinaturas. Controla como a secretaria e 
 
 ---
 
-## Quem pode utilizar
-
-Administrador e Coordenação.
-
----
-
 ## Como acessar
 
 ```

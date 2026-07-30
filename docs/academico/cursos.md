@@ -8,12 +8,6 @@ e carrega dados oficiais exigidos por INEP/MEC.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

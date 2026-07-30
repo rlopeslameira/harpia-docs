@@ -7,12 +7,6 @@ e cheque de um caixa/fonte no dia. Usado para conciliar o saldo do sistema com o
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

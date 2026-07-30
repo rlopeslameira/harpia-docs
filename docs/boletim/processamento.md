@@ -8,12 +8,6 @@ processo que pode ser executado quantas vezes for necessário (reprocessamento).
 
 ---
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

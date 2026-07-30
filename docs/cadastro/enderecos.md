@@ -7,12 +7,6 @@ reutilizado nos demais cadastros do sistema, evitando digitar o mesmo endereço 
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

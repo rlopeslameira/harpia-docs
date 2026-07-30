@@ -7,11 +7,6 @@ do sistema: relatórios **financeiros** (diário, contas a pagar), de **secretar
 matrícula, frequência, boletim) e de **funcionários**, além da listagem de **turmas**. Em geral,
 cada relatório funciona no mesmo padrão: você escolhe **filtros**, gera e **imprime/exporta** (PDF).
 
-## Quem pode utilizar
-
-Conforme o perfil: Secretaria e Coordenação (relatórios acadêmicos), Financeiro (relatórios
-financeiros), Administrador (todos).
-
 ## Como acessar
 
 As telas ficam no grupo **Relatórios** do menu lateral.

@@ -8,12 +8,6 @@ situações individuais que fogem do fluxo normal de aprovação.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Coordenação.
-
----
-
 ## Como acessar
 
 ```

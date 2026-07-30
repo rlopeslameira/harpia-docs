@@ -8,12 +8,6 @@ sensíveis e opções de imposto de renda. É onde se controla o comportamento d
 
 ---
 
-## Quem pode utilizar
-
-Administrador (área sensível).
-
----
-
 ## Como acessar
 
 ```

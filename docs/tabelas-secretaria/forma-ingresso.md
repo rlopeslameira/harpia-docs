@@ -7,12 +7,6 @@ vestibulinho, bolsa). É uma informação da matrícula usada para relatórios e
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

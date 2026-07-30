@@ -7,12 +7,6 @@ aluno muda de turma no mesmo curso/período (por remanejamento, mudança de turn
 
 ---
 
-## Quem pode utilizar
-
-Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

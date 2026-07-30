@@ -8,12 +8,6 @@ disciplinas/matérias correspondentes.
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Coordenação.
-
----
-
 ## Como acessar
 
 ```

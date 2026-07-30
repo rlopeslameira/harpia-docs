@@ -8,12 +8,6 @@ assinaturas ou controle de senhas/operadores. Complementa o cadastro de
 
 ---
 
-## Quem pode utilizar
-
-Administrador e RH.
-
----
-
 ## Como acessar
 
 ```

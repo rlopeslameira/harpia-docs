@@ -8,12 +8,6 @@ prestação de contas e gestão do fluxo de caixa.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -8,12 +8,6 @@ responsáveis ou enviados ao banco.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro e Administrador).
-
----
-
 ## Como acessar
 
 ```

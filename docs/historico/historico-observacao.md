@@ -8,12 +8,6 @@ notas de rodapé do histórico).
 
 ---
 
-## Quem pode utilizar
-
-Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

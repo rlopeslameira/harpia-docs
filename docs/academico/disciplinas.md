@@ -9,12 +9,6 @@ que se define quais disciplinas **aprovam com base na média**.
 
 ---
 
-## Quem pode utilizar
-
-Coordenação Pedagógica e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -7,12 +7,6 @@ ou ao fim do expediente, por segurança ou para depósito. Gera um **recibo de s
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

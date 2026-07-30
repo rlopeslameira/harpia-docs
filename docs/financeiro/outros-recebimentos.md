@@ -8,12 +8,6 @@ escolher a forma de pagamento e emitir o **recibo** correspondente.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira (Financeiro, Administrador e, em algumas escolas, Secretaria).
-
----
-
 ## Como acessar
 
 ```

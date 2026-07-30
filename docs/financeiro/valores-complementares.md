@@ -8,12 +8,6 @@ transporte, bolsas específicas). Permite abater/ajustar esses valores por parce
 
 ---
 
-## Quem pode utilizar
-
-Financeiro, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

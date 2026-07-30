@@ -7,11 +7,6 @@ turma ou por aluno, os **instrumentos de avaliação** que compõem cada nota, a
 dissertativa** (parecer descritivo) e o **conselho de classe** com a situação final. É a base do
 [Boletim](../academico/README.md).
 
-## Quem pode utilizar
-
-Professores (lançamento das suas disciplinas), Coordenação e Secretaria (lançamento e ajustes),
-Administrador.
-
 ## Como acessar
 
 As telas ficam no grupo **Notas** do menu lateral.

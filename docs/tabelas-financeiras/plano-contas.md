@@ -8,12 +8,6 @@ dos relatórios financeiros e das declarações.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

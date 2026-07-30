@@ -8,12 +8,6 @@ feito em [Alunos — Turmas Auxiliares](../cadastro/turmas-auxiliares.md).
 
 ---
 
-## Quem pode utilizar
-
-Coordenação, Secretaria e Administrador.
-
----
-
 ## Como acessar
 
 ```

@@ -8,12 +8,6 @@ percentuais de juros e multa e as mensagens que aparecem no boleto.
 
 ---
 
-## Quem pode utilizar
-
-Perfis com permissão financeira e administrativa (normalmente Administrador).
-
----
-
 ## Como acessar
 
 ```

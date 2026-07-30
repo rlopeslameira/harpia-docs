@@ -8,12 +8,6 @@ ferramenta de correção usada com cautela pelo setor financeiro.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador (operação sensível).
-
----
-
 ## Como acessar
 
 ```

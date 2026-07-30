@@ -8,12 +8,6 @@ total mensal em vez de dia a dia.
 
 ---
 
-## Quem pode utilizar
-
-Professores, Secretaria, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```

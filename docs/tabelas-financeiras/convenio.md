@@ -8,12 +8,6 @@ e pode ter tratamento específico para imposto de renda.
 
 ---
 
-## Quem pode utilizar
-
-Financeiro e Administrador.
-
----
-
 ## Como acessar
 
 ```

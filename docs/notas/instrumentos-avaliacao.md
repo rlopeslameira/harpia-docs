@@ -8,12 +8,6 @@ participação etc. de forma separada antes de consolidar a nota da etapa.
 
 ---
 
-## Quem pode utilizar
-
-Professores da disciplina, Coordenação e Administrador.
-
----
-
 ## Como acessar
 
 ```
