@@ -25,7 +25,7 @@ O Harpia é usado por diferentes perfis dentro da escola:
 
 A documentação é dividida por **módulos**. Cada funcionalidade tem uma página própria que
 explica o objetivo, quem pode usar, como acessar, o passo a passo, os campos, os botões, as
-regras e as mensagens do sistema. Comece pelo [Índice geral](../README.md).
+regras e as mensagens do sistema. Comece pela [Introdução](/) e use a barra lateral para navegar.
 
 ## Próximos passos
 

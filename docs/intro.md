@@ -1,3 +1,10 @@
+---
+slug: /
+sidebar_position: 0
+sidebar_label: Introdução
+title: Documentação do Harpia
+---
+
 # Documentação do Harpia
 
 Bem-vindo à documentação funcional do **Harpia**, o sistema de gestão escolar.

@@ -29,10 +29,12 @@ const config: Config = {
 
   onBrokenLinks: 'warn',
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
   },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -64,7 +66,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/harpia-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -72,7 +74,7 @@ const config: Config = {
       title: 'Harpia Educacional',
       logo: {
         alt: 'Harpia Educacional',
-        src: 'img/logo.svg',
+        src: 'img/harpia-icon.png',
       },
       items: [
         {
@@ -91,7 +93,7 @@ const config: Config = {
           items: [
             {
               label: 'Início',
-              to: '/intro',
+              to: '/',
             },
           ],
         },

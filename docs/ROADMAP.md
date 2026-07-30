@@ -1,3 +1,9 @@
+---
+sidebar_position: 99
+sidebar_label: Roadmap (interno)
+title: Roadmap da Documentação
+---
+
 # Roadmap da Documentação Completa — Harpia
 
 Este documento controla o progresso da documentação funcional de **todo** o sistema.
