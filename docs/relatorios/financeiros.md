@@ -62,6 +62,10 @@ Relatórios
 | Botão | O que faz |
 |-------|-----------|
 | **Gerar/Imprimir** | Produz o relatório em PDF |
+| **Exportar para Excel** (ícone verde) | Exporta os lançamentos do **Diário Financeiro** para planilha. Fica no **topo da lista**, ao lado da pesquisa |
+
+O Diário Financeiro exibe, acima da lista, cartões com os **totais** do período: **Valor**,
+**Descontos**, **Desconto Extra**, **Multas** e **Juros**.
 
 ---
 

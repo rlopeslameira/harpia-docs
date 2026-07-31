@@ -34,9 +34,26 @@ Financeiro
    **Acrésc.**, **Corrigido**, **Total**, **Pago**, **Data**, **Sit.**.
 5. Use **Atualizar** para recalcular os valores após alguma alteração.
 6. Se estiver negociando um saldo, informe a **Data de Vencimento do Saldo**.
-7. Use **Imprimir** para emitir a ficha.
+7. Na coluna de **ações** de cada parcela, é possível **pagar**, **imprimir o recibo** de um
+   pagamento e **estornar** um pagamento (ver seção **Ações por parcela**).
+8. Use **Imprimir** para emitir a ficha.
 
 *(Print sugerido: ficha financeira do aluno com a tabela de parcelas.)*
+
+---
+
+## Ações por parcela
+
+Cada linha da tabela de parcelas traz botões próprios, que aparecem conforme a situação:
+
+| Botão | O que faz |
+|-------|-----------|
+| **Pagar mensalidade** (ícone $) | Abre o recebimento da parcela diretamente pela ficha. Fica indisponível para parcela de aluno remanejado |
+| **Imprimir recibo** (ícone impressora) | Reimprime o recibo de um pagamento já realizado. Um botão por pagamento existente na parcela |
+| **Estornar pagamento** (ícone lixeira) | Estorna um pagamento realizado naquela parcela |
+
+Ao expandir a parcela, o **detalhe** exibe os **dados do banco** e a composição dos valores
+do pagamento.
 
 ---
 
@@ -93,6 +110,9 @@ Financeiro
 
 ## Mensagens do sistema
 
+**Sucesso**
+- *"Estorno realizado com sucesso!"* (ao estornar um pagamento pela ficha)
+
 **Atenção / Erro**
 - *"Informe a data de vencimento do saldo para continuar."*
 - *"Erro ao carregar os dados"* / *"Erro na consulta"*
@@ -142,6 +162,8 @@ Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 ## Prints
 
 - [ ] Ficha financeira com tabela de parcelas.
+- [ ] Coluna de **ações por parcela** (pagar / imprimir recibo / estornar).
+- [ ] Detalhe da parcela com **dados do banco**.
 
 ---
 
@@ -150,3 +172,4 @@ Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui recálculos da ficha e data de vencimento do saldo. |
+| 31/07/2026 | **Ações por parcela** (pagar, imprimir recibo e estornar) na própria tabela, com tooltips. Detalhe da parcela passa a exibir **dados do banco**. Ajustes de layout das colunas. |

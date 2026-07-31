@@ -49,7 +49,7 @@ Financeiro
 | Referente | Descrição do que está sendo cobrado | Sim | Taxa de 2ª via | |
 | Plano de Pagamento | Plano/condição usada na cobrança | Condicional | Avulso | |
 | Conta | Conta/plano de contas do recebimento | Sim | Receitas — Taxas | Mensagem de erro se vazio |
-| Qtd. Parcelas | Número de parcelas | Não | 1 | Deve ser maior que 1 quando parcelado |
+| Qtd. Parcelas | Número de parcelas do cartão | Condicional | 3 | Habilitado apenas para **cartão parcelado**. Mínimo 1 e no máximo o limite de parcelas do cartão selecionado |
 | Valor | Valor da cobrança | Sim | 30,00 | Mensagem de erro se vazio |
 | Juros | Juros aplicados | Não | 0,00 | |
 | Multa | Multa aplicada | Não | 0,00 | |
@@ -102,7 +102,8 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 ## Regras importantes
 
 - **Conta** e **Valor** são obrigatórios.
-- Para parcelar, a **quantidade de parcelas deve ser maior que 1**.
+- **Qtd. Parcelas** só é habilitado para **cartão parcelado**; deve ser no mínimo 1 e não pode
+  ultrapassar o limite de parcelas do cartão selecionado. Para dinheiro/PIX fica fixo em 1.
 - **A Data de Pagamento não pode ser futura.**
 - Se o **caixa estiver encerrado** para a data, o lançamento é bloqueado.
 - Registros com pagamento não podem ser excluídos — é preciso **estornar**.
@@ -117,7 +118,8 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 **Erro**
 - *"Conta é obrigatório"*
 - *"Valor é obrigatório"*
-- *"Digite um valor válido para Parcelas (Maior que 1)!"*
+- *"O número de parcelas deve ser no mínimo 1."* (cartão parcelado)
+- *"Quantidade máxima de parcelas permitida para este cartão é X"* (ao exceder o limite do cartão)
 - *"Data de Pagamento não pode ser futura."*
 - *"Erro ao gerar recibo!"* / *"Recibo não encontrado!"* / *"Erro ao buscar dados do recibo"*
 - *"O Caixa está encerrado para a data: ..."*
@@ -188,3 +190,4 @@ Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Recibo padronizado, numeração de recibo e input de pesquisa de aluno padronizado. |
+| 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)** e **N° Doc.**. |

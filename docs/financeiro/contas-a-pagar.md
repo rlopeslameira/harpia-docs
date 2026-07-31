@@ -44,6 +44,15 @@ Relatórios
 7. Para **pagar**, abra a conta, informe **Forma de Pagamento**, **Fonte/Conta**, **Data do
    Pagamento**, eventuais **Juros/Multa/Desconto** e o **Valor Pago**, e grave.
 
+:::tip Conta sugerida pelo credor
+Ao **selecionar o credor**, o sistema preenche automaticamente a **Conta** com a **última conta
+utilizada** naquele credor, agilizando o lançamento. Você pode trocar a conta normalmente se
+necessário — a nova escolha passa a ser a sugerida no próximo lançamento do mesmo credor.
+:::
+
+> Durante a gravação, o pagamento, o estorno ou a exclusão, o sistema exibe um **indicador de
+> carregamento** e desabilita os botões para evitar cliques duplicados.
+
 *(Print sugerido: formulário de Contas a Pagar.)*
 
 ---
@@ -55,7 +64,7 @@ Relatórios
 | Credor | Quem receberá o pagamento | Sim | Papelaria Central | |
 | Referente | Descrição da despesa | Sim | Material de escritório | |
 | Centro de Custo | Centro de custo da despesa | Sim | Administrativo | Há um centro de custo padrão |
-| Conta | Plano de contas da despesa | Sim | Despesas — Materiais | |
+| Conta | Plano de contas da despesa | Sim | Despesas — Materiais | Sugerida automaticamente com a **última conta usada** no credor selecionado |
 | Nº Documento | Nº da nota/documento | Não | NF 1234 | |
 | Nº da Fatura | Nº da fatura vinculada | Não | 987 | |
 | Valor a Pagar | Valor devido | Sim | 500,00 | |
@@ -94,6 +103,15 @@ Colunas: **Credor**, **Referente**, **Nº Documento**, **Fatura**, **Valor**, **
 **Data Pagto**, **Valor Pago**, **Ações**.
 
 Há também a opção **Cartão Institucional** e **Alterar Credor** (troca o credor de um lançamento).
+
+Na coluna **Fatura**, quando a conta está vinculada a um **cartão institucional**, um ícone
+identifica o tipo:
+
+| Ícone | Significado |
+|-------|-------------|
+| **C** (verde) | Cartão de **Crédito** institucional (fatura) **já paga/liquidada** |
+| **C** (vermelho) | Cartão de **Crédito** institucional (fatura) **em aberto** |
+| **D** (azul) | Cartão de **Débito** institucional (débito em conta) |
 
 ---
 
@@ -193,3 +211,4 @@ Use **Opções → Estornar**.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui centro de custo padrão, alterar credor, projeção de lançamentos e correções de estorno/alteração. |
+| 31/07/2026 | **Conta sugerida** pela última conta usada no credor. **Ícones C/D** na coluna Fatura para diferenciar cartão institucional de crédito e débito. **Indicador de carregamento** ao gravar/pagar/estornar/excluir. |

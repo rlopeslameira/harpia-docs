@@ -40,6 +40,13 @@ Financeiro
 8. Clique em **Gerar Boleto**.
 9. Visualize o resultado em **Visualização do Boleto** e imprima.
 
+:::note Layout do boleto por banco
+A **visualização/impressão** usa o **layout correspondente ao banco selecionado**. Para os bancos
+que utilizam o layout **60**, o boleto é apresentado no **modelo de carnê** ("Carnê de Boletos"),
+com composição própria do **Nosso Número**. Os demais bancos seguem o layout padrão. A escolha é
+**automática**, conforme o cadastro do banco.
+:::
+
 *(Print sugerido: tela de geração com filtros e opções de vencimento.)*
 
 ---
@@ -155,7 +162,8 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 ## Prints
 
 - [ ] Tela de geração com filtros.
-- [ ] Visualização do boleto.
+- [ ] Visualização do boleto (layout padrão).
+- [ ] Visualização do boleto em **modelo de carnê** (bancos com layout 60).
 
 ---
 
@@ -164,3 +172,4 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui geração pelo banco do cadastro da turma, opções de vencimento e ajustes de valores/estilo do boleto. |
+| 31/07/2026 | Novo **modelo de carnê** para bancos com layout 60 (seleção automática do layout conforme o banco). |

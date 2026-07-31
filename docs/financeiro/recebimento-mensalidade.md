@@ -43,6 +43,13 @@ Financeiro
 > recebido será distribuído entre as parcelas. É preciso informar ao menos um valor e o total
 > distribuído não pode ultrapassar o saldo.
 
+:::note Quantidade de parcelas no cartão
+O campo **Qtd. Parcelas** só fica habilitado quando a forma de pagamento é um **cartão
+parcelado**. Para **dinheiro/PIX** e cartões não parcelados, o valor fica fixo em **1**.
+Ao escolher o cartão, o sistema já ajusta o campo para **1** e não permite informar um número
+**acima do limite de parcelas** configurado naquele cartão.
+:::
+
 *(Print sugerido: tela de recebimento com o aluno e as parcelas selecionadas.)*
 
 ---
@@ -65,7 +72,7 @@ Financeiro
 | Data | Data do pagamento | Sim | 30/07/2026 | Não pode ser data futura |
 | Bom Para / Disponível Em | Data de disponibilidade (cheque/cartão) | Não | 05/08/2026 | Usado em cheque/cartão |
 | Cartão | Dados do cartão | Condicional | — | Quando a forma é cartão |
-| Qtd. Parcelas | Parcelas do cartão | Condicional | 1 | Quando a forma é cartão |
+| Qtd. Parcelas | Nº de parcelas do cartão | Condicional | 3 | Habilitado apenas para **cartão parcelado**. Mínimo 1 e no máximo o limite de parcelas do cartão selecionado |
 | Pagamento sem valor recebido (Cortesia) | Marca o recebimento como cortesia | Não | — | Isenção, sem entrada de dinheiro |
 
 ---
@@ -85,6 +92,14 @@ Financeiro
 - As parcelas selecionadas ficam **quitadas**.
 - É gerado um **lançamento no Diário Financeiro**.
 - É gerado um **recibo numerado** para impressão.
+
+O **recibo** traz, além dos dados do aluno e da parcela:
+
+- **Forma de Pagto.** com o número de parcelas do cartão entre parênteses quando parcelado
+  (ex.: *Cartão de Crédito (3x)*).
+- **N° Doc.** — exibido quando há número de documento/comprovante informado no pagamento.
+- Detalhamento de valores no canhoto: **Val. Mens.**, **Desconto**, **Desconto Extra**,
+  **Dedução**, **Acréscimos**, **Juros** e o **valor Pago** em destaque.
 
 ---
 
@@ -108,6 +123,8 @@ Financeiro
 - *"O Caixa está encerrado para a data: ..."* / *"O Caixa está encerrado para o dia de hoje!"*
 - *"Erro ao salvar o registro no Diário Financeiro"*
 - *"Erro ao salvar o registro no Encerramento de Caixa"*
+- *"O número de parcelas deve ser no mínimo 1."* (cartão parcelado)
+- *"Quantidade máxima de parcelas permitida para este cartão é X"* (ao exceder o limite do cartão)
 
 **Alerta / Atenção (distribuição de valores)**
 - *"Informe ao menos um valor para distribuição."*
@@ -186,3 +203,4 @@ Use o [Estorno](#) na própria movimentação; o número do recibo é registrado
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui recebimento com valor a menor / distribuição de valores e recibo padronizado. |
+| 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)**, **N° Doc.** e **Desconto Extra**. |
