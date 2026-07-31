@@ -49,7 +49,7 @@ Cada linha da tabela de parcelas traz botões próprios, que aparecem conforme a
 | Botão | O que faz |
 |-------|-----------|
 | **Pagar mensalidade** (ícone $) | Abre o recebimento da parcela diretamente pela ficha. Fica indisponível para parcela de aluno remanejado |
-| **Imprimir recibo** (ícone impressora) | Reimprime o recibo de um pagamento já realizado. Um botão por pagamento existente na parcela |
+| **Imprimir recibo** (ícone impressora) | Reimprime o [recibo](recibo.md) de um pagamento já realizado. Um botão por pagamento existente na parcela |
 | **Estornar pagamento** (ícone lixeira) | Estorna um pagamento realizado naquela parcela |
 
 Ao expandir a parcela, o **detalhe** exibe os **dados do banco** e a composição dos valores

@@ -14,7 +14,8 @@ No recebimento de mensalidade, o sistema abre a **distribuição de valores** pa
 quanto vai para cada parcela. É preciso distribuir todo o valor informado.
 
 **Como cancelo um recebimento?**
-Use a opção de **estorno** na movimentação. O número do recibo é registrado junto ao estorno.
+Use a opção de **estorno** na movimentação. O número do [recibo](../financeiro/recibo.md) é
+registrado junto ao estorno.
 
 ## Caixa
 

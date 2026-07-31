@@ -21,6 +21,7 @@ cadastro de bancos) do menu lateral.
 | Geração de Boletos | Gerar boletos das mensalidades para os alunos | [Abrir](geracao-boletos.md) |
 | Arquivo de Remessa (CNAB) | Gerar o arquivo que é enviado ao banco | [Abrir](arquivo-remessa.md) |
 | Ficha Financeira | Consultar a situação financeira completa de um aluno | [Abrir](ficha-financeira.md) |
+| Recibo de Recebimento | Estrutura, numeração e impressão do recibo dos recebimentos | [Abrir](recibo.md) |
 | Zerar Mensalidades | Limpar valores/dados bancários de mensalidades em lote | [Abrir](zerar-mensalidades.md) |
 | Valores Complementares | Acréscimos/deduções nas parcelas do aluno | [Abrir](valores-complementares.md) |
 | Baixa Automática | Baixar mensalidades pelo arquivo de retorno do banco | [Abrir](baixa-automatica.md) |
@@ -46,7 +47,7 @@ cadastro de bancos) do menu lateral.
 - **Encerramento de Caixa:** o fechamento do movimento de um dia. Depois de encerrado, o sistema
   **bloqueia** novos lançamentos naquela data.
 - **Fonte / Conta:** de onde entra ou sai o dinheiro (caixa, banco, etc.).
-- **Recibo:** comprovante impresso de um recebimento, com número sequencial próprio.
+- **[Recibo](recibo.md):** comprovante impresso de um recebimento, com número sequencial próprio.
 
 ## Regras gerais do módulo
 
@@ -54,7 +55,7 @@ cadastro de bancos) do menu lateral.
   mensagem *"O Caixa está encerrado para a data..."*.
 - Registros que já possuem pagamentos **não podem ser simplesmente excluídos** — é preciso
   estornar primeiro.
-- Todo recebimento gera um **número de recibo**, que também é registrado no estorno.
+- Todo recebimento gera um **[número de recibo](recibo.md)**, que também é registrado no estorno.
 
 ## Fluxo geral do dia a dia financeiro
 
@@ -78,3 +79,4 @@ flowchart TD
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada com o mapa do módulo. |
+| 31/07/2026 | Adicionada a página **Recibo de Recebimento** ao mapa e aos conceitos. |

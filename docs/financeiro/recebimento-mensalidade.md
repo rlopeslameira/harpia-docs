@@ -36,7 +36,7 @@ Financeiro
 7. Preencha os campos complementares conforme a forma escolhida (ver seção **Campos**).
 8. Confira o **Valor Pago**.
 9. Clique em **Gravar** para registrar o recebimento.
-10. O sistema gera o **recibo**; use a opção de impressão para entregá-lo ao responsável.
+10. O sistema gera o **[recibo](recibo.md)**; use a opção de impressão para entregá-lo ao responsável.
 
 > **Recebimento com valor a menor:** quando o valor pago é menor que o total das parcelas
 > selecionadas, o sistema abre a **distribuição de valores**, permitindo indicar como o valor
@@ -91,9 +91,9 @@ Ao escolher o cartão, o sistema já ajusta o campo para **1** e não permite in
 
 - As parcelas selecionadas ficam **quitadas**.
 - É gerado um **lançamento no Diário Financeiro**.
-- É gerado um **recibo numerado** para impressão.
+- É gerado um **[recibo](recibo.md) numerado** para impressão.
 
-O **recibo** traz, além dos dados do aluno e da parcela:
+O **[recibo](recibo.md)** traz, além dos dados do aluno e da parcela:
 
 - **Forma de Pagto.** com o número de parcelas do cartão entre parênteses quando parcelado
   (ex.: *Cartão de Crédito (3x)*).

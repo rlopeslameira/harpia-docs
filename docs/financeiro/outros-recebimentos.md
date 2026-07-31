@@ -4,7 +4,7 @@
 
 Registrar recebimentos que **não são mensalidade** — por exemplo taxas, materiais, uniformes,
 segunda via de documentos, eventos e demais cobranças avulsas. A tela permite lançar o valor,
-escolher a forma de pagamento e emitir o **recibo** correspondente.
+escolher a forma de pagamento e emitir o **[recibo](recibo.md)** correspondente.
 
 ---
 
@@ -95,7 +95,7 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 ## Resultados
 
 - O recebimento é registrado e lançado no **Diário Financeiro**.
-- É gerado um **recibo numerado** (campo **Nº Recibo**).
+- É gerado um **[recibo](recibo.md) numerado** (campo **Nº Recibo**).
 
 ---
 
@@ -173,7 +173,8 @@ Nem sempre. Recebimentos que não são de um aluno específico podem ser lançad
 política da escola; quando forem de um aluno, pesquise-o para vincular o recibo.
 
 **Como reimprimo um recibo antigo?**
-Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**.
+Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**. Ver
+[Recibo de Recebimento](recibo.md).
 
 ---
 
