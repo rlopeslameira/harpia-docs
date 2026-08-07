@@ -37,14 +37,25 @@ Financeiro
    - **Fixar a Data de Vencimento para todas as parcelas**, se quiser a mesma data;
    - **Gerar data de vencimento com o último dia do mês**, se preferir vencer no fim do mês.
 7. Se necessário, ajuste **Valor da Parcela** e **Valor do Desconto**.
-8. Clique em **Gerar Boleto**.
-9. Visualize o resultado em **Visualização do Boleto** e imprima.
+8. Escolha o **Layout de impressão**: **1 boleto p/ página** ou **3 boletos p/ página**.
+9. Clique em **Gerar Boleto**.
+10. Visualize o resultado em **Visualização do Boleto** e imprima.
 
 :::note Layout do boleto por banco
 A **visualização/impressão** usa o **layout correspondente ao banco selecionado**. Para os bancos
 que utilizam o layout **60**, o boleto é apresentado no **modelo de carnê** ("Carnê de Boletos"),
 com composição própria do **Nosso Número**. Os demais bancos seguem o layout padrão. A escolha é
 **automática**, conforme o cadastro do banco.
+:::
+
+:::note Layout de impressão (nº de boletos por página)
+O campo **Layout de impressão** define quantos boletos saem em cada página impressa:
+
+- **1 boleto p/ página** — um boleto por folha.
+- **3 boletos p/ página** — três boletos por folha, economizando papel.
+
+A seleção é **obrigatória** antes de gerar/imprimir. Ao selecionar o banco, o sistema exibe os
+dados bancários (**Agência**, **Carteira**) apenas para conferência — esses campos não são editáveis.
 :::
 
 *(Print sugerido: tela de geração com filtros e opções de vencimento.)*
@@ -69,6 +80,12 @@ com composição própria do **Nosso Número**. Os demais bancos seguem o layout
 | Gerar data de vencimento com o último dia do mês | Vence no último dia | Não | — | |
 | Valor da Parcela | Valor a cobrar | Não | 450,00 | |
 | Valor do Desconto | Desconto aplicado | Não | 0,00 | |
+| Layout de impressão | Nº de boletos por página | Sim | 1 boleto p/ página | Opções: 1 ou 3 boletos por página |
+
+:::info Valor com dedução
+Quando a parcela possui **dedução**, o valor do boleto é calculado já com o abatimento
+(**valor da mensalidade − dedução − desconto**), refletindo o valor líquido a cobrar.
+:::
 
 ---
 
@@ -90,9 +107,11 @@ com composição própria do **Nosso Número**. Os demais bancos seguem o layout
 
 ## Regras importantes
 
+- É obrigatório **selecionar ao menos um filtro**: Curso, Turma ou Aluno.
 - **Parcela Inicial e Parcela Final não podem ser 0** e a **inicial não pode ser maior que a final**.
 - **O dia do vencimento não pode ser superior a 31**; se o dia não existir no mês, o sistema avisa.
 - É obrigatório **selecionar um banco** (ou usar o banco do cadastro da turma).
+- É obrigatório **selecionar o Layout de impressão** (1 ou 3 boletos por página).
 - Alunos configurados para **não imprimir boleto** são ignorados (mensagem *"O aluno não imprime boleto."*).
 
 ---
@@ -100,7 +119,9 @@ com composição própria do **Nosso Número**. Os demais bancos seguem o layout
 ## Mensagens do sistema
 
 **Erro / Atenção**
+- *"Selecione ao menos um filtro: Curso, Turma ou Aluno."*
 - *"Nenhum banco selecionado."* / *"Seleção do banco é obrigatório."*
+- *"Seleção do número de páginas para impressão é obrigatória."*
 - *"Parcela Inicial não pode ser 0."* / *"Parcela Final não pode ser 0."*
 - *"Parcela Inicial não pode ser maior que a Final."*
 - *"Dia do vencimento não pode ser superior a 31."*
@@ -161,9 +182,13 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 
 ## Prints
 
-- [ ] Tela de geração com filtros.
-- [ ] Visualização do boleto (layout padrão).
+- [ ] Tela de geração com filtros e o campo **Layout de impressão** — **recapturar**.
+- [ ] Visualização do boleto (**novo modelo**, com logo atualizado) — **recapturar**.
+- [ ] Visualização em **3 boletos por página**.
 - [ ] Visualização do boleto em **modelo de carnê** (bancos com layout 60).
+
+> **Prints a substituir:** as capturas do boleto no modelo anterior estão desatualizadas — o
+> layout e o logo mudaram em 08/2026.
 
 ---
 
@@ -173,3 +198,4 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui geração pelo banco do cadastro da turma, opções de vencimento e ajustes de valores/estilo do boleto. |
 | 31/07/2026 | Novo **modelo de carnê** para bancos com layout 60 (seleção automática do layout conforme o banco). |
+| 07/08/2026 | **Novo modelo de boleto** (layout e logo atualizados). Novo campo **Layout de impressão** (1 ou 3 boletos por página), de seleção obrigatória. Exibição dos dados bancários (Agência/Carteira) para conferência. Valor do boleto passa a considerar a **dedução** no cálculo do valor líquido. Nova validação de **filtro obrigatório** (Curso/Turma/Aluno). |

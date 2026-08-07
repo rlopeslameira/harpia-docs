@@ -212,3 +212,4 @@ Use **Opções → Estornar**.
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui centro de custo padrão, alterar credor, projeção de lançamentos e correções de estorno/alteração. |
 | 31/07/2026 | **Conta sugerida** pela última conta usada no credor. **Ícones C/D** na coluna Fatura para diferenciar cartão institucional de crédito e débito. **Indicador de carregamento** ao gravar/pagar/estornar/excluir. |
+| 07/08/2026 | Correção na **exclusão** de contas pagas com **cartão institucional**: a taxa do cartão vinculada passa a ser removida junto com o lançamento. |

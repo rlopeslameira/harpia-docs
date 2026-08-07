@@ -9,6 +9,12 @@ por isso esta página concentra a explicação da sua **estrutura, numeração, 
 > Esta página descreve o recibo de **recebimento de mensalidade** e de **outros recebimentos**.
 > A **sangria** possui um comprovante próprio — ver [Sangria](sangria.md).
 
+:::note Atualização de 07/08/2026
+O recibo deixou de exibir a marca **REEMISSÃO** nas 2ª vias. A reimpressão continua **mantendo o
+mesmo número**, mas **sem nenhuma marcação visual** de reemissão. O recibo também passou a mostrar
+a linha **Total**, a **máquina/tipo do cartão** na forma de pagamento e a **descrição da turma**.
+:::
+
 ---
 
 ## Onde o recibo é gerado
@@ -42,7 +48,8 @@ O recibo é dividido em **canhoto** (resumo destacável) e **corpo** (declaraç�
 |------|-----------|
 | Dados da empresa | Nome, CNPJ e identificação da escola emissora |
 | Nº do Recibo | Número sequencial do recibo, gerado pelo sistema |
-| REEMISSÃO | Marcação exibida quando o recibo é uma **reimpressão** |
+
+> A partir de 07/08/2026, o recibo **não exibe mais a marca REEMISSÃO** nas reimpressões.
 
 ### Canhoto (detalhamento de valores)
 
@@ -54,17 +61,23 @@ O recibo é dividido em **canhoto** (resumo destacável) e **corpo** (declaraç�
 | Dedução | Valor deduzido, quando houver (com a descrição da dedução) |
 | Acréscimos | Acréscimos aplicados, quando houver |
 | Juros | Juros por atraso |
+| **Total** | **Total apurado da parcela**: mensalidade + acréscimos + multas + juros − desconto − dedução − desconto extra |
 | **Pago** | **Valor efetivamente recebido**, em destaque |
+| Forma Pagto. | Quando o pagamento é por cartão, exibe a **máquina/tipo do cartão** (Crédito, Débito, Parcelado ou PIX) |
+
+> **Total x Pago:** o **Total** é o valor devido apurado da parcela; o **Pago** é o valor que
+> entrou de fato. Em recebimentos comuns os dois coincidem.
 
 ### Corpo / dados do pagamento
 
 | Item | Descrição |
 |------|-----------|
 | Aluno / Responsável Financeiro | Quem pagou (nome e CPF/CNPJ, quando informado) |
-| Forma de Pagto. | Forma de pagamento; para **cartão parcelado** aparece o nº de parcelas, ex.: *Cartão de Crédito (3x)* |
+| Forma de Pagto. | Forma de pagamento; para **cartão**, exibe também o **tipo** (Crédito/Débito/Parcelado/PIX) da máquina e, no **parcelado**, o nº de parcelas, ex.: *Cartão de Crédito (3x)* |
+| Matrícula / Turma | Matrícula do aluno e a **turma com a descrição**, ex.: *3ºA - 3ª Série A* |
 | N° Doc. | Número do documento/comprovante do pagamento, quando informado |
-| Fonte | Fonte financeira do lançamento |
-| Data | Data do pagamento e local de emissão |
+| Fonte | Fonte financeira do lançamento (seguida da data do pagamento) |
+| Data / Local | Data do pagamento e **cidade/UF da escola** (obtidos automaticamente do cadastro da empresa) |
 | Declaração de quitação | Texto com o valor por extenso e a **referência** do pagamento (parcela ou descrição) |
 
 ---
@@ -72,7 +85,8 @@ O recibo é dividido em **canhoto** (resumo destacável) e **corpo** (declaraç�
 ## Numeração e reemissão
 
 - Todo recebimento gera um **número de recibo sequencial** próprio.
-- Ao **reimprimir**, o recibo é marcado como **REEMISSÃO**, preservando o mesmo número.
+- Ao **reimprimir**, o recibo **preserva o mesmo número**. Desde 07/08/2026, a 2ª via **não recebe
+  mais a marca REEMISSÃO** — ela é idêntica ao recibo original.
 - O número do recibo também fica **registrado no estorno**, para rastreabilidade.
 
 ---
@@ -87,7 +101,7 @@ O recibo é dividido em **canhoto** (resumo destacável) e **corpo** (declaraç�
 ## Regras importantes
 
 - O recibo só existe **após a gravação** do recebimento.
-- A reimpressão **não gera um novo número** — reaproveita o número original e marca **REEMISSÃO**.
+- A reimpressão **não gera um novo número** — reaproveita o número original (sem marca de reemissão).
 - Ao **estornar** um recebimento, o número do recibo é mantido no registro do estorno.
 
 ---
@@ -108,7 +122,7 @@ flowchart TD
     A[Gravar recebimento] --> B[Sistema gera Nº do recibo]
     B --> C[Visualizar / Imprimir recibo]
     C --> D{Reimprimir depois?}
-    D -->|Sim| E[Recibo com marca REEMISSÃO<br/>mesmo número]
+    D -->|Sim| E[2ª via com o mesmo número<br/>sem marca de reemissão]
     D -->|Não| F[Entregar ao responsável]
 ```
 
@@ -118,7 +132,8 @@ flowchart TD
 
 **Exemplo — reimpressão pela Ficha Financeira:** o responsável pediu a 2ª via do recibo de uma
 parcela já paga. Abra a [Ficha Financeira](ficha-financeira.md) do aluno, localize a parcela e
-clique no botão de **imprimir recibo** daquele pagamento. O recibo sai marcado como **REEMISSÃO**.
+clique no botão de **imprimir recibo** daquele pagamento. A 2ª via sai com o **mesmo número** do
+original, sem qualquer marca de reemissão.
 
 ---
 
@@ -141,7 +156,17 @@ clique no botão de **imprimir recibo** daquele pagamento. O recibo sai marcado 
 ## FAQ
 
 **O número do recibo muda na reimpressão?**
-Não. A 2ª via mantém o mesmo número e recebe a marca **REEMISSÃO**.
+Não. A 2ª via mantém o mesmo número. Desde 07/08/2026 **não há mais a marca REEMISSÃO** — a
+2ª via é idêntica ao recibo original.
+
+**Por que aparece uma linha "Total" além de "Pago"?**
+O **Total** é o valor devido apurado da parcela (mensalidade + acréscimos + multas + juros, menos
+desconto, dedução e desconto extra). O **Pago** é o que foi efetivamente recebido. Em recebimentos
+comuns os dois valores são iguais.
+
+**O recibo mostra qual máquina/cartão foi usado?**
+Sim. Nos pagamentos por cartão, a **Forma de Pagto.** exibe o tipo da máquina (Crédito, Débito,
+Parcelado ou PIX) e, no parcelado, o número de parcelas *(Nx)*.
 
 **Como reimprimo um recibo antigo?**
 Pela [Ficha Financeira](ficha-financeira.md) (botão de impressão na parcela) ou pela lista de
@@ -154,9 +179,12 @@ Não. A [Sangria](sangria.md) usa um comprovante próprio.
 
 ## Prints
 
-- [ ] Recibo de recebimento de mensalidade (canhoto + corpo).
-- [ ] Recibo de outros recebimentos.
-- [ ] Recibo marcado como **REEMISSÃO**.
+- [ ] Recibo de recebimento de mensalidade (canhoto + corpo) — **recapturar**: agora com a linha **Total** e sem a marca REEMISSÃO.
+- [ ] Recibo de outros recebimentos — **recapturar** com a linha **Total**.
+- [ ] Detalhe do recibo com pagamento por **cartão** mostrando o tipo da máquina na Forma de Pagto.
+
+> **Prints a substituir:** todas as capturas anteriores que exibiam a marca **REEMISSÃO** estão
+> desatualizadas e devem ser refeitas.
 
 ---
 
@@ -165,3 +193,4 @@ Não. A [Sangria](sangria.md) usa um comprovante próprio.
 | Data | Alteração |
 |------|-----------|
 | 31/07/2026 | Página criada. Centraliza a documentação do recibo (estrutura, numeração, reemissão e impressão), com forma de pagamento por parcelas (Nx), N° Doc. e Desconto Extra. |
+| 07/08/2026 | Removida a marca **REEMISSÃO** das 2ª vias (mantido o mesmo número). Incluída a linha **Total** no detalhamento de valores. **Forma de Pagto.** passa a exibir a **máquina/tipo do cartão** (Crédito/Débito/Parcelado/PIX). **Turma** exibida com a descrição e **cidade/UF** obtidas do cadastro da empresa. |

@@ -88,7 +88,10 @@ Financeiro
 | Pesquisar | Aplica os filtros e lista os resultados |
 
 Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, **Valor**,
-**Vencimento**, **Data Disp.**, **Data Pagto**, **Ações**.
+**Valor Pago**, **Vencimento**, **Data Disp.**, **Data Pagto**, **Ações**.
+
+> A coluna **Valor** mostra o valor lançado (a receber) e a coluna **Valor Pago** mostra o que
+> foi efetivamente recebido — úteis para identificar rapidamente pagamentos parciais ou pendentes.
 
 ---
 
@@ -192,3 +195,4 @@ Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**. Ver
 |------|-----------|
 | 30/07/2026 | Página criada. Recibo padronizado, numeração de recibo e input de pesquisa de aluno padronizado. |
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)** e **N° Doc.**. |
+| 07/08/2026 | Nova coluna **Valor Pago** na lista (ao lado de Valor). Recibo passa a exibir a linha **Total** e a **máquina/tipo do cartão** na Forma de Pagto. |

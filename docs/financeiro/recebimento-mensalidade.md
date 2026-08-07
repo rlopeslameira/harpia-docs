@@ -99,7 +99,9 @@ O **[recibo](recibo.md)** traz, além dos dados do aluno e da parcela:
   (ex.: *Cartão de Crédito (3x)*).
 - **N° Doc.** — exibido quando há número de documento/comprovante informado no pagamento.
 - Detalhamento de valores no canhoto: **Val. Mens.**, **Desconto**, **Desconto Extra**,
-  **Dedução**, **Acréscimos**, **Juros** e o **valor Pago** em destaque.
+  **Dedução**, **Acréscimos**, **Juros**, o **Total** apurado e o **valor Pago** em destaque.
+- Em pagamentos por **cartão**, a **Forma de Pagto.** mostra o tipo da máquina (Crédito/Débito/
+  Parcelado/PIX). Ver [Recibo](recibo.md).
 
 ---
 
@@ -204,3 +206,4 @@ Use o [Estorno](#) na própria movimentação; o número do recibo é registrado
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui recebimento com valor a menor / distribuição de valores e recibo padronizado. |
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)**, **N° Doc.** e **Desconto Extra**. |
+| 07/08/2026 | Recibo passa a exibir a linha **Total** e, nos pagamentos por cartão, a **máquina/tipo do cartão** na Forma de Pagto. Correção da gravação do recebimento de **adiantamento** (sem impacto no fluxo de uso). |

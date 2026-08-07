@@ -30,8 +30,8 @@ Financeiro
 1. Abra **Ficha Financeira**.
 2. **Pesquise o aluno**.
 3. Selecione a **Turma** e o **Plano de Pagamento**, se houver mais de um.
-4. Confira a tabela de parcelas: **Parcela**, **Vencto**, **Mensal.**, **Desc.**, **Dedução**,
-   **Acrésc.**, **Corrigido**, **Total**, **Pago**, **Data**, **Sit.**.
+4. Confira a tabela de parcelas: **Parcela**, **Banco**, **Vencto**, **Mensal.**, **Desc.**,
+   **Dedução**, **Acrésc.**, **Total**, **Data**, **Pago**, **Corrigido**, **Sit.**.
 5. Use **Atualizar** para recalcular os valores após alguma alteração.
 6. Se estiver negociando um saldo, informe a **Data de Vencimento do Saldo**.
 7. Na coluna de **ações** de cada parcela, é possível **pagar**, **imprimir o recibo** de um
@@ -55,22 +55,26 @@ Cada linha da tabela de parcelas traz botões próprios, que aparecem conforme a
 Ao expandir a parcela, o **detalhe** exibe os **dados do banco** e a composição dos valores
 do pagamento.
 
+> Ao **receber** ou **estornar** a **parcela de matrícula** (selo **M**), a consulta do aluno é
+> **atualizada automaticamente** na tela, refletindo a nova situação sem precisar recarregar.
+
 ---
 
 ## Campos e colunas
 
 | Coluna | Descrição |
 |--------|-----------|
-| Parcela | Número da parcela |
-| Vencto | Data de vencimento |
+| Parcela | Número da parcela e descrição. A **parcela de matrícula** recebe o selo **M** |
+| Banco | Banco vinculado à parcela/boleto (código do banco; o nome aparece ao passar o mouse) |
+| Vencto | Data de vencimento (vencidas em aberto aparecem em vermelho) |
 | Mensal. | Valor da mensalidade |
 | Desc. | Desconto |
 | Dedução | Valor deduzido |
 | Acrésc. | Acréscimos |
-| Corrigido | Valor corrigido (juros/multa/correção) |
 | Total | Total da parcela |
+| Data | Data e hora do último pagamento |
 | Pago | Valor já pago |
-| Data | Data do pagamento |
+| Corrigido | Valor corrigido a pagar (com juros/multa/correção), para parcelas em aberto |
 | Sit. | Situação da parcela (em aberto, paga, etc.) |
 
 | Campo | Descrição | Obrigatório | Observações |
@@ -161,7 +165,7 @@ Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 
 ## Prints
 
-- [ ] Ficha financeira com tabela de parcelas.
+- [ ] Ficha financeira com tabela de parcelas — **recapturar** com a nova coluna **Banco** e o selo **M** na parcela de matrícula.
 - [ ] Coluna de **ações por parcela** (pagar / imprimir recibo / estornar).
 - [ ] Detalhe da parcela com **dados do banco**.
 
@@ -173,3 +177,4 @@ Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 |------|-----------|
 | 30/07/2026 | Página criada. Inclui recálculos da ficha e data de vencimento do saldo. |
 | 31/07/2026 | **Ações por parcela** (pagar, imprimir recibo e estornar) na própria tabela, com tooltips. Detalhe da parcela passa a exibir **dados do banco**. Ajustes de layout das colunas. |
+| 07/08/2026 | Nova coluna **Banco** na tabela de parcelas e selo **M** na **parcela de matrícula**. Ao receber/estornar a parcela de matrícula, a consulta do aluno é **atualizada automaticamente**. |
