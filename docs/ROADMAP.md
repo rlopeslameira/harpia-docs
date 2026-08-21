@@ -118,6 +118,7 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 - ✅ Empresas
 - ✅ Perfil (permissões)
 - ✅ Usuários
+- ✅ Gerenciador de Tabelas (uso técnico, restrito a Master)
 
 ## 14. Configurações
 - ✅ Configurações de Avaliações
@@ -134,6 +135,23 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 - ✅ Relatórios de Secretaria (Alunos, Documentos, Frequências, Boletim)
 - ✅ Relatórios de Funcionários
 - ✅ Relatório de Turma Regular
+
+## 16. Primeiros Passos (transversal)
+- ✅ Introdução ao Harpia
+- ✅ Como navegar no sistema
+- ✅ Dashboard (Meus widgets)
+- ✅ Talita — Assistente Virtual
+
+## 17. Documentos Word
+- ✅ Modelos de Documentos
+- ✅ Campos Disponíveis
+- ✅ Impressão de Documentos
+- ⬜ Filtros adicionais da impressão (mês de aniversário, pendência de documentos, pendência
+  financeira e situação acadêmica) — **ainda não implementados na aplicação**
+
+## 18. Em espera (aguardando a funcionalidade)
+- ⬜ Integração **Asaas** — há código inicial no backend e no frontend, mas nenhuma tela ou fluxo
+  visível ao usuário final
 
 ---
 
@@ -156,3 +174,4 @@ Legenda: ✅ concluído · 🔄 em andamento · ⬜ pendente
 | 30/07/2026 | Módulo **Gerenciador** concluído (3 telas). |
 | 30/07/2026 | Módulo **Configurações** concluído (9 telas). |
 | 30/07/2026 | Módulo **Relatórios** concluído (4 telas). **DOCUMENTAÇÃO COMPLETA.** |
+| 21/08/2026 | Novo módulo **Documentos Word** documentado (3 telas). Incluídas as páginas de **Dashboard** e **Talita** em Primeiros Passos e a tela técnica **Gerenciador de Tabelas**. Registradas as pendências: filtros adicionais da impressão de documentos e integração **Asaas**, ambos ainda indisponíveis ao usuário. |

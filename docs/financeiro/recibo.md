@@ -48,8 +48,16 @@ O recibo é dividido em **canhoto** (resumo destacável) e **corpo** (declaraç�
 |------|-----------|
 | Dados da empresa | Nome, CNPJ e identificação da escola emissora |
 | Nº do Recibo | Número sequencial do recibo, gerado pelo sistema |
+| Selo **CORTESIA** | Aparece ao lado do número quando o recebimento foi marcado como **Pagamento sem valor recebido (Cortesia)** |
 
 > A partir de 07/08/2026, o recibo **não exibe mais a marca REEMISSÃO** nas reimpressões.
+
+:::note Recibo de cortesia
+Quando o recebimento é lançado com a marcação **Pagamento sem valor recebido (Cortesia)** — uma
+isenção, sem entrada de dinheiro —, o recibo sai com o selo **CORTESIA**, tanto no canhoto quanto
+no corpo. Isso deixa claro para a família e para a conferência interna que não houve pagamento
+em dinheiro.
+:::
 
 ### Canhoto (detalhamento de valores)
 
@@ -194,3 +202,4 @@ Não. A [Sangria](sangria.md) usa um comprovante próprio.
 |------|-----------|
 | 31/07/2026 | Página criada. Centraliza a documentação do recibo (estrutura, numeração, reemissão e impressão), com forma de pagamento por parcelas (Nx), N° Doc. e Desconto Extra. |
 | 07/08/2026 | Removida a marca **REEMISSÃO** das 2ª vias (mantido o mesmo número). Incluída a linha **Total** no detalhamento de valores. **Forma de Pagto.** passa a exibir a **máquina/tipo do cartão** (Crédito/Débito/Parcelado/PIX). **Turma** exibida com a descrição e **cidade/UF** obtidas do cadastro da empresa. |
+| 21/08/2026 | Novo selo **CORTESIA** no recibo, exibido quando o recebimento é marcado como *Pagamento sem valor recebido (Cortesia)*. O **número do recibo** voltou a ser exibido também nos recibos de **estorno**. |

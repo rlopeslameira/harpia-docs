@@ -31,7 +31,8 @@ Financeiro
 2. **Pesquise o aluno**.
 3. Selecione a **Turma** e o **Plano de Pagamento**, se houver mais de um.
 4. Confira a tabela de parcelas: **Parcela**, **Banco**, **Vencto**, **Mensal.**, **Desc.**,
-   **Dedução**, **Acrésc.**, **Total**, **Data**, **Pago**, **Corrigido**, **Sit.**.
+   **Dedução**, **Acrésc.**, **Total**, **Data**, **Pago**, **Corrigido**, **Sit.**. As colunas do
+   grupo **Pagamento** (à direita) detalham o que foi efetivamente recebido.
 5. Use **Atualizar** para recalcular os valores após alguma alteração.
 6. Se estiver negociando um saldo, informe a **Data de Vencimento do Saldo**.
 7. Na coluna de **ações** de cada parcela, é possível **pagar**, **imprimir o recibo** de um
@@ -77,6 +78,20 @@ do pagamento.
 | Corrigido | Valor corrigido a pagar (com juros/multa/correção), para parcelas em aberto |
 | Sit. | Situação da parcela (em aberto, paga, etc.) |
 
+### Grupo de colunas "Pagamento"
+
+À direita da tabela, um bloco identificado como **Pagamento** detalha o que foi recebido em cada
+parcela:
+
+| Coluna | Descrição |
+|--------|-----------|
+| Desc.+Ext. | Desconto somado ao desconto extra concedido no recebimento |
+| M + J | Multa somada aos juros cobrados |
+| Déb.Cor. | Débito corrigido considerado no pagamento |
+| Dat. Pagto. | Data do último pagamento (permite ordenação) |
+| Pago | Valor efetivamente recebido |
+| Nº Recibo | Número do recibo emitido para o pagamento |
+
 | Campo | Descrição | Obrigatório | Observações |
 |-------|-----------|-------------|-------------|
 | Aluno | Aluno consultado | Sim | Pesquisa por nome/matrícula |
@@ -109,6 +124,13 @@ do pagamento.
 
 - Para gerar/negociar um saldo, **é preciso informar a Data de Vencimento do Saldo**.
 - Os valores exibidos (corrigido, total) são **calculados pelo sistema**; use **Atualizar** após mudanças.
+- **Pagamento com data retroativa:** quando a escola ativa o parâmetro *Permitir Pagto./Transf.
+  Fonte p/ Data retroativa*, o recebimento pela ficha só aceita datas **dentro do limite de dias**
+  configurado. Fora do limite, a operação é bloqueada. Com o parâmetro **desativado**, não há
+  limite de dias. Ver [Configurações do Financeiro](../configuracoes/financeiro.md).
+- **Parcelamento no cartão:** o campo **Parcelas** só é oferecido para cartões do tipo
+  **Parcelado**. Cartões marcados como **RPU** são sempre recebidos em parcela única. Ver
+  [Cartão](../tabelas-financeiras/cartao.md).
 
 ---
 
@@ -119,6 +141,8 @@ do pagamento.
 
 **Atenção / Erro**
 - *"Informe a data de vencimento do saldo para continuar."*
+- *"Retroativo permitido até N dia(s)."*
+- *"A data de pagamento excede o limite de N dia(s) para lançamento retroativo."*
 - *"Erro ao carregar os dados"* / *"Erro na consulta"*
 
 ---
@@ -153,6 +177,10 @@ aluno para ver quais parcelas estão em aberto e o valor corrigido de cada uma.
 ## Erros comuns
 
 - **"Informe a data de vencimento do saldo..."** → preencha a data antes de continuar a negociação.
+- **"A data de pagamento excede o limite de N dia(s) para lançamento retroativo."** → a data
+  informada é anterior ao limite permitido. Use uma data dentro do prazo ou peça ao
+  administrador para revisar o parâmetro em
+  [Configurações do Financeiro](../configuracoes/financeiro.md).
 
 ---
 
@@ -161,13 +189,21 @@ aluno para ver quais parcelas estão em aberto e o valor corrigido de cada uma.
 **A ficha mostra o que já foi pago?**
 Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 
+**Onde vejo o número do recibo de um pagamento?**
+Na coluna **Nº Recibo**, dentro do grupo **Pagamento**.
+
+**Por que não consigo lançar um pagamento de duas semanas atrás?**
+A escola configurou um **limite de dias para lançamento retroativo**. O sistema informa o limite
+na própria mensagem.
+
 ---
 
 ## Prints
 
-- [ ] Ficha financeira com tabela de parcelas — **recapturar** com a nova coluna **Banco** e o selo **M** na parcela de matrícula.
+- [ ] Ficha financeira com tabela de parcelas — **recapturar** com o grupo de colunas **Pagamento** (Desc.+Ext., M + J, Déb.Cor., Dat. Pagto., Pago, Nº Recibo).
 - [ ] Coluna de **ações por parcela** (pagar / imprimir recibo / estornar).
 - [ ] Detalhe da parcela com **dados do banco**.
+- [ ] Mensagem de bloqueio de pagamento retroativo.
 
 ---
 
@@ -178,3 +214,4 @@ Sim, nas colunas **Pago** e **Data**, junto da situação de cada parcela.
 | 30/07/2026 | Página criada. Inclui recálculos da ficha e data de vencimento do saldo. |
 | 31/07/2026 | **Ações por parcela** (pagar, imprimir recibo e estornar) na própria tabela, com tooltips. Detalhe da parcela passa a exibir **dados do banco**. Ajustes de layout das colunas. |
 | 07/08/2026 | Nova coluna **Banco** na tabela de parcelas e selo **M** na **parcela de matrícula**. Ao receber/estornar a parcela de matrícula, a consulta do aluno é **atualizada automaticamente**. |
+| 21/08/2026 | Novo grupo de colunas **Pagamento** (Desc.+Ext., M + J, Déb.Cor., Dat. Pagto., Pago e **Nº Recibo**), com ordenação por data de pagamento. Passou a valer o **bloqueio de pagamento retroativo** conforme o limite de dias configurado nas Configurações do Financeiro. Cartões marcados como **RPU** não permitem parcelamento no recebimento. |

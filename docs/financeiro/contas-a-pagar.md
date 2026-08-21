@@ -44,6 +44,45 @@ Relatórios
 7. Para **pagar**, abra a conta, informe **Forma de Pagamento**, **Fonte/Conta**, **Data do
    Pagamento**, eventuais **Juros/Multa/Desconto** e o **Valor Pago**, e grave.
 
+### Pagar parcelado no cartão institucional de crédito
+
+Quando o pagamento é feito com um **cartão institucional de crédito**, é possível dividir a
+despesa em parcelas:
+
+1. Em **Forma de Pagamento**, escolha o cartão institucional de crédito.
+2. O campo **Qtd. Parcelas** é habilitado, já com o valor **1**.
+3. Informe em quantas vezes a despesa foi parcelada.
+4. Grave o pagamento.
+
+O sistema então **quita a conta original** e gera **uma conta a pagar para cada parcela** do
+cartão, com os vencimentos correspondentes. As parcelas ficam ligadas à conta original, o que
+permite estorná-las todas de uma vez.
+
+*(Print sugerido: campo Qtd. Parcelas habilitado após escolher o cartão institucional.)*
+
+:::note Limite de parcelas
+O limite de parcelas vem do cadastro do [Cartão Institucional](../tabelas-financeiras/cartao-institucional.md).
+Se o cartão não tiver um limite configurado, o sistema aceita até 99 parcelas.
+:::
+
+### Estornar um pagamento parcelado
+
+Ao estornar uma conta paga de forma parcelada, o sistema exibe antes a janela
+**"⚠️ Informações do Estorno de Pagamento Parcelado"**, mostrando exatamente o que vai acontecer:
+
+| Coluna | O que mostra |
+|--------|--------------|
+| Documento | Identificação da conta ou da parcela |
+| Papel | **Conta Original** ou **Parcela X/Y (Cartão)** |
+| Vencimento | Data de vencimento |
+| Valor | Valor do lançamento |
+| O que vai acontecer? | 🟢 *Será Reativada como A Pagar* (conta original) ou 🔴 *Será Cancelada (Estorno Financeiro)* (parcelas) |
+
+Confira a lista e clique em **Prosseguir para Estorno** para continuar, ou em **Cancelar** para
+desistir.
+
+*(Print sugerido: janela de prévia do estorno parcelado.)*
+
 :::tip Conta sugerida pelo credor
 Ao **selecionar o credor**, o sistema preenche automaticamente a **Conta** com a **última conta
 utilizada** naquele credor, agilizando o lançamento. Você pode trocar a conta normalmente se
@@ -79,6 +118,7 @@ necessário — a nova escolha passa a ser a sugerida no próximo lançamento do
 | Juros / Multa / Desconto | Ajustes no pagamento | Não | 0,00 | |
 | Valor Pago | Valor efetivamente pago | No pagamento | 500,00 | |
 | Cartão Institucional | Vincula a um cartão institucional | Não | — | |
+| Qtd. Parcelas | Em quantas vezes a despesa foi parcelada no cartão | Condicional | 6 | Só é habilitado para **cartão institucional de crédito**. Começa em 1; o limite vem do cadastro do cartão (ou 99, se não houver limite) |
 | Pagamento efetuado por | Responsável pelo pagamento | Não | Tesouraria | |
 
 ---
@@ -93,6 +133,7 @@ necessário — a nova escolha passa a ser a sugerida no próximo lançamento do
 | **Salvar** (Alterar Credor) | Confirma a troca de credor |
 | **Opções** | Ações do registro (pagar, estornar, excluir, alterar credor) |
 | **Mostrar Taxas** | Exibe as taxas relacionadas |
+| **Prosseguir para Estorno** | Confirma a prévia do estorno parcelado e abre o estorno |
 | **Cancelar** | Fecha sem gravar |
 
 ---
@@ -129,6 +170,12 @@ identifica o tipo:
 - Para trocar o credor é preciso **selecionar um novo credor**.
 - Se o **caixa estiver encerrado** para a data do pagamento, a operação é bloqueada.
 - Registros com pagamento não podem ser excluídos sem **estorno**.
+- O **parcelamento** só está disponível para **cartão institucional de crédito**. Nas demais
+  formas de pagamento, o campo **Qtd. Parcelas** permanece desabilitado.
+- Ao pagar parcelado, o sistema gera **uma conta a pagar por parcela**, vinculada à conta
+  original. Não altere essas parcelas manualmente — elas são controladas pelo vínculo.
+- No **estorno de um pagamento parcelado**, a conta original volta a ficar **A Pagar** e **todas
+  as parcelas geradas são canceladas**. O sistema mostra essa prévia antes de confirmar.
 
 ---
 
@@ -147,6 +194,9 @@ identifica o tipo:
 
 **Confirmação**
 - Confirmação de **estorno** e de **exclusão**.
+- Janela **"⚠️ Informações do Estorno de Pagamento Parcelado"**, com o resumo: *"Ao confirmar, a
+  conta original de R$ ... para o credor será reativada no Contas a Pagar e as N parcelas do
+  cartão serão canceladas."*
 
 ---
 
@@ -161,16 +211,40 @@ flowchart TD
     D --> E[Gravar]
     E --> F[Conta a pagar registrada]
     F --> G[Pagar: forma, fonte, data e valor]
-    G --> H[Lançamento no Diário Financeiro]
+    G --> H{Cartão institucional de crédito?}
+    H -->|Não| I[Lançamento no Diário Financeiro]
+    H -->|Sim| J{Qtd. Parcelas maior que 1?}
+    J -->|Não| I
+    J -->|Sim| K[Conta original quitada + uma conta por parcela]
+    K --> I
+```
+
+### Fluxo do estorno parcelado
+
+```mermaid
+flowchart TD
+    A[Opções → Estornar] --> B{Pagamento foi parcelado?}
+    B -->|Não| C[Estorno normal]
+    B -->|Sim| D[Janela com a prévia do estorno]
+    D --> E{Confirmar?}
+    E -->|Cancelar| F[Nada é alterado]
+    E -->|Prosseguir para Estorno| G[Conta original volta a A Pagar]
+    G --> H[Parcelas do cartão canceladas]
 ```
 
 ---
 
 ## Exemplos práticos
 
-**Exemplo — aluguel projetado:** Registrar o aluguel de R$ 3.000,00, com **Projetar
+**Exemplo 1 — aluguel projetado:** Registrar o aluguel de R$ 3.000,00, com **Projetar
 Lançamentos** e **Qtd. Lançamentos** = 12. O sistema cria uma conta por mês. A cada mês,
 abra a parcela e efetue o pagamento.
+
+**Exemplo 2 — compra parcelada no cartão da escola:** a escola compra 20 carteiras por
+R$ 6.000,00, parceladas em 6 vezes no cartão institucional de crédito. No pagamento, escolha o
+cartão, informe **Qtd. Parcelas = 6** e grave. A conta original é quitada e o sistema cria as 6
+parcelas de R$ 1.000,00, cada uma com o seu vencimento — o fluxo de caixa dos próximos meses já
+fica correto.
 
 ---
 
@@ -178,6 +252,10 @@ abra a parcela e efetue o pagamento.
 
 - Use o **Centro de Custo** correto — ele alimenta os relatórios gerenciais.
 - Para despesas fixas, **projete os lançamentos** em vez de digitar mês a mês.
+- Não confunda **Projetar Lançamentos** com **Qtd. Parcelas**: o primeiro repete uma despesa
+  recorrente antes do pagamento; o segundo divide **um pagamento já feito** no cartão da escola.
+- Leia a **prévia do estorno parcelado** antes de confirmar — ela mostra exatamente quais
+  lançamentos serão reativados e quais serão cancelados.
 
 ---
 
@@ -185,6 +263,10 @@ abra a parcela e efetue o pagamento.
 
 - **"Selecione um novo credor."** → ao alterar o credor, escolha o novo antes de salvar.
 - **Pagamento com data futura** → ajuste a data do pagamento.
+- **O campo Qtd. Parcelas está desabilitado** → a forma de pagamento escolhida não é um cartão
+  institucional **de crédito**. Só nele o parcelamento é permitido.
+- **Apareceram várias contas a pagar depois de um único pagamento** → é o comportamento esperado
+  do pagamento parcelado: uma conta por parcela do cartão.
 
 ---
 
@@ -196,6 +278,14 @@ Sim, use **Alterar Credor**, selecione o novo credor e clique em **Salvar**.
 **Como cancelo um pagamento?**
 Use **Opções → Estornar**.
 
+**Posso estornar só uma das parcelas do cartão?**
+Não. O estorno trata o conjunto: a conta original volta a ficar **A Pagar** e **todas** as
+parcelas são canceladas.
+
+**Qual o limite de parcelas?**
+O que estiver configurado no cadastro do cartão institucional. Sem limite configurado, o sistema
+aceita até 99.
+
 ---
 
 ## Prints
@@ -203,6 +293,8 @@ Use **Opções → Estornar**.
 - [ ] Lista de Contas a Pagar.
 - [ ] Formulário com Projetar Lançamentos.
 - [ ] Janela **Alterar Credor**.
+- [ ] Campo **Qtd. Parcelas** habilitado com cartão institucional de crédito.
+- [ ] Janela **Informações do Estorno de Pagamento Parcelado**.
 
 ---
 
@@ -213,3 +305,4 @@ Use **Opções → Estornar**.
 | 30/07/2026 | Página criada. Inclui centro de custo padrão, alterar credor, projeção de lançamentos e correções de estorno/alteração. |
 | 31/07/2026 | **Conta sugerida** pela última conta usada no credor. **Ícones C/D** na coluna Fatura para diferenciar cartão institucional de crédito e débito. **Indicador de carregamento** ao gravar/pagar/estornar/excluir. |
 | 07/08/2026 | Correção na **exclusão** de contas pagas com **cartão institucional**: a taxa do cartão vinculada passa a ser removida junto com o lançamento. |
+| 21/08/2026 | Novo **pagamento parcelado no cartão institucional de crédito**: campo **Qtd. Parcelas**, geração de uma conta a pagar por parcela e nova janela de **prévia do estorno parcelado** ("Informações do Estorno de Pagamento Parcelado"), com o detalhamento do que será reativado e do que será cancelado. |

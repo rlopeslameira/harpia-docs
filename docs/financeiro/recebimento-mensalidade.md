@@ -48,6 +48,12 @@ O campo **Qtd. Parcelas** só fica habilitado quando a forma de pagamento é um 
 parcelado**. Para **dinheiro/PIX** e cartões não parcelados, o valor fica fixo em **1**.
 Ao escolher o cartão, o sistema já ajusta o campo para **1** e não permite informar um número
 **acima do limite de parcelas** configurado naquele cartão.
+
+Cartões marcados como **RPU (Recebimento de Parcelamento Único)** também mantêm o campo
+desabilitado em **1**, mesmo sendo do tipo parcelado. Esses cartões aparecem no dropdown com a
+marcação **- RPU** ao final da descrição — por exemplo:
+*Crédito à Vista - 2% - 12 Parcela(s) - 30 dia(s) - RPU*.
+Ver [Cartão](../tabelas-financeiras/cartao.md).
 :::
 
 *(Print sugerido: tela de recebimento com o aluno e as parcelas selecionadas.)*
@@ -72,7 +78,7 @@ Ao escolher o cartão, o sistema já ajusta o campo para **1** e não permite in
 | Data | Data do pagamento | Sim | 30/07/2026 | Não pode ser data futura |
 | Bom Para / Disponível Em | Data de disponibilidade (cheque/cartão) | Não | 05/08/2026 | Usado em cheque/cartão |
 | Cartão | Dados do cartão | Condicional | — | Quando a forma é cartão |
-| Qtd. Parcelas | Nº de parcelas do cartão | Condicional | 3 | Habilitado apenas para **cartão parcelado**. Mínimo 1 e no máximo o limite de parcelas do cartão selecionado |
+| Qtd. Parcelas | Nº de parcelas do cartão | Condicional | 3 | Habilitado apenas para **cartão parcelado** que **não** seja RPU. Mínimo 1 e no máximo o limite de parcelas do cartão selecionado |
 | Pagamento sem valor recebido (Cortesia) | Marca o recebimento como cortesia | Não | — | Isenção, sem entrada de dinheiro |
 
 ---
@@ -207,3 +213,4 @@ Use o [Estorno](#) na própria movimentação; o número do recibo é registrado
 | 30/07/2026 | Página criada. Inclui recebimento com valor a menor / distribuição de valores e recibo padronizado. |
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)**, **N° Doc.** e **Desconto Extra**. |
 | 07/08/2026 | Recibo passa a exibir a linha **Total** e, nos pagamentos por cartão, a **máquina/tipo do cartão** na Forma de Pagto. Correção da gravação do recebimento de **adiantamento** (sem impacto no fluxo de uso). |
+| 21/08/2026 | Cartões marcados como **RPU** passam a aparecer com a marcação **- RPU** na descrição do dropdown e mantêm o campo **Qtd. Parcelas** desabilitado em 1. No **estorno**, o **número do recibo** voltou a ser exibido, e o estorno de pagamentos parcelados passou a reverter **todos os lançamentos** da operação. |

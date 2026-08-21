@@ -49,7 +49,7 @@ Configurações
 | Quantidade de Impressão de Recibos (Mensalidades/Outros) | Nº de vias do recibo |
 | Imprimir CNPJ nos Recibos/Carnês | Exibe CNPJ nos documentos |
 | Limite (dias) para Encerramento da Movimentação | Faixa máxima de encerramento |
-| Permitir Pagto/Transf. Fonte para Data Retroativa | Libera lançamento retroativo |
+| Permitir Pagto/Transf. Fonte p/ Data retroativa | Liga o **controle** do lançamento retroativo. Ao lado, o campo **dias** define até quantos dias no passado o pagamento é aceito |
 | Considerar Valor Pago / Multa e Juros no cálculo do IR | Regras de imposto de renda |
 | Senha Geral / Senhas de operações | Protege ações sensíveis (alterar valor, estorno, quitação) |
 
@@ -75,6 +75,21 @@ Configurações
 - **Bloqueios** (matrícula/pagamento com débito) mudam o que os operadores conseguem fazer.
 - As **senhas** protegem operações sensíveis — defina-as e não compartilhe.
 - Opções de **imposto de renda** afetam a declaração emitida ao responsável.
+
+:::caution Como funciona o limite de dias para lançamento retroativo
+O parâmetro **Permitir Pagto./Transf. Fonte p/ Data retroativa** e o campo **dias** ao lado
+funcionam juntos, na aba **Período**:
+
+| Situação | O que acontece nas telas de recebimento |
+|----------|------------------------------------------|
+| Caixa **marcada** e dias = **5** | O pagamento aceita datas de até **5 dias** no passado. Além disso, o sistema bloqueia |
+| Caixa **marcada** e dias = **0** | Só é aceito o pagamento com a **data de hoje** |
+| Caixa **desmarcada** | O lançamento retroativo fica **liberado, sem limite de dias** |
+
+A regra vale para a [Ficha Financeira](../financeiro/ficha-financeira.md) e para
+[Outros Recebimentos](../financeiro/outros-recebimentos.md). Quando a data excede o limite, o
+sistema exibe *"Retroativo permitido até N dia(s)."* e não conclui a operação.
+:::
 
 ---
 
@@ -115,6 +130,7 @@ Porque há uma **senha** configurada para estorno aqui. Solicite ao administrado
 ## Prints
 
 - [ ] Seções de parâmetros (Global/Período/Senhas).
+- [ ] Aba **Período** com a caixa *Permitir Pagto./Transf. Fonte p/ Data retroativa* e o campo **dias**.
 
 ---
 
@@ -123,3 +139,4 @@ Porque há uma **senha** configurada para estorno aqui. Solicite ao administrado
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 21/08/2026 | Detalhado o funcionamento do parâmetro **Permitir Pagto./Transf. Fonte p/ Data retroativa** junto com o campo de **dias** ao lado: a regra passou a ser aplicada no recebimento pela Ficha Financeira e por Outros Recebimentos. |

@@ -29,6 +29,8 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 ### Primeiros passos
 - [Introdução ao Harpia](getting-started/introducao.md)
 - [Como navegar no sistema](getting-started/navegacao.md)
+- [Dashboard (Meus widgets)](getting-started/dashboard.md)
+- [Talita — Assistente Virtual](getting-started/assistente-virtual.md)
 
 ### Cadastro
 - [Visão geral do módulo Cadastro](cadastro/README.md)
@@ -94,6 +96,7 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Visão geral do módulo Financeiro](financeiro/README.md)
 - [Recebimento de Mensalidade](financeiro/recebimento-mensalidade.md)
 - [Outros Recebimentos](financeiro/outros-recebimentos.md)
+- [Recibo](financeiro/recibo.md)
 - [Contas a Pagar](financeiro/contas-a-pagar.md)
 - [Geração de Boletos](financeiro/geracao-boletos.md)
 - [Arquivo de Remessa (CNAB)](financeiro/arquivo-remessa.md)
@@ -134,6 +137,12 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Forma de Ingresso](tabelas-secretaria/forma-ingresso.md)
 - [Origem](tabelas-secretaria/origem.md)
 
+### Documentos Word
+- [Visão geral do módulo Documentos Word](documentos-word/README.md)
+- [Modelos de Documentos](documentos-word/modelos.md)
+- [Campos Disponíveis](documentos-word/campos.md)
+- [Impressão de Documentos](documentos-word/impressao.md)
+
 ### Bancário
 - [Cadastro de Bancos](bancario/bancos.md)
 
@@ -150,6 +159,7 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Empresas / Unidades](gerenciador/empresas.md)
 - [Perfil (Permissões)](gerenciador/perfil.md)
 - [Usuários](gerenciador/usuarios.md)
+- [Gerenciador de Tabelas (uso técnico)](gerenciador/gerenciador-tabelas.md)
 
 ### Configurações
 - [Visão geral do módulo Configurações](configuracoes/README.md)
@@ -174,7 +184,11 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Perguntas frequentes — Financeiro](faq/financeiro.md)
 
 ### Notas de versão
+- [Agosto/2026](release-notes/2026-08.md)
 - [Julho/2026](release-notes/2026-07.md)
+- [Relatório da atualização — 21/08/2026](release-notes/relatorio-atualizacao-2026-08-21.md)
+- [Relatório da atualização — 07/08/2026](release-notes/relatorio-atualizacao-2026-08-07.md)
+- [Relatório da atualização — 31/07/2026](release-notes/relatorio-atualizacao-2026-07-31.md)
 - [Relatório da atualização — 30/07/2026](release-notes/relatorio-atualizacao-2026-07-30.md)
 
 

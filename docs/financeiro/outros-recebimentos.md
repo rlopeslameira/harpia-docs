@@ -105,11 +105,18 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 ## Regras importantes
 
 - **Conta** e **Valor** são obrigatórios.
-- **Qtd. Parcelas** só é habilitado para **cartão parcelado**; deve ser no mínimo 1 e não pode
-  ultrapassar o limite de parcelas do cartão selecionado. Para dinheiro/PIX fica fixo em 1.
+- **Qtd. Parcelas** só é habilitado para **cartão parcelado** que **não** seja **RPU**; deve ser no
+  mínimo 1 e não pode ultrapassar o limite de parcelas do cartão selecionado. Para dinheiro/PIX,
+  para cartões não parcelados e para cartões **RPU**, fica fixo em 1. Os cartões RPU aparecem no
+  dropdown com a marcação **- RPU** ao final da descrição. Ver
+  [Cartão](../tabelas-financeiras/cartao.md).
 - **A Data de Pagamento não pode ser futura.**
+- **Data de pagamento retroativa:** quando a escola ativa o controle de lançamento retroativo, a
+  data informada precisa estar dentro do **limite de dias** configurado. Fora do limite, o
+  lançamento é bloqueado. Ver [Configurações do Financeiro](../configuracoes/financeiro.md).
 - Se o **caixa estiver encerrado** para a data, o lançamento é bloqueado.
 - Registros com pagamento não podem ser excluídos — é preciso **estornar**.
+- No **estorno**, o **número do recibo** do lançamento original continua sendo exibido.
 
 ---
 
@@ -124,6 +131,8 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 - *"O número de parcelas deve ser no mínimo 1."* (cartão parcelado)
 - *"Quantidade máxima de parcelas permitida para este cartão é X"* (ao exceder o limite do cartão)
 - *"Data de Pagamento não pode ser futura."*
+- *"Data de Pagamento inválida! Data de pagamento excede o limite de dias para pagamentos
+  retroativos"*
 - *"Erro ao gerar recibo!"* / *"Recibo não encontrado!"* / *"Erro ao buscar dados do recibo"*
 - *"O Caixa está encerrado para a data: ..."*
 
@@ -196,3 +205,4 @@ Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**. Ver
 | 30/07/2026 | Página criada. Recibo padronizado, numeração de recibo e input de pesquisa de aluno padronizado. |
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)** e **N° Doc.**. |
 | 07/08/2026 | Nova coluna **Valor Pago** na lista (ao lado de Valor). Recibo passa a exibir a linha **Total** e a **máquina/tipo do cartão** na Forma de Pagto. |
+| 21/08/2026 | Passou a valer o **limite de dias para pagamento retroativo** configurado nas Configurações do Financeiro. Cartões marcados como **RPU** aparecem com a marcação **- RPU** e não permitem parcelamento. No **estorno**, o **número do recibo** voltou a ser exibido, e o estorno de lançamentos parcelados reverte todos os lançamentos da operação. |

@@ -67,6 +67,9 @@ Relatórios
 O Diário Financeiro exibe, acima da lista, cartões com os **totais** do período: **Valor**,
 **Descontos**, **Desconto Extra**, **Multas** e **Juros**.
 
+A lista do Diário Financeiro traz a coluna **Recibo**, com o número do recibo de cada lançamento —
+útil para localizar rapidamente a origem de uma movimentação e para conferir estornos.
+
 ---
 
 ## Resultados
@@ -127,3 +130,4 @@ Sim, a movimentação do caixa no período (entradas e saídas), conforme os fil
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 21/08/2026 | O **Diário Financeiro (Consulta Diário)** passou a exibir a coluna **Recibo**, com o número do recibo de cada lançamento. |
