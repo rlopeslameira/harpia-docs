@@ -54,13 +54,14 @@ Financeiro
 | Juros | Juros aplicados | Não | 0,00 | |
 | Multa | Multa aplicada | Não | 0,00 | |
 | Desconto | Desconto concedido | Não | 0,00 | |
-| Forma de Pagamento | Como o valor foi pago | Sim | Dinheiro | |
+| Valor a Pagar | Valor − desconto + multa + juros | — | 30,00 | Calculado |
+| Forma de Pagamento | Como o valor foi pago | Sim | Dinheiro | A forma **CORTESIA** só aparece quando a opção de cortesia está marcada (ver Regras) |
 | Fonte | Origem/destino do valor | Sim | Caixa | |
 | Data | Data do recebimento | Sim | 30/07/2026 | Não pode ser futura |
 | Nº Documento | Nº do comprovante | Não | 4567 | |
 | Bom Para / Disponível Em | Disponibilidade (cheque/cartão) | Não | 05/08/2026 | |
-| Nº Recibo | Número do recibo gerado | — | 000912 | Gerado pelo sistema |
-| Pagamento sem valor recebido | Marca como cortesia | Não | — | |
+| Nº Recibo | Número do recibo gerado | — | 000912 | Gerado pelo sistema; campo bloqueado |
+| Pagamento sem valor recebido (Cortesia) | Marca como cortesia | Não | — | Só habilitado se existir a forma de pagamento **CORTESIA** liberada para Outros Recebimentos |
 
 ---
 
@@ -87,10 +88,10 @@ Financeiro
 | Situação | Filtra pela situação do recebimento |
 | Pesquisar | Aplica os filtros e lista os resultados |
 
-Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, **Valor**,
-**Valor Pago**, **Vencimento**, **Data Disp.**, **Data Pagto**, **Ações**.
+Colunas da lista: **Seq**, **Recibo**, **Nome**, **Referente**, **Parc.**, **Valor a Pagar**,
+**Valor Pago**, **Fonte**, **Vencimento**, **Data Disp.**, **Data Pagto**, **Ações**.
 
-> A coluna **Valor** mostra o valor lançado (a receber) e a coluna **Valor Pago** mostra o que
+> A coluna **Valor a Pagar** mostra o valor a receber já com desconto, multa e juros e a coluna **Valor Pago** mostra o que
 > foi efetivamente recebido — úteis para identificar rapidamente pagamentos parciais ou pendentes.
 
 ---
@@ -105,6 +106,9 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 ## Regras importantes
 
 - **Conta** e **Valor** são obrigatórios.
+- **Cortesia x forma de pagamento:** ao marcar **Pagamento sem valor recebido (Cortesia)**, a lista de **Forma de Pagamento** passa a mostrar **somente CORTESIA**, a **Fonte** vira **MEU CAIXA**, e **Valor Pago**, multa e juros ficam em **0,00** (o recibo sai com **R$ 0,00** e o selo CORTESIA). Ao desmarcar, a lista volta ao normal, **sem** a forma CORTESIA. Se a escola não tem a forma CORTESIA cadastrada para Outros Recebimentos, a opção fica desabilitada (veja [Forma de Recebimento](../tabelas-financeiras/forma-recebimento.md)).
+- **Número do recibo único:** o número é gerado pelo sistema e **nunca repete** um número já usado em Mensalidades ou em Outros Recebimentos. Todas as parcelas de um mesmo recebimento ficam com o **mesmo número**.
+- **Caixa:** se o **caixa da data** ou o **caixa de hoje** estiver encerrado, o lançamento é bloqueado. Se houver **caixa aberto de data anterior** ou **caixa de hoje encerrado**, os botões **Novo** e de edição ficam desabilitados.
 - **Qtd. Parcelas** só é habilitado para **cartão parcelado** que **não** seja **RPU**; deve ser no
   mínimo 1 e não pode ultrapassar o limite de parcelas do cartão selecionado. Para dinheiro/PIX,
   para cartões não parcelados e para cartões **RPU**, fica fixo em 1. Os cartões RPU aparecem no
@@ -131,6 +135,10 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 - *"O número de parcelas deve ser no mínimo 1."* (cartão parcelado)
 - *"Quantidade máxima de parcelas permitida para este cartão é X"* (ao exceder o limite do cartão)
 - *"Data de Pagamento não pode ser futura."*
+- *"Data inválida!"* / *"Informe um valor de pagamento válido!"* / *"O valor pago não pode ser maior que o valor do recebimento!"*
+- *"Selecione uma Forma de Pagamento!"* / *"Selecione uma Fonte!"*
+- *"O Caixa está encerrado para a data: dd/MM/aaaa"* e *"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*
+- *"Falha ao salvar: ..."*
 - *"Data de Pagamento inválida! Data de pagamento excede o limite de dias para pagamentos
   retroativos"*
 - *"Erro ao gerar recibo!"* / *"Recibo não encontrado!"* / *"Erro ao buscar dados do recibo"*
@@ -138,6 +146,18 @@ Colunas da lista: **Seq**, **Nº Recibo**, **Nome**, **Referente**, **Parc.**, *
 
 **Confirmação**
 - Confirmação de **estorno** e de **exclusão** antes de concluir a ação.
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Novo) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -192,6 +212,8 @@ Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**. Ver
 
 ## Prints
 
+- [ ] Cortesia marcada: forma CORTESIA e fonte MEU CAIXA.
+- [ ] Lista com colunas Recibo, Valor a Pagar e Fonte.
 - [ ] Lista de Outros Recebimentos com filtros.
 - [ ] Formulário preenchido.
 - [ ] Recibo gerado.
@@ -206,3 +228,4 @@ Pesquise o recebimento na lista e use **Visualizar Recibo** / **Opções**. Ver
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)** e **N° Doc.**. |
 | 07/08/2026 | Nova coluna **Valor Pago** na lista (ao lado de Valor). Recibo passa a exibir a linha **Total** e a **máquina/tipo do cartão** na Forma de Pagto. |
 | 21/08/2026 | Passou a valer o **limite de dias para pagamento retroativo** configurado nas Configurações do Financeiro. Cartões marcados como **RPU** aparecem com a marcação **- RPU** e não permitem parcelamento. No **estorno**, o **número do recibo** voltou a ser exibido, e o estorno de lançamentos parcelados reverte todos os lançamentos da operação. |
+| 07/10/2026 | Cortesia x forma de pagamento; número de recibo único e bloqueado; colunas **Recibo**, **Valor a Pagar** e **Fonte**; marcação RPU; aviso/bloqueio por caixa pendente; novas mensagens. |

@@ -18,6 +18,7 @@ As telas ficam no grupo **Gerenciador** do menu lateral.
 | Empresas | Cadastrar as empresas/unidades (escolas) | [Abrir](empresas.md) |
 | Perfil | Definir perfis de acesso e suas permissões | [Abrir](perfil.md) |
 | Usuários | Cadastrar os usuários e vincular perfil | [Abrir](usuarios.md) |
+| Reset Financeiro do Aluno | Zerar o financeiro de um aluno de teste (somente Master) | [Abrir](reset-financeiro-aluno.md) |
 
 ## Conceitos
 

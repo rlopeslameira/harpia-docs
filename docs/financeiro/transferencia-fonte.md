@@ -3,8 +3,8 @@
 ## Objetivo
 
 Transferir valores de uma **fonte financeira** (caixa, banco, conta) para outra — por exemplo,
-mover o dinheiro do caixa para uma conta bancária. Registra origem, destino, valor e data de
-crédito, mantendo os saldos das fontes corretos.
+mover o dinheiro do caixa para uma conta bancária. Registra origem, destino, valor e data,
+mantendo os saldos das fontes corretos.
 
 ---
 
@@ -28,7 +28,7 @@ Financeiro
 1. Abra **Transferência de Fonte**.
 2. Selecione a **Fonte de Origem** e a **Fonte de Destino**.
 3. Confira o **Saldo (R$)** da origem e informe o **Valor (R$)** a transferir.
-4. Informe a **Data** e a **Data do Crédito** (quando o valor fica disponível no destino).
+4. Confira a **Data** da transferência (já vem com hoje). Ao escolher a data, o sistema avisa se o caixa daquele dia está encerrado.
 5. Preencha **Referente** e, para contas bancárias, **Agência/Conta**.
 6. Clique em **Executar**.
 
@@ -42,8 +42,7 @@ Financeiro
 | Fonte de Destino | Para onde vai o valor | Sim | |
 | Saldo R$ | Saldo da origem | — | Exibido pelo sistema |
 | Valor R$ | Valor transferido | Sim | Não pode exceder o saldo |
-| Data | Data da transferência | Sim | |
-| Data do Crédito | Disponibilidade no destino | Sim | |
+| Data | Data da transferência | Sim | Padrão: hoje. Não existe mais o campo *Data do Crédito* |
 | Referente | Descrição | Não | |
 | Agência / Conta | Dados bancários | Condicional | Para fontes bancárias |
 
@@ -59,20 +58,28 @@ Financeiro
 
 ## Resultados
 
-- O saldo da origem diminui e o do destino aumenta na data de crédito.
+- O saldo da origem diminui e o do destino aumenta **na data da transferência**.
+- Débito e crédito são lançados juntos no Diário Financeiro (ou nenhum dos dois).
 
 ---
 
 ## Regras importantes
 
-- O **caixa/fonte deve estar aberto** na data — se estiver encerrado, a transferência é bloqueada.
+- O **caixa da data escolhida não pode estar encerrado**. Ao selecionar a **Data**, aparece um aviso fixo:
+  - Caixa encerrado: *"O caixa referente à Data selecionada já está encerrado. Verifique o Encerramento de Caixa antes de continuar."* — o botão **Executar** fica desabilitado.
+  - Dia sem caixa: *"Não existe caixa para esse dia. A transferência será lançada no caixa de hoje."* — não bloqueia.
+- Além da data escolhida, o **caixa de hoje também não pode estar encerrado** (*"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*), pois o lançamento entra no caixa do dia em que é feito.
+- A transferência **não conta** no Total Geral do caixa.
 - O valor não pode exceder o **saldo** da origem.
 
 ---
 
 ## Mensagens do sistema
 
-- *"Caixa Encerrado para a Data de Crédito!"* / *"Caixa Encerrado para a Data de Transferência!"*
+- *"Caixa Encerrado para a Data de Transferência!"*
+- *"Valor transferido não pode ser maior que o valor do saldo de origem!"*
+- *"Erro ao salvar o registro!"*
+- *"Transferência gravada no Diário Financeiro, mas o saldo das fontes não foi atualizado. Execute o Encerramento da Movimentação para esta data."*
 - *"Valor Inválido!"* / *"Data Inválida!"*
 - *"Registro gravado com sucesso!"*
 
@@ -82,7 +89,7 @@ Financeiro
 
 ```mermaid
 flowchart TD
-    A[Selecionar origem e destino] --> B[Informar valor e datas]
+    A[Selecionar origem e destino] --> B[Informar valor e data]
     B --> C{Caixa aberto e valor válido?}
     C -->|Não| D[Sistema bloqueia]
     C -->|Sim| E[Executar]
@@ -93,13 +100,13 @@ flowchart TD
 
 ## Exemplos práticos
 
-**Exemplo:** transferir R$ 3.000,00 do "Caixa" para a fonte "Banco X", com data de crédito no dia útil seguinte.
+**Exemplo:** transferir R$ 3.000,00 do "Caixa" para a fonte "Banco X", na data de hoje.
 
 ---
 
 ## Dicas
 
-- Confira a **Data do Crédito** — é ela que determina quando o valor entra no destino.
+- Confira a **Data** antes de executar: é ela que define o caixa verificado e o dia do saldo das fontes.
 
 ---
 
@@ -120,6 +127,7 @@ Não; é apenas movimentação entre fontes, sem afetar receita/despesa.
 
 - [ ] Seleção de origem/destino.
 - [ ] Confirmação da transferência.
+- [ ] Aviso amarelo de caixa encerrado na data escolhida.
 
 ---
 
@@ -128,3 +136,4 @@ Não; é apenas movimentação entre fontes, sem afetar receita/despesa.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Campo **Data do Crédito** removido; aviso por data (caixa encerrado/inexistente), bloqueio do caixa de hoje e novas mensagens. |

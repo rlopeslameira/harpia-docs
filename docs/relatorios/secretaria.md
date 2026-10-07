@@ -35,9 +35,32 @@ Relatórios
 ## Relatórios disponíveis
 
 ### Alunos por Turma
-Lista os alunos de uma ou mais turmas. Opções: ordenar por **Turma + Nome** ou **Turma + Nº
-Ordem**; exibir **Mãe/Pai**, **Responsável Acadêmico/Financeiro**, **Mês de Aniversário**;
-**imprimir uma turma por página**; filtrar **turmas regulares/auxiliares**.
+Lista os alunos de uma ou mais turmas. Opções:
+- **Tipo de turma:** *Somente Turmas Regulares* ou *Somente Turmas Auxiliares*.
+- **Situação** (Matriculado, Cancelado, Abandono, Transferido, Trancado, Registrado), **Turma** e **Turno**.
+- **Imprimir o Nº de Ordem**, **o Total de Alunos**, **a Situação** e **Dados Pessoais** (Sim/Não).
+- **Imprimir o Nome** do responsável sob o nome do aluno: *Resp. Finan.*, *Resp. Academ.*, *Pai* ou *Mãe*.
+- **Imprimir uma turma por página**.
+- **Classificado por:** *Turma + Nº Ordem* ou *Turma + Nome*.
+- **Título personalizado do relatório** (novo), que sai em maiúsculas no cabeçalho.
+
+Na folha, a coluna **Matrícula / Sit** mostra a matrícula com a situação (ex.: *123 - M*). Com
+**Dados Pessoais** ativado saem também **Dt. Nasc.**, **CPF**, **Plano Pgto.**, **Convênio** e
+**D. Venc.** O nome do responsável escolhido aparece em letra pequena, abaixo do nome do aluno.
+
+> Os filtros **Nível/Escolaridade** e **Mês de Aniversário** foram retirados desta tela.
+
+**Turmas Auxiliares:** ao escolher *Somente Turmas Auxiliares*, o sistema troca o seletor para
+turmas auxiliares e **bloqueia** o que não se aplica a elas: Turno, Situação, Nº de Ordem,
+Situação e Dados Pessoais (ficam em *Não*), o nome do responsável e a ordenação por Nº Ordem
+(fica só *Turma + Nome*). Voltando para *Regulares*, tudo é liberado de novo.
+
+### Relação de Assinaturas
+Mesma tela e mesmos filtros do Alunos por Turma, mas a folha traz uma coluna em branco para o
+aluno (ou responsável) **assinar**. Título do PDF: *RELAÇÃO DE ASSINATURAS*, com a ordenação
+usada (Nº Ordem ou Nome).
+
+*(Print sugerido: tela de Alunos por Turma com tipo de turma, Situação e Configurações; e uma versão com Turmas Auxiliares selecionadas.)*
 
 ### Informações de Matrícula
 Comprovante/ficha com os dados da matrícula do aluno (curso, turma, plano, responsáveis).
@@ -58,7 +81,9 @@ Imprime o **Diário de Classe** da turma e a **Frequência de Prova**, para regi
 |--------|-----------|
 | Turma / Curso | Escopo do relatório |
 | Ordenação (Turma+Nome / Turma+Nº Ordem) | Ordem dos alunos |
-| Exibir Mãe/Pai/Responsáveis | Colunas adicionais |
+| Tipo de turma (Regulares / Auxiliares) | Define o seletor de turma e libera ou bloqueia opções |
+| Imprimir o Nome (Resp. Finan. / Resp. Academ. / Pai / Mãe) | Mostra o responsável sob o nome do aluno |
+| Título personalizado | Texto no cabeçalho (Alunos por Turma e Assinaturas) |
 | Uma turma por página | Quebra por turma |
 | Situação | Filtra alunos por situação |
 | Boletim Individual / Listagem | Formato do boletim |
@@ -84,6 +109,7 @@ Imprime o **Diário de Classe** da turma e a **Frequência de Prova**, para regi
 ## Regras importantes
 
 - O **Boletim Escolar** exige que a turma tenha sido **processada** (ver [Boletim](../boletim/processamento.md)).
+- Em Alunos por Turma, o sistema avisa *"Nenhum registro encontrado para os filtros selecionados."* quando não há alunos.
 - Listas de alunos refletem a **situação** e a **numeração de ordem** atuais — organize a ordem antes
   (ver [Organiza Número de Ordem](../secretaria/organiza-numero-ordem.md)).
 
@@ -124,6 +150,8 @@ A turma precisa ser **reprocessada** após as alterações (ver [Processamento d
 ## Prints
 
 - [ ] Filtros de Alunos por Turma.
+- [ ] Alunos por Turma com Turmas Auxiliares (campos bloqueados).
+- [ ] Relação de Assinaturas gerada.
 - [ ] Boletim Escolar (opções).
 - [ ] Diário de Classe.
 
@@ -134,3 +162,4 @@ A turma precisa ser **reprocessada** após as alterações (ver [Processamento d
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | **Alunos por Turma:** novo campo de **Título**, nova coluna **Matrícula / Sit**, dados de plano, convênio e vencimento, responsável sob o nome, bloqueios para **Turmas Auxiliares**; retirados **Nível** e **Mês de Aniversário**. Incluída a **Relação de Assinaturas**. |

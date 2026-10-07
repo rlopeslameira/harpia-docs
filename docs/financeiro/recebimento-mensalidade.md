@@ -73,13 +73,13 @@ Ver [Cartão](../tabelas-financeiras/cartao.md).
 | Desconto | Desconto concedido | Não | 0,00 | |
 | Valor Pago | Valor efetivamente recebido | Sim | 465,00 | Se menor, abre a distribuição |
 | Forma de Pagamento | Como o valor foi pago | Sim | Dinheiro | |
-| Fonte | Origem/destino do valor | Sim | Caixa | |
+| Fonte | Origem/destino do valor | Sim | Caixa | Para **cartão e PIX** só lista fontes bancárias; vem sugerida pela forma de pagamento e fica **travada** quando a forma exige a fonte sugerida |
 | Número do Documento | Nº do comprovante/cheque/transação | Não | 001234 | |
 | Data | Data do pagamento | Sim | 30/07/2026 | Não pode ser data futura |
-| Bom Para / Disponível Em | Data de disponibilidade (cheque/cartão) | Não | 05/08/2026 | Usado em cheque/cartão |
-| Cartão | Dados do cartão | Condicional | — | Quando a forma é cartão |
+| Disponível Em | Data de disponibilidade (cheque/cartão) | Não | 05/08/2026 | O campo **Bom Para** foi retirado da tela |
+| Cartão | Máquina/cartão usado | Condicional | — | **Obrigatório** quando há máquinas cadastradas para a forma (*"Selecione o cartão utilizado no pagamento."*). PIX aparece como **PIX**; cartões RPU com **- RPU** |
 | Qtd. Parcelas | Nº de parcelas do cartão | Condicional | 3 | Habilitado apenas para **cartão parcelado** que **não** seja RPU. Mínimo 1 e no máximo o limite de parcelas do cartão selecionado |
-| Pagamento sem valor recebido (Cortesia) | Marca o recebimento como cortesia | Não | — | Isenção, sem entrada de dinheiro |
+| Pagamento sem valor recebido (Cortesia) | Marca o recebimento como cortesia | Não | — | Isenção, sem entrada de dinheiro. Com a marca, a forma de pagamento vira **CORTESIA**, a fonte **MEU CAIXA** e os valores ficam **0,00**; sem a marca, a forma CORTESIA não aparece na lista |
 
 ---
 
@@ -113,7 +113,10 @@ O **[recibo](recibo.md)** traz, além dos dados do aluno e da parcela:
 
 ## Regras importantes
 
-- **A Data de Pagamento não pode ser futura.**
+- **A Data de Pagamento não pode ser futura** (*"Data inválida!"*) e, quando a escola limita lançamentos retroativos, deve estar dentro do limite: *"Retroativo permitido até N dia(s)."* / *"A data de pagamento excede o limite de N dia(s) para lançamento retroativo."*
+- **Cartão parcelado:** a taxa do cartão é lançada no [Contas a Pagar](contas-a-pagar.md) **uma por parcela** (ex.: *PARC.CART. 1/3*), com vencimento a cada intervalo de recebimento da máquina. As taxas ficam ocultas no [Diário Financeiro](../relatorios/financeiros.md) até marcar **Exibir Taxas**.
+- **Adiantamento:** o recibo sai como **Recibo de Adiantamento** (e como *Recibo de Pagamento* nos demais).
+- **Caixa:** o **caixa de hoje** também não pode estar encerrado para gravar (*"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*). Com aviso de caixa pendente, o recebimento fica bloqueado (veja a [Ficha Financeira](ficha-financeira.md)).
 - **O Valor Pago não pode ser menor que a soma de Juros e Multa.**
 - Se o **caixa estiver encerrado** para a data informada, o recebimento é **bloqueado**.
 - No recebimento com valor a menor, **é preciso distribuir todo o valor informado** entre as parcelas.
@@ -127,6 +130,7 @@ O **[recibo](recibo.md)** traz, além dos dados do aluno e da parcela:
 
 **Erro**
 - *"Data de Pagamento não pode ser futura."*
+- *"Selecione o cartão utilizado no pagamento."* / *"Informe o cartão"*
 - *"O Valor Pago não pode ser menor que a soma de Juros e Multa."*
 - *"O Caixa está encerrado para a data: ..."* / *"O Caixa está encerrado para o dia de hoje!"*
 - *"Erro ao salvar o registro no Diário Financeiro"*
@@ -214,3 +218,4 @@ Use o [Estorno](#) na própria movimentação; o número do recibo é registrado
 | 31/07/2026 | **Qtd. Parcelas** vinculada ao limite do cartão (mín. 1; desabilitado para dinheiro/PIX). Recibo passa a exibir **forma de pagamento com nº de parcelas (Nx)**, **N° Doc.** e **Desconto Extra**. |
 | 07/08/2026 | Recibo passa a exibir a linha **Total** e, nos pagamentos por cartão, a **máquina/tipo do cartão** na Forma de Pagto. Correção da gravação do recebimento de **adiantamento** (sem impacto no fluxo de uso). |
 | 21/08/2026 | Cartões marcados como **RPU** passam a aparecer com a marcação **- RPU** na descrição do dropdown e mantêm o campo **Qtd. Parcelas** desabilitado em 1. No **estorno**, o **número do recibo** voltou a ser exibido, e o estorno de pagamentos parcelados passou a reverter **todos os lançamentos** da operação. |
+| 07/10/2026 | Campo **Bom Para** retirado; regras de **cortesia**, fonte por forma de pagamento (cartão/PIX), cartão obrigatório, taxa parcelada de cartão, recibo de adiantamento e bloqueio do caixa de hoje. |

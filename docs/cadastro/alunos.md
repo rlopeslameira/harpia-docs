@@ -37,6 +37,14 @@ Cadastro
 
 *(Print sugerido: lista de alunos com filtros e botão Novo.)*
 
+### Emitir um documento do Word para o aluno
+
+Na linha do aluno, clique no botão com o **ícone do Word** (*Documentos do Word*). O sistema abre
+[Documentos Word → Impressão](../documentos-word/impressao.md) já com **Imprimir para: Aluno** e o
+aluno carregado e marcado. Falta só escolher o modelo, a saída e o formato e gerar.
+
+*(Print sugerido: linha do aluno com o botão Documentos do Word destacado.)*
+
 ---
 
 ## Abas do formulário
@@ -105,6 +113,7 @@ Valores adicionais/específicos vinculados ao aluno e ao plano de pagamento, com
 | **Novo** | Inicia o cadastro de um novo aluno |
 | **Pesquisar** | Aplica os filtros e lista os alunos |
 | **Opções** | Ações da linha (editar, documentos, situação, excluir) |
+| **Documentos do Word** (ícone Word, na linha) | Abre a Impressão de Documentos Word já com este aluno selecionado |
 | **Gravar** | Salva o cadastro |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão de um registro |
 | **Cancelar** | Fecha sem salvar |
@@ -224,3 +233,4 @@ Um tipo de matrícula que **não processa boletim**; use para casos específicos
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Incluído o botão **Documentos do Word** na linha do aluno. |

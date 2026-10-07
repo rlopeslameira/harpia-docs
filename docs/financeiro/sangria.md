@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Registrar a **sangria de caixa** — a retirada de valores (dinheiro e/ou cheque) do caixa durante
+Registrar a **sangria de caixa** — a retirada de valores **em dinheiro** do caixa durante
 ou ao fim do expediente, por segurança ou para depósito. Gera um **recibo de sangria**.
 
 ---
@@ -18,18 +18,23 @@ Financeiro
 
 ## Quando utilizar
 
-- Ao retirar dinheiro/cheque do caixa (redução de numerário, depósito).
+- Ao retirar dinheiro do caixa (redução de numerário, depósito).
 
 ---
 
 ## Como utilizar
 
 1. Abra **Sangria**.
-2. Clique em **Cadastrar Sangria**.
-3. Informe o valor em **Dinheiro** e/ou em **Cheque** e uma **Observação**.
-4. Confira o **Total**.
-5. Clique em **Gravar**.
-6. Use **Imprimir** para emitir o **Recibo de Sangria**.
+2. A tela já abre filtrada pelo **dia de hoje**. Para ver outros dias, ajuste o período em **Data Inicial/Final** (campo de período, com **Limpar**, **Hoje** e **Confirmar**), escolha o **Usuário** e clique em **Pesquisar**.
+3. Clique em **Cadastrar Sangria**.
+4. Confira o **Saldo Atual (R$)** do caixa (se aparecer erro de saldo, clique em **Atualiza Saldo**).
+5. Informe o valor no campo **Total** (em R$) da seção **Sangria (R$)** e a **Observação**.
+6. Clique em **Gravar** (o botão mostra carregamento — não clique duas vezes).
+7. Depois de gravar, a tela volta com o filtro do **dia de hoje** e do **seu usuário**, mostrando a sangria feita.
+8. Use **Imprimir** para emitir o **Recibo de Sangria**.
+
+*(Print sugerido: filtros com período e lista de sangrias.)*
+*(Print sugerido: formulário com Saldo Atual (R$) e Sangria (R$).)*
 
 ---
 
@@ -37,9 +42,10 @@ Financeiro
 
 | Campo | Descrição | Obrigatório |
 |-------|-----------|-------------|
-| Dinheiro | Valor retirado em dinheiro | Condicional |
-| Cheque | Valor retirado em cheque | Condicional |
-| Total | Soma da sangria | — |
+| Data Inicial/Final | Período da pesquisa | Sim (padrão: hoje) | Campo de período |
+| Usuário | Operador da sangria | Não | Filtro da lista |
+| Saldo Atual (R$) | Saldo em dinheiro do caixa do dia | — | Exibido pelo sistema |
+| Total (Sangria R$) | Valor retirado, em dinheiro | Sim | Maior que zero e até o saldo |
 | Observação | Motivo/observação | Não |
 | Data / Hora / Usuário | Registro da sangria | — |
 
@@ -68,7 +74,8 @@ Financeiro
 
 - **A sangria deve ter valor maior que zero.**
 - **O valor da sangria não pode ser maior que o saldo** do caixa.
-- **Selecione ao menos um tipo de pagamento** (dinheiro ou cheque).
+- A sangria é **somente em dinheiro** (a opção cheque saiu da tela).
+- Se houver **caixa aberto de data anterior** ou o **caixa de hoje já estiver encerrado**, o botão **Cadastrar Sangria** fica desabilitado (veja o aviso abaixo).
 
 ---
 
@@ -76,8 +83,22 @@ Financeiro
 
 - *"Sangria deve ter valor maior que zero."*
 - *"Valor da sangria não pode ser maior que o saldo!"*
-- *"Selecione ao menos um tipo de pagamento."*
+- *"Não foi possível verificar o saldo. Clique em Atualiza Saldo e tente novamente."*
+- *"Erro ao buscar o saldo do dia!"*
+- *"Erro ao gravar a sangria!"*
 - *"Erro ao gerar recibo da sangria!"*
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Cadastrar Sangria) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -85,7 +106,7 @@ Financeiro
 
 ```mermaid
 flowchart TD
-    A[Cadastrar Sangria] --> B[Informar dinheiro e/ou cheque]
+    A[Cadastrar Sangria] --> B[Informar o valor em dinheiro]
     B --> C[Observação]
     C --> D[Gravar]
     D --> E[Saldo do caixa reduzido]
@@ -132,3 +153,4 @@ Não. Ela retira valores; o fechamento é feito no [Encerramento de Caixa](encer
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Filtro de período único (já em hoje); **cheque removido** (sangria só em dinheiro); campo **Total**; aviso/bloqueio de caixa pendente; mensagens de saldo. |

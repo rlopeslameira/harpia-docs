@@ -116,6 +116,8 @@ necessário — a nova escolha passa a ser a sugerida no próximo lançamento do
 | Data do Pagamento | Data em que foi pago | No pagamento | 10/08/2026 | Não pode ser futura |
 | Hora do Pagamento | Hora do pagamento | Não | 14:30 | |
 | Juros / Multa / Desconto | Ajustes no pagamento | Não | 0,00 | |
+| Desconto Extra | Desconto adicional concedido (antes chamado *Desconto Concedido*) | Não | 0,00 | |
+| Data Programada / Valor Programado | Data e valor previstos para o pagamento | No pagamento | 10/08/2026 | Obrigatórios ao registrar o pagamento |
 | Valor Pago | Valor efetivamente pago | No pagamento | 500,00 | |
 | Cartão Institucional | Vincula a um cartão institucional | Não | — | |
 | Qtd. Parcelas | Em quantas vezes a despesa foi parcelada no cartão | Condicional | 6 | Só é habilitado para **cartão institucional de crédito**. Começa em 1; o limite vem do cadastro do cartão (ou 99, se não houver limite) |
@@ -140,7 +142,7 @@ necessário — a nova escolha passa a ser a sugerida no próximo lançamento do
 
 ## Filtros e colunas (lista)
 
-Colunas: **Credor**, **Referente**, **Nº Documento**, **Fatura**, **Valor**, **Vencimento**,
+Colunas: **Credor**, **Referente**, **Nº Documento**, **Fatura**, **Valor** (valor **líquido**: já com os descontos; se há programação, o valor programado com multa e juros), **Vencimento**,
 **Data Pagto**, **Valor Pago**, **Ações**.
 
 Há também a opção **Cartão Institucional** e **Alterar Credor** (troca o credor de um lançamento).
@@ -166,9 +168,12 @@ identifica o tipo:
 ## Regras importantes
 
 - **Credor**, **Referente**, **Centro de Custo**, **Conta** e **Valor** são obrigatórios.
-- **A Data de Pagamento não pode ser futura.**
+- **A Data de Pagamento não pode ser futura** e, quando a escola limita lançamentos retroativos, deve estar dentro do limite de dias.
+- **Valor líquido:** a coluna **Valor** e a prévia do estorno parcelado mostram o valor líquido, e o parcelamento no cartão divide o **valor líquido** entre as parcelas (as parcelas não repetem multa, juros nem desconto).
+- **Número do documento:** se ficar em branco, o sistema gera um automaticamente.
+- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Novo** e o lápis de edição ficam desabilitados.
 - Para trocar o credor é preciso **selecionar um novo credor**.
-- Se o **caixa estiver encerrado** para a data do pagamento, a operação é bloqueada.
+- Se o **caixa estiver encerrado** para a data do pagamento (ou o **caixa de hoje**, no caso de estorno e pagamento), a operação é bloqueada.
 - Registros com pagamento não podem ser excluídos sem **estorno**.
 - O **parcelamento** só está disponível para **cartão institucional de crédito**. Nas demais
   formas de pagamento, o campo **Qtd. Parcelas** permanece desabilitado.
@@ -190,13 +195,30 @@ identifica o tipo:
 - *"Data de Pagamento não pode ser futura."*
 - *"Erro ao salvar o registro no Contas a Pagar"*
 - *"Erro ao salvar o registro no Diário Financeiro"*
-- *"O Caixa está encerrado para a data: ..."*
+- *"O Caixa está encerrado para a data dd/MM/aaaa para o funcionário X! Não é permitido estorno de pagamento."* (o final muda conforme a ação)
+- *"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*
+- *"Conta é obrigatório"* / *"Valor é obrigatório"* / *"Referente é obrigatório."*
+- *"Data Programada é obrigatória."* / *"Valor Programado é obrigatório e deve ser maior que zero."*
+- *"A data de pagamento excede o limite de N dia(s) para lançamento retroativo no período."* / *"Retroativo permitido até N dia(s)."*
 
 **Confirmação**
 - Confirmação de **estorno** e de **exclusão**.
+- Estorno parcelado concluído: *"Estornado"* — *"Estorno parcelado realizado com sucesso!"*
 - Janela **"⚠️ Informações do Estorno de Pagamento Parcelado"**, com o resumo: *"Ao confirmar, a
-  conta original de R$ ... para o credor será reativada no Contas a Pagar e as N parcelas do
+  conta original (líquido: R$ ...) para o credor será reativada no Contas a Pagar e as N parcelas do
   cartão serão canceladas."*
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Novo) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -290,6 +312,8 @@ aceita até 99.
 
 ## Prints
 
+- [ ] Aviso amarelo de caixa pendente.
+- [ ] Campo Desconto Extra no formulário.
 - [ ] Lista de Contas a Pagar.
 - [ ] Formulário com Projetar Lançamentos.
 - [ ] Janela **Alterar Credor**.
@@ -306,3 +330,4 @@ aceita até 99.
 | 31/07/2026 | **Conta sugerida** pela última conta usada no credor. **Ícones C/D** na coluna Fatura para diferenciar cartão institucional de crédito e débito. **Indicador de carregamento** ao gravar/pagar/estornar/excluir. |
 | 07/08/2026 | Correção na **exclusão** de contas pagas com **cartão institucional**: a taxa do cartão vinculada passa a ser removida junto com o lançamento. |
 | 21/08/2026 | Novo **pagamento parcelado no cartão institucional de crédito**: campo **Qtd. Parcelas**, geração de uma conta a pagar por parcela e nova janela de **prévia do estorno parcelado** ("Informações do Estorno de Pagamento Parcelado"), com o detalhamento do que será reativado e do que será cancelado. |
+| 07/10/2026 | Coluna **Valor** líquida, **Desconto Extra**, campos de programação obrigatórios, limite retroativo, estorno com motivo e valor líquido, aviso/bloqueio por caixa pendente. |

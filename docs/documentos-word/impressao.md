@@ -15,6 +15,10 @@ Documentos Word
 → Impressão
 ```
 
+Também é possível chegar aqui pelo cadastro: em **Cadastro → Alunos**, clique no botão
+**Documentos do Word** na linha do aluno (ver [Alunos](../cadastro/alunos.md)). A tela abre já com
+**Imprimir para: Aluno** e o aluno carregado; falta escolher o modelo.
+
 ---
 
 ## Quando utilizar
@@ -29,7 +33,8 @@ Documentos Word
 ## Como utilizar
 
 1. Abra **Impressão**.
-2. Em **Modelo**, escolha o documento que será emitido.
+2. Em **Modelo**, escolha o documento que será emitido. O sistema já deixa marcado o **último
+   modelo emitido com sucesso** pela escola — troque se precisar de outro.
 3. Em **Imprimir para**, escolha:
    - **Turma** — o sistema carrega todos os alunos matriculados, já marcados;
    - **Aluno** — busca um aluno específico pelo nome ou pela matrícula.
@@ -107,6 +112,9 @@ modelo se repetem em todas elas.
 
 ## Regras importantes
 
+- O **último modelo usado** é guardado **para a escola toda**, não por usuário: o que um
+  colaborador emitiu por último aparece pré-selecionado para os demais. Ele só é gravado depois
+  de um documento ser gerado com sucesso.
 - É preciso **selecionar o modelo** e **ao menos um aluno** para gerar o documento.
 - No modo **Turma**, entram apenas os alunos **matriculados** na turma.
 - No modo **Aluno**, a busca traz alunos de **qualquer situação** — inclusive transferidos e
@@ -253,3 +261,4 @@ Sim, se você escolher o formato **Word (.docx)**.
 | Data | Alteração |
 |------|-----------|
 | 21/08/2026 | Página criada — nova tela **Impressão de Documentos**. |
+| 07/10/2026 | Entrada pelo botão **Documentos do Word** do cadastro de Alunos e **modelo pré-selecionado** (último emitido, compartilhado pela escola). |

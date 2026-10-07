@@ -41,6 +41,21 @@ No topo do menu existe um campo **"Pesquisar opção"**. Ao digitar parte do nom
 mesmo que estejam dentro de grupos diferentes. Isso ajuda a chegar rápido a uma tela sem
 precisar lembrar em qual grupo ela está.
 
+A busca **ignora maiúsculas, minúsculas e acentos**: digitar `relatorio` encontra *Relatório*,
+e `Financeiro` ou `financeiro` dão o mesmo resultado.
+
+## Opção exclusiva do usuário Master
+
+Usuários **Master** veem no menu, além das telas do perfil, a opção **Reset Financeiro do Aluno**.
+Ela não aparece para os demais usuários. Veja [Reset Financeiro do Aluno](../gerenciador/reset-financeiro-aluno.md).
+
+## Endereço de acesso (login)
+
+A tela de login fica em **/login** (por exemplo, `https://seu-endereco/login`). Links antigos com o
+código da escola (`/12345`) continuam abrindo o login. O endereço raiz (`/`) agora mostra a página
+de apresentação do Harpia, e ao sair do sistema você volta para a tela de login. Atualize seus
+favoritos se você salvava o endereço raiz para entrar.
+
 ## Como lemos os caminhos nesta documentação
 
 Sempre que uma página indicar **como acessar** uma tela, o caminho é mostrado assim:
@@ -71,3 +86,4 @@ Isso significa: abra o grupo **Financeiro** no menu lateral e clique em **Recebi
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 21/08/2026 | Incluídas as seções **menu filtrado pelas permissões do perfil**, **tela inicial (Dashboard)** e **ajuda pela assistente virtual Talita**. |
+| 07/10/2026 | Busca do menu ignora acentos e maiúsculas; opção **Reset Financeiro do Aluno** (Master); endereço de login em **/login**. |

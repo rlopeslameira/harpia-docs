@@ -128,6 +128,9 @@ parcela:
   Fonte p/ Data retroativa*, o recebimento pela ficha só aceita datas **dentro do limite de dias**
   configurado. Fora do limite, a operação é bloqueada. Com o parâmetro **desativado**, não há
   limite de dias. Ver [Configurações do Financeiro](../configuracoes/financeiro.md).
+- **Caixa:** para receber pela ficha, o **caixa de hoje** não pode estar encerrado (*"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*).
+- **Bom Para:** não é mais mostrado no detalhe do pagamento; o **Nº Recibo** exibido é o da parcela.
+- **Cartão:** quando há máquinas cadastradas para a forma, é obrigatório escolher o cartão (*"Selecione o cartão utilizado no pagamento."*). A taxa do cartão parcelado é lançada em parcelas no [Contas a Pagar](contas-a-pagar.md).
 - **Parcelamento no cartão:** o campo **Parcelas** só é oferecido para cartões do tipo
   **Parcelado**. Cartões marcados como **RPU** são sempre recebidos em parcela única. Ver
   [Cartão](../tabelas-financeiras/cartao.md).
@@ -141,9 +144,25 @@ parcela:
 
 **Atenção / Erro**
 - *"Informe a data de vencimento do saldo para continuar."*
+- *"Selecione o cartão utilizado no pagamento."* / *"Informe o cartão"*
+- *"Data inválida!"* (data futura)
 - *"Retroativo permitido até N dia(s)."*
 - *"A data de pagamento excede o limite de N dia(s) para lançamento retroativo."*
 - *"Erro ao carregar os dados"* / *"Erro na consulta"*
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Gravar) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
+
+Na Ficha, ficam desabilitados o ícone de **recebimento ($)**, o de **desfazer pagamento** e o botão **Gravar**.
 
 ---
 
@@ -200,6 +219,7 @@ na própria mensagem.
 
 ## Prints
 
+- [ ] Aviso amarelo de caixa pendente na Ficha.
 - [ ] Ficha financeira com tabela de parcelas — **recapturar** com o grupo de colunas **Pagamento** (Desc.+Ext., M + J, Déb.Cor., Dat. Pagto., Pago, Nº Recibo).
 - [ ] Coluna de **ações por parcela** (pagar / imprimir recibo / estornar).
 - [ ] Detalhe da parcela com **dados do banco**.
@@ -215,3 +235,4 @@ na própria mensagem.
 | 31/07/2026 | **Ações por parcela** (pagar, imprimir recibo e estornar) na própria tabela, com tooltips. Detalhe da parcela passa a exibir **dados do banco**. Ajustes de layout das colunas. |
 | 07/08/2026 | Nova coluna **Banco** na tabela de parcelas e selo **M** na **parcela de matrícula**. Ao receber/estornar a parcela de matrícula, a consulta do aluno é **atualizada automaticamente**. |
 | 21/08/2026 | Novo grupo de colunas **Pagamento** (Desc.+Ext., M + J, Déb.Cor., Dat. Pagto., Pago e **Nº Recibo**), com ordenação por data de pagamento. Passou a valer o **bloqueio de pagamento retroativo** conforme o limite de dias configurado nas Configurações do Financeiro. Cartões marcados como **RPU** não permitem parcelamento no recebimento. |
+| 07/10/2026 | Aviso/bloqueio por caixa pendente, bloqueio do caixa de hoje, cartão obrigatório, **Bom Para** retirado do detalhe e **Nº Recibo** por parcela. |

@@ -71,8 +71,22 @@ Filtros: **Data Início**, **Data Final**, **Usuário**. Colunas: **Data**, **Ho
 ## Regras importantes
 
 - **Usuário**, **Data** e **Valor** são obrigatórios.
+- O abastecimento **não fecha nem abre** caixa por si só: o fechamento é feito apenas no [Encerramento de Caixa](encerramento-caixa.md).
+- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Novo** fica desabilitado.
 - O abastecimento compõe o saldo do caixa considerado na [Sangria](sangria.md) e no
   [Encerramento de Caixa](encerramento-caixa.md).
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Novo) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -119,3 +133,4 @@ Não; é o fundo de troco. Não representa entrada de receita, apenas saldo inic
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Aviso e bloqueio do botão **Novo** quando há caixa pendente; o abastecimento não grava mais o fechamento do caixa. |

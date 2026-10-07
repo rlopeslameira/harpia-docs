@@ -42,6 +42,7 @@ Financeiro
 | Data Disponível (Inicial/Final) | Período de disponibilidade | Não |
 | Data do Crédito | Data em que a operadora creditou | Sim |
 | Valor Tarifa | Tarifa cobrada pela operadora | Não |
+| Valor Pagamento | Valor recebido na transação (em R$) | — |
 | Nº Documento | Documento da transação | Não |
 | Matrícula / Nome | Aluno da transação | — |
 
@@ -65,7 +66,21 @@ Financeiro
 ## Regras importantes
 
 - Informe a **Data do Crédito** para confirmar a entrada.
+- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Confirmar Entrada de Cartão** fica desabilitado (veja o aviso abaixo).
+- Se a escola ativou a **confirmação automática de entrada do cartão** em Parâmetros Financeiros, a baixa é feita pelo sistema; a tela de quitação manual de fatura em [Fatura de Cartão](fatura-cartao.md) fica indisponível.
 - A **tarifa** reduz o valor líquido creditado.
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Confirmar Entrada de Cartão) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -106,6 +121,7 @@ aqui você confirma o **crédito** posterior.
 
 - [ ] Filtros e lista de transações.
 - [ ] Confirmação de entrada.
+- [ ] Aviso amarelo de caixa pendente.
 
 ---
 
@@ -114,3 +130,4 @@ aqui você confirma o **crédito** posterior.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Ajustes nas telas de Cartão/Entrada de Cartão (jul/2026). |
+| 07/10/2026 | Nova coluna **Valor Pagamento**; aviso e bloqueio do botão quando há caixa pendente. |

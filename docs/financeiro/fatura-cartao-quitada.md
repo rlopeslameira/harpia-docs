@@ -11,7 +11,7 @@ necessário, **estornar** uma fatura (desfazer a quitação). É o histórico da
 
 ```
 Financeiro
-→ Fatura de Cartão Quitada
+→ Fatura de Cartão - Quitadas
 ```
 
 ---
@@ -24,11 +24,18 @@ Financeiro
 
 ## Como utilizar
 
-1. Abra **Fatura de Cartão Quitada**.
-2. Filtre por período (**Data**, **Data Liquidação**) e **Operador**.
-3. Clique em **Pesquisar**.
-4. Use **Ver Itens** para detalhar a fatura.
-5. Se necessário, use **Estornar Fatura** para desfazer a quitação.
+1. Abra **Fatura de Cartão - Quitadas**.
+2. Filtre por **Cartão Institucional**, período de **Dt. Liquidação** (campo de período) e **Operador**.
+3. Clique em **Pesquisar** (as faturas mais recentes aparecem primeiro).
+4. Use **Ver Itens** para detalhar a fatura (os valores são os líquidos).
+5. Para desfazer, marque a fatura em **Sel.**; no quadro **Estorno da Fatura** confira **Total Selecionado** e clique em **Estornar Fatura**.
+
+*(Print sugerido: filtros e quadro Estorno da Fatura.)*
+
+> **Como usar o campo de período (calendário):** clique no campo, escolha a **data inicial** e depois a
+> **data final** (para um único dia, clique duas vezes no mesmo dia). Os botões do calendário são
+> **Limpar** (apaga o período), **Hoje** (seleciona o dia de hoje) e **Confirmar** (aplica o período).
+
 
 ---
 
@@ -37,8 +44,10 @@ Financeiro
 | Campo/Coluna | Descrição |
 |--------------|-----------|
 | Fatura | Identificação da fatura |
-| Nº Documento | Documento |
-| Valor | Valor liquidado |
+| Cartão Institucional | Cartão da fatura |
+| Fonte | Fonte usada na quitação |
+| Sel. | Marca a fatura para estorno |
+| Valor | Valor liquidado (líquido) |
 | Data / Hora Liquidação | Quando foi quitada |
 | Operador da Liquidação | Quem quitou |
 
@@ -63,6 +72,20 @@ Financeiro
 ## Regras importantes
 
 - O **estorno** reabre a fatura e desfaz os lançamentos da quitação — use com cautela.
+- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Estornar Fatura** fica desabilitado.
+- Sem seleção, o quadro mostra *"Selecione uma fatura no grid para estornar"*.
+
+---
+
+:::caution Aviso de caixa pendente
+Ao abrir esta tela, o sistema confere o **seu caixa**. Se houver **caixa aberto de data anterior**
+e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** logo abaixo do título
+(fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
+as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
+Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
+(Estornar Fatura) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
+:::
 
 ---
 
@@ -102,6 +125,7 @@ Em [Fatura de Cartão](fatura-cartao.md).
 
 - [ ] Lista de faturas quitadas.
 - [ ] Itens da fatura.
+- [ ] Quadro Estorno da Fatura com seleção.
 
 ---
 
@@ -110,3 +134,4 @@ Em [Fatura de Cartão](fatura-cartao.md).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Layout novo (filtros e quadro **Estorno da Fatura**), filtro **Cartão Institucional**, colunas Cartão e Fonte, valores líquidos, aviso/bloqueio por caixa pendente. |

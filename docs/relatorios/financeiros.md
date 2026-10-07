@@ -30,9 +30,11 @@ Relatórios
 ### Diário Financeiro (Consulta Diário)
 
 1. Abra **Relatórios → Financeiro → Consulta Diário**.
-2. Informe **Data inicial** e **Data final** e os filtros desejados (fonte, forma de pagamento,
-   direção de entrada/saída, complementos).
-3. Gere o relatório e visualize/imprima.
+2. A tela abre com o período de **Dt. Lançamento** em **hoje**. Ajuste **Dt. Lançamento** e/ou **Dt. Pagamento** (cada um é um campo de período, com os botões **Limpar**, **Hoje** e **Confirmar**).
+3. Se quiser, filtre por **Tarefa**, **Forma de Pagamento**, **Fonte**, **Operador** e **Nome**, e use as caixas **Lançamentos de Faturas** (só lançamentos ligados a fatura de cartão institucional) e **Exibir Taxas** (inclui as taxas de cartão, que ficam ocultas por padrão).
+4. Clique em **Pesquisar** e visualize/imprima. **Limpar** zera os filtros.
+
+*(Print sugerido: filtros do Diário com período, Tarefa e caixas Lançamentos de Faturas / Exibir Taxas.)*
 
 ### Contas a Pagar
 
@@ -48,9 +50,12 @@ Relatórios
 
 | Filtro | Relatório | Descrição |
 |--------|-----------|-----------|
-| Data inicial / final | Ambos | Período do relatório |
+| Data inicial / final | Contas a Pagar | Período do relatório |
+| Dt. Lançamento / Dt. Pagamento | Diário | Períodos (campo de período com Limpar/Hoje/Confirmar) |
+| Operador | Diário | Lista todos os usuários da escola |
+| Lançamentos de Faturas | Diário | Só lançamentos de fatura de cartão institucional |
+| Exibir Taxas | Diário | Mostra também as taxas de cartão (ocultas por padrão) |
 | Fonte / Forma de Pagamento | Ambos | Origem/forma do valor |
-| Direção (entrada/saída) | Diário | Tipo de movimentação |
 | Centro de Custo / Conta / Credor | Contas a Pagar | Classificação da despesa |
 | A Pagar / a vencer / vencidas | Contas a Pagar | Situação das despesas |
 | Não considerar taxa de cartão | Contas a Pagar | Exclui taxas de cartão |
@@ -64,8 +69,9 @@ Relatórios
 | **Gerar/Imprimir** | Produz o relatório em PDF |
 | **Exportar para Excel** (ícone verde) | Exporta os lançamentos do **Diário Financeiro** para planilha. Fica no **topo da lista**, ao lado da pesquisa |
 
-O Diário Financeiro exibe, acima da lista, cartões com os **totais** do período: **Valor**,
-**Descontos**, **Desconto Extra**, **Multas** e **Juros**.
+O Diário Financeiro **não exibe mais** os cartões de totais nem a linha **TOTAIS** no rodapé (retirados em setembro/2026). A lista mostra as colunas **Valor**, **Operador**, **Desconto**, **Desc. Extra**, **Multa** e **Juros** linha a linha, e passou a vir em ordem de lançamento (mais antigo primeiro), 10 linhas por página.
+
+A coluna **Tarefa** tem cores: **RECMEN** (azul), **Out. Recebimentos** (verde-petróleo), **APAGAR** (âmbar) e **SANGRIA** (terracota). Lançamentos de fatura de cartão mostram, na **Referência**, etiquetas **Fat. #N** (verde, fatura quitada) ou **Fat. Pendente** (amarela) e o nome do cartão. Cartões RPU aparecem como *(Nx RPU)*.
 
 A lista do Diário Financeiro traz a coluna **Recibo**, com o número do recibo de cada lançamento —
 útil para localizar rapidamente a origem de uma movimentação e para conferir estornos.
@@ -119,7 +125,8 @@ Sim, a movimentação do caixa no período (entradas e saídas), conforme os fil
 
 ## Prints
 
-- [ ] Filtros do Diário Financeiro.
+- [ ] Filtros do Diário Financeiro (nova disposição).
+- [ ] Lista com cores de Tarefa e etiquetas de fatura.
 - [ ] Filtros do Contas a Pagar.
 - [ ] Relatórios gerados.
 
@@ -131,3 +138,4 @@ Sim, a movimentação do caixa no período (entradas e saídas), conforme os fil
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 21/08/2026 | O **Diário Financeiro (Consulta Diário)** passou a exibir a coluna **Recibo**, com o número do recibo de cada lançamento. |
+| 07/10/2026 | Diário Financeiro: filtros de período únicos, **Operador**, **Lançamentos de Faturas**, **Exibir Taxas**, cores por Tarefa, etiquetas de fatura, coluna Operador; cartões de totais removidos. |

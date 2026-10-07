@@ -19,7 +19,7 @@ Não descreve como o código foi implementado — descreve o comportamento do pr
 
 :::tip Atualizações quentes
 🔥 **Quer acompanhar as novidades mais recentes do Harpia?**
-Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir ajustes, melhorias e mudanças visíveis ao usuário.
+Veja a página de [Notas de versão](release-notes/2026-10.md) para conferir ajustes, melhorias e mudanças visíveis ao usuário.
 :::
 
 ---
@@ -111,6 +111,7 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Ajusta Saldo Final do Dia](financeiro/ajusta-saldo-final-dia.md)
 - [Ajusta Diário Financeiro](financeiro/ajusta-diario-financeiro.md)
 - [Encerramento de Caixa](financeiro/encerramento-caixa.md)
+- [Consulta de Caixas](financeiro/consulta-de-caixas.md)
 - [Encerramento de Movimentação](financeiro/encerramento-movimentacao.md)
 - [Entrada de Cartão](financeiro/entrada-cartao.md)
 - [Fatura de Cartão](financeiro/fatura-cartao.md)
@@ -160,6 +161,7 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Perfil (Permissões)](gerenciador/perfil.md)
 - [Usuários](gerenciador/usuarios.md)
 - [Gerenciador de Tabelas (uso técnico)](gerenciador/gerenciador-tabelas.md)
+- [Reset Financeiro do Aluno (Master)](gerenciador/reset-financeiro-aluno.md)
 
 ### Configurações
 - [Visão geral do módulo Configurações](configuracoes/README.md)
@@ -184,6 +186,9 @@ Veja a página de [Notas de versão](release-notes/2026-07.md) para conferir aju
 - [Perguntas frequentes — Financeiro](faq/financeiro.md)
 
 ### Notas de versão
+- [Outubro/2026](release-notes/2026-10.md)
+- [Setembro/2026](release-notes/2026-09.md)
+- [Relatório da atualização — 07/10/2026](release-notes/relatorio-atualizacao-2026-10-07.md)
 - [Agosto/2026](release-notes/2026-08.md)
 - [Julho/2026](release-notes/2026-07.md)
 - [Relatório da atualização — 21/08/2026](release-notes/relatorio-atualizacao-2026-08-21.md)

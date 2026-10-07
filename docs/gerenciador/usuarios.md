@@ -30,7 +30,7 @@ Gerenciador
 2. Clique em **Novo**.
 3. Informe o **Nome**, o **E-mail (Login)** e o **Operador**.
 4. Vincule o **Perfil** (permissões) e a **Unidade**.
-5. Defina a **Senha** inicial de acesso e, se for o caso, marque **Usuário Master**.
+5. Defina a **Senha** inicial de acesso e, se for o caso, marque **Usuário Master** e/ou **Operador de Caixa Master**.
 6. Clique em **Gravar**.
 
 > **Segurança:** a senha é definida pelo administrador para o **primeiro acesso**. Oriente o
@@ -50,6 +50,7 @@ Gerenciador
 | Unidade | Unidade/empresa do usuário | Sim | Multi-tenant |
 | Senha | Senha de acesso | Sim | Definida pelo administrador |
 | Usuário Master | Acesso total de administração | Não | Conceder com critério |
+| Operador de Caixa Master | Permite consultar o caixa de **todos** os operadores | Não | Ver [Consulta de Caixas](../financeiro/consulta-de-caixas.md) |
 | Ativado | Situação do acesso | Não | Desative em vez de excluir |
 
 ---
@@ -67,7 +68,7 @@ Gerenciador
 
 ## Filtros e colunas
 
-Colunas: **Nome**, **E-mail (Login)**, **Unidade**, **Ativado**.
+Colunas: **Nome**, **E-mail (Login)**, **Unidade**, **Ativado**. Usuários que são **Operador de Caixa Master** mostram um ícone verde de **cifrão ($)** na linha.
 
 ---
 
@@ -83,6 +84,8 @@ Colunas: **Nome**, **E-mail (Login)**, **Unidade**, **Ativado**.
 - O que o usuário vê/faz é determinado pelo **perfil**; os dados que enxerga, pela **unidade**.
 - Prefira **desativar** um usuário a excluí-lo, preservando o histórico de operações.
 - **Usuário Master** tem acesso amplo — conceda apenas a administradores.
+- **Operador de Caixa Master** vê, na [Consulta de Caixas](../financeiro/consulta-de-caixas.md), o caixa de **qualquer operador** (campo Operador opcional, com "Todos"). Os demais usuários enxergam **somente o próprio caixa**. Conceda a quem supervisiona o [Encerramento de Caixa](../financeiro/encerramento-caixa.md).
+- Agora é possível **gravar um usuário sem perfil vinculado** (por exemplo, enquanto o acesso ainda será definido); nesse caso ele não verá telas até receber um perfil.
 
 ---
 
@@ -134,7 +137,8 @@ O administrador, por esta tela. Oriente a troca no primeiro acesso.
 ## Prints
 
 - [ ] Lista de usuários.
-- [ ] Formulário (perfil, unidade, senha).
+- [ ] Formulário (perfil, unidade, senha, Operador de Caixa Master).
+- [ ] Lista com o ícone $ do Operador de Caixa Master.
 
 ---
 
@@ -143,3 +147,4 @@ O administrador, por esta tela. Oriente a troca no primeiro acesso.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 07/10/2026 | Incluído **Operador de Caixa Master** (campo, ícone $ na lista e regra de consulta) e gravação de usuário sem perfil. |

@@ -39,13 +39,18 @@ Financeiro
 7. Se necessário, ajuste **Valor da Parcela** e **Valor do Desconto**.
 8. Escolha o **Layout de impressão**: **1 boleto p/ página** ou **3 boletos p/ página**.
 9. Clique em **Gerar Boleto**.
-10. Visualize o resultado em **Visualização do Boleto** e imprima.
+10. Se algum boleto já existir em **banco diferente** do usado na impressão, o sistema abre a janela **Boletos com bancos divergentes encontrados** (veja Regras).
+11. Visualize o resultado em **Visualização do Boleto** e imprima.
 
 :::note Layout do boleto por banco
 A **visualização/impressão** usa o **layout correspondente ao banco selecionado**. Para os bancos
 que utilizam o layout **60**, o boleto é apresentado no **modelo de carnê** ("Carnê de Boletos"),
 com composição própria do **Nosso Número**. Os demais bancos seguem o layout padrão. A escolha é
 **automática**, conforme o cadastro do banco.
+:::
+
+:::note Impressão gerada pelo sistema (setembro/2026)
+A montagem do boleto/carnê para impressão agora é feita pelo servidor, com **novos layouts de carnê e de fatura** (incluindo o banco com layout 60), fontes padronizadas e o **sequencial** no boleto-fatura. O caminho de uso é o mesmo; só o visual impresso mudou, e a **geração não zera mais os dados da mensalidade** antes de gerar.
 :::
 
 :::note Layout de impressão (nº de boletos por página)
@@ -112,6 +117,7 @@ Quando a parcela possui **dedução**, o valor do boleto é calculado já com o 
 - **O dia do vencimento não pode ser superior a 31**; se o dia não existir no mês, o sistema avisa.
 - É obrigatório **selecionar um banco** (ou usar o banco do cadastro da turma).
 - É obrigatório **selecionar o Layout de impressão** (1 ou 3 boletos por página).
+- **Banco divergente:** se uma parcela já tem boleto de um banco diferente do usado na impressão (por exemplo, o banco definido no cadastro da turma), o sistema mostra a janela **Boletos com bancos divergentes encontrados**: *"Os boletos abaixo foram encontrados vinculados a um banco diferente do banco usado na impressão (...). Eles não serão incluídos na visualização caso você opte por seguir."* com a lista **Aluno / Matrícula / Parcela / Banco Encontrado** e os botões **Imprimir relatório**, **Abortar** e **Seguir para observação dos boletos**.
 - Alunos configurados para **não imprimir boleto** são ignorados (mensagem *"O aluno não imprime boleto."*).
 
 ---
@@ -127,6 +133,9 @@ Quando a parcela possui **dedução**, o valor do boleto é calculado já com o 
 - *"Dia do vencimento não pode ser superior a 31."*
 - *"O dia ... não existe em [mês]..."*
 - *"Nenhum boleto foi gerado"*
+- *"Não foi possível carregar os dados da tela. Verifique sua conexão e tente novamente."*
+- *"Não foi possível gerar os boletos. Verifique sua conexão e tente novamente."*
+- *"Não foi possível gerar o relatório."*
 - *"O aluno não imprime boleto."*
 
 ---
@@ -182,6 +191,8 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 
 ## Prints
 
+- [ ] Janela Boletos com bancos divergentes encontrados.
+- [ ] Novo layout de carnê impresso.
 - [ ] Tela de geração com filtros e o campo **Layout de impressão** — **recapturar**.
 - [ ] Visualização do boleto (**novo modelo**, com logo atualizado) — **recapturar**.
 - [ ] Visualização em **3 boletos por página**.
@@ -199,3 +210,4 @@ Depois de gerar, produza o [Arquivo de Remessa](arquivo-remessa.md).
 | 30/07/2026 | Página criada. Inclui geração pelo banco do cadastro da turma, opções de vencimento e ajustes de valores/estilo do boleto. |
 | 31/07/2026 | Novo **modelo de carnê** para bancos com layout 60 (seleção automática do layout conforme o banco). |
 | 07/08/2026 | **Novo modelo de boleto** (layout e logo atualizados). Novo campo **Layout de impressão** (1 ou 3 boletos por página), de seleção obrigatória. Exibição dos dados bancários (Agência/Carteira) para conferência. Valor do boleto passa a considerar a **dedução** no cálculo do valor líquido. Nova validação de **filtro obrigatório** (Curso/Turma/Aluno). |
+| 07/10/2026 | Impressão gerada pelo sistema com novos layouts de carnê/fatura; janela de **bancos divergentes**; geração não zera mais a mensalidade; novas mensagens de erro. |

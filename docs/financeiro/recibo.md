@@ -65,13 +65,13 @@ em dinheiro.
 |-------|-----------|
 | Val. Mens. | Valor da mensalidade/parcela |
 | Desconto | Desconto concedido (exibido com sinal negativo) |
-| Desconto Extra | Desconto adicional aplicado no recebimento |
+| Desconto Extra | Desconto adicional aplicado no recebimento (também no recibo de Outros Recebimentos) |
 | Dedução | Valor deduzido, quando houver (com a descrição da dedução) |
 | Acréscimos | Acréscimos aplicados, quando houver |
 | Juros | Juros por atraso |
 | **Total** | **Total apurado da parcela**: mensalidade + acréscimos + multas + juros − desconto − dedução − desconto extra |
 | **Pago** | **Valor efetivamente recebido**, em destaque |
-| Forma Pagto. | Quando o pagamento é por cartão, exibe a **máquina/tipo do cartão** (Crédito, Débito, Parcelado ou PIX) |
+| Forma Pagto. | Quando o pagamento é por cartão, exibe a **máquina/tipo do cartão** (Crédito, Débito, Parcelado ou PIX). Cartões **RPU** aparecem com o sufixo **- RPU** |
 
 > **Total x Pago:** o **Total** é o valor devido apurado da parcela; o **Pago** é o valor que
 > entrou de fato. Em recebimentos comuns os dois coincidem.
@@ -92,7 +92,9 @@ em dinheiro.
 
 ## Numeração e reemissão
 
-- Todo recebimento gera um **número de recibo sequencial** próprio.
+- Todo recebimento gera um **número de recibo sequencial** próprio, que **não repete** números já usados em Mensalidades ou Outros Recebimentos. Todas as parcelas de um mesmo Outros Recebimentos compartilham o **mesmo número**.
+- Em **adiantamentos** o título do recibo é **Recibo de Adiantamento** (nos demais, *Recibo de Pagamento*).
+- No recibo de **cortesia**, o valor pago aparece como **R$ 0,00**. Quando o aluno não tem matrícula (Outros Recebimentos avulsos), o recibo mostra só o **Nome**.
 - Ao **reimprimir**, o recibo **preserva o mesmo número**. Desde 07/08/2026, a 2ª via **não recebe
   mais a marca REEMISSÃO** — ela é idêntica ao recibo original.
 - O número do recibo também fica **registrado no estorno**, para rastreabilidade.
@@ -203,3 +205,4 @@ Não. A [Sangria](sangria.md) usa um comprovante próprio.
 | 31/07/2026 | Página criada. Centraliza a documentação do recibo (estrutura, numeração, reemissão e impressão), com forma de pagamento por parcelas (Nx), N° Doc. e Desconto Extra. |
 | 07/08/2026 | Removida a marca **REEMISSÃO** das 2ª vias (mantido o mesmo número). Incluída a linha **Total** no detalhamento de valores. **Forma de Pagto.** passa a exibir a **máquina/tipo do cartão** (Crédito/Débito/Parcelado/PIX). **Turma** exibida com a descrição e **cidade/UF** obtidas do cadastro da empresa. |
 | 21/08/2026 | Novo selo **CORTESIA** no recibo, exibido quando o recebimento é marcado como *Pagamento sem valor recebido (Cortesia)*. O **número do recibo** voltou a ser exibido também nos recibos de **estorno**. |
+| 07/10/2026 | Sufixo **- RPU**, título de **Adiantamento**, **Desconto Extra**, cortesia com R$ 0,00 e número de recibo único. |
