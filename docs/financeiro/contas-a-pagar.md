@@ -112,7 +112,7 @@ necessário — a nova escolha passa a ser a sugerida no próximo lançamento do
 | Projetar Lançamentos | Repete a despesa em vários meses | Não | Sim | |
 | Qtd. Lançamentos | Quantas projeções gerar | Condicional | 12 | Quando projeta |
 | Forma de Pagamento | Como será pago | No pagamento | Transferência | |
-| Fonte / Conta | Origem do valor | No pagamento | Banco X | |
+| Fonte / Conta | Origem do valor | No pagamento | Banco X | Com **Dinheiro**, só **CAIXA** ou **MEU CAIXA** |
 | Data do Pagamento | Data em que foi pago | No pagamento | 10/08/2026 | Não pode ser futura |
 | Hora do Pagamento | Hora do pagamento | Não | 14:30 | |
 | Juros / Multa / Desconto | Ajustes no pagamento | Não | 0,00 | |
@@ -168,6 +168,7 @@ identifica o tipo:
 ## Regras importantes
 
 - **Credor**, **Referente**, **Centro de Custo**, **Conta** e **Valor** são obrigatórios.
+- **Forma de pagamento Dinheiro:** a **Fonte** só pode ser **CAIXA** ou **MEU CAIXA**; as demais fontes não aparecem na lista. Se a fonte escolhida antes não for permitida, o sistema troca para **MEU CAIXA**.
 - **A Data de Pagamento não pode ser futura** e, quando a escola limita lançamentos retroativos, deve estar dentro do limite de dias.
 - **Valor líquido:** a coluna **Valor** e a prévia do estorno parcelado mostram o valor líquido, e o parcelamento no cartão divide o **valor líquido** entre as parcelas (as parcelas não repetem multa, juros nem desconto).
 - **Número do documento:** se ficar em branco, o sistema gera um automaticamente.
@@ -331,3 +332,4 @@ aceita até 99.
 | 07/08/2026 | Correção na **exclusão** de contas pagas com **cartão institucional**: a taxa do cartão vinculada passa a ser removida junto com o lançamento. |
 | 21/08/2026 | Novo **pagamento parcelado no cartão institucional de crédito**: campo **Qtd. Parcelas**, geração de uma conta a pagar por parcela e nova janela de **prévia do estorno parcelado** ("Informações do Estorno de Pagamento Parcelado"), com o detalhamento do que será reativado e do que será cancelado. |
 | 07/10/2026 | Coluna **Valor** líquida, **Desconto Extra**, campos de programação obrigatórios, limite retroativo, estorno com motivo e valor líquido, aviso/bloqueio por caixa pendente. |
+| 07/10/2026 | Com a forma de pagamento **Dinheiro**, a **Fonte** passa a aceitar somente **CAIXA** e **MEU CAIXA**. |
