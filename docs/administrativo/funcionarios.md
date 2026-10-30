@@ -72,7 +72,7 @@ O relatório correspondente fica em **Relatórios → Funcionários**.
 | **Pesquisar** | Busca funcionários |
 | **Impressão** | Emite a lista/ficha de funcionários |
 | **Gravar** | Salva o funcionário |
-| **Opções** | Editar/ativar/desativar |
+| **Ícones da linha** | Editar, ativar ou desativar o funcionário (lápis e demais ícones ao lado de cada registro) |
 
 ---
 
@@ -164,3 +164,4 @@ Não. O funcionário é o cadastro de RH; o acesso ao sistema é o [Usuário](..
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Terminologia padronizada: ações de cada registro descritas como **ícones da linha** (não há botão **Opções** no topo desta tela). |

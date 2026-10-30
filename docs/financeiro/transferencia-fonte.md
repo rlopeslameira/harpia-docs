@@ -25,34 +25,52 @@ Financeiro
 
 ## Como utilizar
 
-1. Abra **Transferência de Fonte**.
-2. Selecione a **Fonte de Origem** e a **Fonte de Destino**.
-3. Confira o **Saldo (R$)** da origem e informe o **Valor (R$)** a transferir.
+1. Abra **Transferência de Fonte**. A tela mostra primeiro a **lista das transferências já feitas** (consulta), já filtrada pelo dia de hoje.
+2. Para ver outros dias, ajuste **Data Inicial/Final** e, se quiser, o **Usuário**, e clique em **Pesquisar**.
+3. Para fazer uma nova transferência, clique em **Novo**. Abre a janela **Cadastrando Transferência de Fonte**.
 4. Confira a **Data** da transferência (já vem com hoje). Ao escolher a data, o sistema avisa se o caixa daquele dia está encerrado.
-5. Preencha **Referente** e, para contas bancárias, **Agência/Conta**.
-6. Clique em **Executar**.
+5. Selecione a **Fonte de Origem** e a **Fonte de Destino**. O sistema mostra o **Saldo R$** de cada uma (e **Agência/Conta**, quando for conta bancária).
+6. Informe o **Valor R$** a transferir e, se quiser, o **Referente**.
+7. Clique em **Gravar**. A janela fecha e a transferência aparece na lista. Para desistir, clique em **Cancelar**.
+
+![Transferência de Fonte: lista com filtros e botão Novo](../assets/images/financeiro/transferencia-fonte-lista.jpg)
+![Janela Cadastrando Transferência de Fonte](../assets/images/financeiro/transferencia-fonte-novo.jpg)
 
 ---
 
 ## Campos
 
+**Filtros da lista**
+
 | Campo | Descrição | Obrigatório | Observações |
 |-------|-----------|-------------|-------------|
-| Fonte de Origem | De onde sai o valor | Sim | |
-| Fonte de Destino | Para onde vai o valor | Sim | |
-| Saldo R$ | Saldo da origem | — | Exibido pelo sistema |
-| Valor R$ | Valor transferido | Sim | Não pode exceder o saldo |
+| Data Inicial/Final | Período das transferências | Não | Campo de período; abre com o dia de hoje |
+| Usuário | Quem lançou a transferência | Não | Abre com o usuário logado |
+
+**Colunas da lista:** Data, Hora, Usuário, Origem, Destino, Valor e Referente (os valores aparecem em R$).
+
+**Formulário (janela Novo)**
+
+| Campo | Descrição | Obrigatório | Observações |
+|-------|-----------|-------------|-------------|
 | Data | Data da transferência | Sim | Padrão: hoje. Não existe mais o campo *Data do Crédito* |
-| Referente | Descrição | Não | |
-| Agência / Conta | Dados bancários | Condicional | Para fontes bancárias |
+| Fonte de Origem | De onde sai o valor | Sim | |
+| Fonte de Destino | Para onde vai o valor | Sim | Não pode ser igual à origem |
+| Saldo R$ | Saldo de cada fonte | — | Exibido pelo sistema |
+| Agência / Conta | Dados bancários | — | Exibidos para fontes bancárias |
+| Valor R$ | Valor transferido | Sim | Não pode exceder o saldo da origem |
+| Referente | Descrição | Não | Ex.: "Depósito do caixa" |
 
 ---
 
 ## Botões
 
-| Botão | O que faz |
-|-------|-----------|
-| **Executar** | Efetiva a transferência entre as fontes |
+| Botão | Onde | O que faz |
+|-------|------|-----------|
+| **Pesquisar** | Lista | Mostra as transferências do período e usuário escolhidos |
+| **Novo** | Lista | Abre a janela para cadastrar uma transferência |
+| **Gravar** | Janela | Efetiva a transferência entre as fontes (substitui o antigo botão *Executar*) |
+| **Cancelar** | Janela | Fecha a janela sem gravar |
 
 ---
 
@@ -81,7 +99,9 @@ Financeiro
 - *"Erro ao salvar o registro!"*
 - *"Transferência gravada no Diário Financeiro, mas o saldo das fontes não foi atualizado. Execute o Encerramento da Movimentação para esta data."*
 - *"Valor Inválido!"* / *"Data Inválida!"*
-- *"Registro gravado com sucesso!"*
+- *"Registro salvo com sucesso!"*
+- *"Fonte não tem saldo!"* / *"Fontes iguais!"*
+- *"Erro ao carregar as transferências!"*
 
 ---
 
@@ -89,11 +109,13 @@ Financeiro
 
 ```mermaid
 flowchart TD
-    A[Selecionar origem e destino] --> B[Informar valor e data]
+    A[Abrir Transferência de Fonte] --> L[Lista de transferências do dia]
+    L --> N[Novo]
+    N --> B[Selecionar origem, destino, data e valor]
     B --> C{Caixa aberto e valor válido?}
-    C -->|Não| D[Sistema bloqueia]
-    C -->|Sim| E[Executar]
-    E --> F[Saldos atualizados]
+    C -->|Não| D[Sistema bloqueia o Gravar]
+    C -->|Sim| E[Gravar]
+    E --> F[Saldos atualizados e lista recarregada]
 ```
 
 ---
@@ -125,8 +147,9 @@ Não; é apenas movimentação entre fontes, sem afetar receita/despesa.
 
 ## Prints
 
-- [ ] Seleção de origem/destino.
-- [ ] Confirmação da transferência.
+- [x] **Novo:** lista de transferências com filtros (Data Inicial/Final e Usuário).
+- [x] **Novo:** janela "Cadastrando Transferência de Fonte" (origem/destino/saldos).
+- [x] Confirmação da transferência.
 - [ ] Aviso amarelo de caixa encerrado na data escolhida.
 
 ---
@@ -137,3 +160,4 @@ Não; é apenas movimentação entre fontes, sem afetar receita/despesa.
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 07/10/2026 | Campo **Data do Crédito** removido; aviso por data (caixa encerrado/inexistente), bloqueio do caixa de hoje e novas mensagens. |
+| 30/10/2026 | A tela passou a abrir com a **lista (consulta)** de transferências, filtros **Data Inicial/Final** e **Usuário**; o cadastro agora é feito em janela aberta pelo botão **Novo**, e o botão **Executar** virou **Gravar** (com **Cancelar**). Valores em R$ nas colunas. |

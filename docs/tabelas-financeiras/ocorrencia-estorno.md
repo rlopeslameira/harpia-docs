@@ -53,7 +53,7 @@ Tabelas
 | **Novo** | Cadastra um novo motivo |
 | **Pesquisar** | Busca motivos |
 | **Gravar** | Salva o registro |
-| **Opções** | Editar/desabilitar |
+| **Ícones da linha** | Editar ou desabilitar o registro (lápis e demais ícones ao lado de cada registro) |
 
 ---
 
@@ -113,3 +113,4 @@ Ao confirmar um estorno nas telas de recebimento/pagamento.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Terminologia padronizada: ações de cada registro descritas como **ícones da linha** (não há botão **Opções** no topo desta tela). |

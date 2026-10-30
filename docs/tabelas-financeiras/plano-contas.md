@@ -59,7 +59,22 @@ Tabelas
 | **Novo** | Cadastra uma nova conta |
 | **Pesquisar** | Busca contas |
 | **Gravar** | Salva a conta |
-| **Opções** | Editar/alterar classificação |
+| **Opções** | Abre um menu com **Imprimir** (relação do plano de contas) |
+| Ícones da linha | Editar ou alterar a classificação |
+
+---
+
+## Imprimir o plano de contas
+
+> Esta tela segue o padrão descrito em [Como imprimir relações nos cadastros](../getting-started/imprimir-relacoes.md).
+
+1. Clique em **Opções → Imprimir**.
+2. Na janela **Filtro para impressão**, informe um **Título** (opcional) e clique no ícone de impressora.
+3. O relatório **Plano de Contas** abre na janela de visualização.
+
+Sem registros: *"Nenhum registro encontrado para gerar o relatório."*
+
+![Janela Filtro para impressão do Plano de Contas](../assets/images/tabelas-financeiras/plano-contas-filtro-impressao.jpg)
 
 ---
 
@@ -119,3 +134,4 @@ Nos recebimentos, contas a pagar e nos relatórios financeiros por conta.
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | **Opções → Imprimir** passou a gerar a relação do plano de contas. |

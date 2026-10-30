@@ -64,7 +64,8 @@ Média**, marque as disciplinas desejadas e clique em **Gravar Alterações**.
 |-------|-----------|
 | **Novo** | Cadastra uma nova disciplina |
 | **Pesquisar** | Busca disciplinas |
-| **Opções** | Editar/excluir |
+| **Opções** | Abre um menu com **Imprimir** (relação de disciplinas) |
+| Ícones da linha | Editar ou excluir a disciplina |
 | **Gravar** | Salva a disciplina |
 | **Gravar Alterações** (Aprova com Base na Média) | Salva as marcações de aprovação por média |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
@@ -75,6 +76,20 @@ Média**, marque as disciplinas desejadas e clique em **Gravar Alterações**.
 
 Colunas na lista: **Código**, **Descrição**, **Controla Faltas**, **Lanç. de Notas**,
 **Imp. Boletim**, **Imp. Histórico**, **Itinerário**, **Avulso**.
+
+---
+
+## Imprimir a relação de disciplinas
+
+> Esta tela segue o padrão descrito em [Como imprimir relações nos cadastros](../getting-started/imprimir-relacoes.md).
+
+1. Clique em **Opções → Imprimir** (se quiser, preencha antes a **Descrição** para filtrar).
+2. Na janela **Filtro para impressão**, em **Organizar por**, escolha **Código** (padrão) ou **Descrição** e informe um **Título** se quiser.
+3. Clique no ícone de impressora e confira o relatório na janela de visualização.
+
+Sem disciplinas: *"Nenhuma disciplina encontrada para gerar o relatório."*
+
+![Janela Filtro para impressão das Disciplinas](../assets/images/academico/disciplinas-filtro-impressao.jpg)
 
 ---
 
@@ -154,3 +169,4 @@ disciplina (ver [Matérias](materias.md)).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | **Opções → Imprimir** passou a gerar a relação de disciplinas (organizada por código ou descrição). |

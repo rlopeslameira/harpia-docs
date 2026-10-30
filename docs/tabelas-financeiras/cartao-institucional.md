@@ -28,8 +28,12 @@ Tabelas
 1. Abra **Cartão Institucional**.
 2. Clique em **Novo**.
 3. Informe o **Nome do Cartão**, o **Número** e o **Tipo**.
-4. Defina o **Dia Padrão de Vencimento**, o **Centro de Custo** e a **Fonte Sugerida**.
+4. Defina o **Dia Padrão de Vencimento**, o **Dia de Fechamento da Fatura** (obrigatório para cartão do tipo **Crédito**), o **Centro de Custo** e a **Fonte Sugerida**.
 5. Clique em **Gravar**.
+
+![Lista de cartões com a coluna Dia de Fechamento da Fatura](../assets/images/tabelas-financeiras/cartao-institucional-lista.jpg)
+
+![Cadastro: campo Dia de Fechamento da Fatura (habilitado só para Crédito)](../assets/images/tabelas-financeiras/cartao-institucional-novo.jpg)
 
 ---
 
@@ -41,6 +45,7 @@ Tabelas
 | Número | Número/identificação | Não |
 | Tipo | Tipo do cartão | Não |
 | Dia Padrão de Vencimento | Vencimento da fatura | Não |
+| Dia de Fechamento da Fatura | Dia do mês (1 a 31) em que a fatura fecha. Só habilitado para cartão do tipo **Crédito**; também aparece como coluna na lista | Sim, para Crédito |
 | Centro de Custo | Centro de custo padrão | Não |
 | Fonte Sugerida | Fonte para pagamento da fatura | Não |
 
@@ -53,7 +58,7 @@ Tabelas
 | **Novo** | Cadastra um novo cartão institucional |
 | **Pesquisar** | Busca cartões |
 | **Gravar** | Salva o registro |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 
 ---
 
@@ -112,3 +117,4 @@ Em [Fatura de Cartão](../financeiro/fatura-cartao.md).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Novo campo **Dia de Fechamento da Fatura** (obrigatório para cartão de crédito; aviso *"Informe o dia de fechamento da fatura entre 1 e 31."*). Usado na [Fatura de Cartão](../financeiro/fatura-cartao.md). |

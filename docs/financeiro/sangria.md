@@ -36,6 +36,8 @@ Financeiro
 *(Print sugerido: filtros com período e lista de sangrias.)*
 *(Print sugerido: formulário com Saldo Atual (R$) e Sangria (R$).)*
 
+![Sangria: filtros e lista](../assets/images/financeiro/sangria.jpg)
+
 ---
 
 ## Campos
@@ -59,7 +61,7 @@ Financeiro
 | **Pesquisar** | Busca sangrias por período/usuário |
 | **Gravar** | Salva a sangria |
 | **Imprimir** | Emite o recibo de sangria |
-| **Opções** | Ações do registro |
+| **Ícones da linha** | Ações do registro (o botão **Opções** do topo foi removido) |
 
 ---
 

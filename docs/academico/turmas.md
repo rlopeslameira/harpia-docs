@@ -56,18 +56,26 @@ Tabelas
 | Exige Itinerário Formativo | Turma do Novo Ensino Médio | Não | |
 | Eletrônica (Catraca/Totem) — Dia/Horário | Regras de catraca | Não | |
 | Turma Final de Curso | Marca turma concluinte | Não | |
+| Turma ativa | Marca a turma como ativa (já vem marcada em turma nova) | Não | Usada no filtro de impressão *Somente Ativas* |
+
 | Turma Encerrada | Encerra a turma | Não | |
 
 ---
 
 ## Botões
 
+![Lista de turmas](../assets/images/academico/turmas-lista.jpg)
+
+![Cadastro da turma, aba Principal: campos Turma ativa e Turma encerrada](../assets/images/academico/turmas-form-principal.jpg)
+
+
 | Botão | O que faz |
 |-------|-----------|
 | **Novo** | Cria uma nova turma |
 | **Novo Com Base Nesse** | Duplica uma turma como ponto de partida |
 | **Pesquisar** | Busca turmas |
-| **Opções** | Editar/excluir/alunos registrados |
+| **Opções** | Abre um menu com **Imprimir** (relação de turmas) |
+| Ícones da linha | Editar, excluir e ver alunos registrados |
 | **Gravar** | Salva a turma |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
 
@@ -76,6 +84,24 @@ Tabelas
 ## Filtros e colunas
 
 Colunas: **Código**, **Descrição**, **Nível**, **Vagas Ocup(adas)**.
+
+---
+
+## Imprimir a relação de turmas
+
+> Esta tela segue o padrão descrito em [Como imprimir relações nos cadastros](../getting-started/imprimir-relacoes.md).
+
+1. Na lista de turmas, clique em **Opções → Imprimir**. Abre a janela **Filtro para impressão**.
+2. Em **Imprimir**, escolha **Somente Ativas** (padrão), **Somente Encerradas** ou **Todas**.
+3. Em **Imprimir a Oferta de Disciplinas**, escolha **Sim** ou **Não** (padrão: Não).
+4. Em **Classificado por**, escolha **Código** (padrão) ou **Descrição**, e informe um **Título** se quiser.
+5. Clique no ícone de impressora. O relatório abre em uma janela de visualização.
+
+Sem turmas para o filtro, aparece *"Nenhuma turma encontrada para gerar o relatório."* Falha na geração: *"Erro ao gerar relatório."*
+
+![Menu Opções com Imprimir](../assets/images/academico/turmas-menu-opcoes.jpg)
+
+![Janela Filtro para impressão das Turmas](../assets/images/academico/turmas-filtro-impressao.jpg)
 
 ---
 
@@ -142,7 +168,7 @@ Em [Oferta de Disciplina](oferta-disciplina.md).
 
 ## Prints
 
-- [ ] Lista de turmas.
+- [x] Lista de turmas.
 - [ ] Aba Principal.
 - [ ] Aba Configurações (avaliação, modelos, banco).
 
@@ -153,3 +179,4 @@ Em [Oferta de Disciplina](oferta-disciplina.md).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. Observação: o combo de **Banco para os Boletos** foi ajustado recentemente (jul/2026). |
+| 30/10/2026 | Novo campo **Turma ativa** no cadastro; **Opções → Imprimir** passou a gerar a relação de turmas (ativas/encerradas/todas, com ou sem oferta de disciplinas). |

@@ -24,35 +24,52 @@ Financeiro
 
 ## Como utilizar
 
-1. Abra **Ajusta Saldo Final do Dia**.
-2. Selecione a **Fonte** (a **Data** já vem com hoje).
-3. Clique em **Pesquisar**; o sistema mostra o **Saldo Atual (R$)**.
-4. Informe o **Novo Saldo (R$)** e uma **Observação**.
-5. Clique em **Ajustar Saldo**. Os campos continuam preenchidos depois de ajustar, para conferência.
+1. Abra **Ajusta Saldo Final do Dia**. A tela mostra primeiro a **lista dos ajustes já feitos**, filtrada pelo dia de hoje.
+2. Para ver outros dias, ajuste **Data Inicial/Final** e, se quiser, o **Usuário**, e clique em **Pesquisar**.
+3. Para fazer um novo ajuste, clique em **Novo** (fica desabilitado se houver caixa pendente — veja o aviso abaixo). Abre a janela **Ajustando Saldo Final do Dia**.
+4. Informe a **Data do Saldo** (já vem com hoje) e selecione a **Fonte**.
+5. Clique em **Buscar Saldo**; o sistema mostra o **Saldo Atual (R$)**.
+6. Informe o **Novo Saldo (R$)** e preencha a **Observação** (obrigatória).
+7. Clique em **Gravar**. Para desistir, clique em **Cancelar**.
 
-*(Print sugerido: Saldo Atual (R$) e Novo Saldo (R$) lado a lado.)*
+![Ajusta Saldo Final do Dia: lista de ajustes](../assets/images/financeiro/ajusta-saldo-lista.jpg)
+![Janela Ajustando Saldo Final do Dia](../assets/images/financeiro/ajusta-saldo-novo.jpg)
 
 ---
 
 ## Campos
 
+**Filtros da lista**
+
 | Campo | Descrição | Obrigatório |
 |-------|-----------|-------------|
+| Data Inicial/Final | Período dos ajustes | Não (padrão: hoje) |
+| Usuário | Quem fez o ajuste | Não |
+
+**Colunas da lista:** Data, Hora e Usuário (do ajuste); em **Saldo**: Data, Fonte, Atual e Novo; e Obs.
+
+**Formulário (janela Novo)**
+
+| Campo | Descrição | Obrigatório |
+|-------|-----------|-------------|
+| Data do Saldo | Data do fechamento (padrão: hoje) | Sim |
 | Fonte | Fonte a ajustar | Sim |
-| Data | Data do fechamento (padrão: hoje) | Sim |
-| Saldo Atual (R$) | Saldo em dinheiro da fonte na data | — |
-| Novo Saldo (R$) | Saldo correto, em dinheiro | Sim |
 | Agência / Conta | Dados bancários | Condicional |
-| Observação | Justificativa | Não |
+| Saldo Atual (R$) | Saldo em dinheiro da fonte na data (preenchido por **Buscar Saldo**) | — |
+| Novo Saldo (R$) | Saldo correto, em dinheiro | Sim |
+| Observação | Justificativa do ajuste | Sim |
 
 ---
 
 ## Botões
 
-| Botão | O que faz |
-|-------|-----------|
-| **Pesquisar** | Busca o saldo da fonte na data |
-| **Ajustar Saldo** | Grava o saldo final ajustado |
+| Botão | Onde | O que faz |
+|-------|------|-----------|
+| **Pesquisar** | Lista | Mostra os ajustes do período e usuário escolhidos |
+| **Novo** | Lista | Abre a janela de ajuste |
+| **Buscar Saldo** | Janela | Consulta o saldo atual da fonte na data |
+| **Gravar** | Janela | Grava o saldo final ajustado (substitui *Ajustar Saldo*) |
+| **Cancelar** | Janela | Fecha sem gravar |
 
 ---
 
@@ -67,7 +84,7 @@ Financeiro
 - Use com critério — o ajuste altera o saldo de fechamento considerado nos controles.
 - A data precisa ser válida e, em geral, o caixa da data não pode estar encerrado.
 - O saldo é **somente em dinheiro** (a opção cheque saiu da tela).
-- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Ajustar Saldo** fica desabilitado.
+- Com **caixa aberto de data anterior** ou **caixa de hoje encerrado**, o botão **Gravar** (e o **Novo** da lista) fica desabilitado.
 
 ---
 
@@ -75,6 +92,10 @@ Financeiro
 
 - *"Alterações salvas com sucesso!"* / *"Registro salvo com sucesso!"*
 - *"Data Inválida!"* / *"Valor Inválido!"*
+- *"Clique em Buscar Saldo para consultar o saldo atual da fonte."*
+- *"O novo saldo não pode ser igual ao saldo atual."*
+- *"Preencha a observação."* / *"Preencha o novo saldo."* / *"Selecione a fonte."*
+- *"Erro ao carregar os ajustes de saldo!"*
 
 ---
 
@@ -84,7 +105,7 @@ e/ou o **caixa de hoje já estiver encerrado**, aparece um **aviso amarelo** log
 (fecha no **X**), por exemplo: *"Existe caixa aberto de data(s) anterior(es) (dd/mm/aaaa). Verifique
 as pendências no Encerramento de Caixa."* ou *"O caixa de hoje já está encerrado. Verifique o
 Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o botão de gravar
-(Ajustar Saldo) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
+(Gravar) fica **desabilitado**. Resolva a pendência em [Encerramento de Caixa](encerramento-caixa.md)
 (a situação de cada dia pode ser consultada em [Consulta de Caixas](consulta-de-caixas.md)).
 :::
 
@@ -94,9 +115,10 @@ Encerramento de Caixa antes de continuar."* Enquanto o aviso estiver ativo, o bo
 
 ```mermaid
 flowchart TD
-    A[Selecionar fonte e data] --> B[Pesquisar]
-    B --> C[Informar o novo saldo]
-    C --> D[Ajustar Saldo]
+    A[Lista de ajustes] --> N[Novo]
+    N --> B[Informar data e fonte e Buscar Saldo]
+    B --> C[Informar novo saldo e observação]
+    C --> D[Gravar]
 ```
 
 ---
@@ -133,3 +155,4 @@ Não; é uma conciliação de saldo. O fechamento é o [Encerramento de Caixa](e
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 07/10/2026 | **Cheque removido** (um só saldo em dinheiro); campo **Fonte** (antes Fonte de Origem); data de hoje por padrão; campos não são limpos após ajustar; aviso/bloqueio de caixa pendente. |
+| 30/10/2026 | Passou a ter **lista (consulta)** de ajustes com filtros **Data Inicial/Final** e **Usuário**; o ajuste é feito em janela aberta por **Novo**, com **Buscar Saldo**, **Gravar** e **Cancelar**. **Observação** passou a ser obrigatória e não é aceito novo saldo igual ao atual. |

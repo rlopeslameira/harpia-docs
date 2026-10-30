@@ -56,7 +56,7 @@ Tabelas
 | **Novo** | Cadastra uma nova ocorrência |
 | **Pesquisar** | Busca ocorrências |
 | **Gravar** | Salva o registro |
-| **Opções** | Editar/ativar/desativar |
+| **Ícones da linha** | Editar, ativar ou desativar o registro (lápis e demais ícones ao lado de cada registro) |
 
 ---
 
@@ -125,3 +125,4 @@ Na abertura de requerimentos/ocorrências da secretaria e nos relatórios corres
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Terminologia padronizada: ações de cada registro descritas como **ícones da linha** (não há botão **Opções** no topo desta tela). |

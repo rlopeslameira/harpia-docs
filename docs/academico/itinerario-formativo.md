@@ -47,7 +47,7 @@ Tabelas
 |-------|-----------|
 | **Novo** | Cadastra um novo itinerário |
 | **Pesquisar** | Busca itinerários |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 | **Gravar** | Salva o itinerário |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
 

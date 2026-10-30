@@ -15,8 +15,8 @@ As telas ficam no grupo **Relatórios** do menu lateral.
 
 | Relatório | Para que serve | Documentação |
 |-----------|----------------|--------------|
-| Relatórios Financeiros | Diário Financeiro e Contas a Pagar | [Abrir](financeiros.md) |
-| Relatórios de Secretaria | Alunos por Turma, Assinaturas, Matrícula, Frequência, Boletim | [Abrir](secretaria.md) |
+| Relatórios Financeiros | Diário Financeiro, Contas a Pagar, Movimentação Financeira e Outros Recebimentos | [Abrir](financeiros.md) |
+| Relatórios de Secretaria | Alunos por Turma, Responsáveis, Assinaturas, Matrícula, Frequência, Boletim | [Abrir](secretaria.md) |
 | Relatórios de Funcionários | Relação de Colaboradores: Resumido, Detalhado e Assinatura | [Abrir](funcionarios.md) |
 | Relatório de Turma Regular | Listagem de turmas | [Abrir](turma-regular.md) |
 

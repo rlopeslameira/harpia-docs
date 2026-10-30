@@ -62,7 +62,7 @@ Tabelas
 | **Novo** | Cadastra um novo cartão/máquina |
 | **Pesquisar** | Busca cartões |
 | **Gravar** | Salva o registro |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 
 ---
 

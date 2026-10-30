@@ -30,6 +30,8 @@ Financeiro
 4. Informe a **Data**, a **Hora** e o **Valor (R$)**.
 5. Clique em **Gravar**.
 
+![Abastecimento de Caixa: filtro Data Inicial/Final e Usuário](../assets/images/financeiro/abastecimento-caixa.jpg)
+
 ---
 
 ## Campos
@@ -50,14 +52,14 @@ Financeiro
 | **Novo** | Novo abastecimento |
 | **Pesquisar** | Busca abastecimentos por período/usuário |
 | **Gravar** | Salva o abastecimento |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
 
 ---
 
 ## Filtros e colunas
 
-Filtros: **Data Início**, **Data Final**, **Usuário**. Colunas: **Data**, **Hora**, **Valor**,
+Filtros: **Data Inicial/Final** (campo de período) e **Usuário**. Colunas: **Data**, **Hora**, **Valor**,
 **Abastecido Por**, **Abastecido Em**.
 
 ---
@@ -134,3 +136,4 @@ Não; é o fundo de troco. Não representa entrada de receita, apenas saldo inic
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 07/10/2026 | Aviso e bloqueio do botão **Novo** quando há caixa pendente; o abastecimento não grava mais o fechamento do caixa. |
+| 30/10/2026 | Filtros de data unificados em **Data Inicial/Final** (campo de período); botão de topo **Opções** (Imprimir/Excel/Ajuda) removido da tela. |

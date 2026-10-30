@@ -61,7 +61,8 @@ Tabelas
 | **Novo Com Base Nesse** | Duplica um plano existente |
 | **Pesquisar** | Busca planos |
 | **Gravar** | Salva o plano |
-| **Opções** | Editar/desabilitar |
+| **Opções** | Abre um menu com **Imprimir** (relação dos planos) |
+| Ícones da linha | Editar ou desabilitar o plano |
 
 ---
 
@@ -69,6 +70,20 @@ Tabelas
 
 Colunas: **Código**, **Descrição**, **Valor 1ª Parcela**, **Desc. 1ª Parcela**, **Desconto**,
 **Matríc. Auto**, **Status**.
+
+---
+
+## Imprimir a relação de planos
+
+> Esta tela segue o padrão descrito em [Como imprimir relações nos cadastros](../getting-started/imprimir-relacoes.md).
+
+1. Clique em **Opções → Imprimir**.
+2. Na janela **Filtro para impressão**, escolha **Imprime Parcelas do Plano de Pagamento** (**Sim/Não**, padrão Não) e **Imprime Contas** (**Sim/Não**, padrão Sim) e, se quiser, um **Título**.
+3. Clique no ícone de impressora. O relatório abre em **Plano de Pagamento - Visualização do relatório**.
+
+Sem registros: *"Nenhum registro encontrado para gerar o relatório."*
+
+![Janela Filtro para impressão do Plano de Pagamento](../assets/images/tabelas-financeiras/plano-pagamento-filtro-impressao.jpg)
 
 ---
 
@@ -131,3 +146,4 @@ escolhido na aba Matrícula do [Cadastro de Alunos](../cadastro/alunos.md).
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | **Opções → Imprimir** passou a gerar a relação dos planos de pagamento (com opção de imprimir parcelas e contas). |

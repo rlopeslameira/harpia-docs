@@ -49,7 +49,7 @@ Tabelas
 |-------|-----------|
 | **Novo** | Cadastra uma nova matéria |
 | **Pesquisar** | Busca matérias |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 | **Gravar** | Salva a matéria |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
 

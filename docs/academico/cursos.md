@@ -63,7 +63,7 @@ Tabelas
 |-------|-----------|
 | **Novo** | Cadastra um novo curso |
 | **Pesquisar** | Busca cursos |
-| **Opções** | Editar/excluir |
+| **Ícones da linha (lápis / lixeira)** | Editar ou excluir o registro (a lixeira aparece só para quem tem permissão de excluir). O antigo botão **Opções** do topo foi removido |
 | **Gravar** | Salva o curso |
 | **Confirmar/Cancelar Exclusão** | Confirma ou cancela a exclusão |
 

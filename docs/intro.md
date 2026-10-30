@@ -29,6 +29,7 @@ Veja a página de [Notas de versão](release-notes/2026-10.md) para conferir aju
 ### Primeiros passos
 - [Introdução ao Harpia](getting-started/introducao.md)
 - [Como navegar no sistema](getting-started/navegacao.md)
+- [Como imprimir relações nos cadastros](getting-started/imprimir-relacoes.md)
 - [Dashboard (Meus widgets)](getting-started/dashboard.md)
 - [Talita — Assistente Virtual](getting-started/assistente-virtual.md)
 
@@ -188,6 +189,7 @@ Veja a página de [Notas de versão](release-notes/2026-10.md) para conferir aju
 ### Notas de versão
 - [Outubro/2026](release-notes/2026-10.md)
 - [Setembro/2026](release-notes/2026-09.md)
+- [Relatório da atualização — 30/10/2026](release-notes/relatorio-atualizacao-2026-10-30.md)
 - [Relatório da atualização — 07/10/2026](release-notes/relatorio-atualizacao-2026-10-07.md)
 - [Agosto/2026](release-notes/2026-08.md)
 - [Julho/2026](release-notes/2026-07.md)

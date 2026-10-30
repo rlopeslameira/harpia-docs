@@ -34,6 +34,16 @@ Relatórios
 
 ## Relatórios disponíveis
 
+### Relação de Responsáveis
+Lista os alunos com seus responsáveis (financeiro e acadêmico) para conferência de contatos.
+
+1. Abra **Relatórios → Secretaria → Responsáveis**.
+2. Em **Filtros**, ligue as chaves de **Situação** que deseja (**Matriculado** já vem ligado; também há Cancelado, Abandono, Transferido, Trancado e Registrado). Depois filtre por **Turmas** e **Turno** (Manhã, Tarde, Noite, Semi-Integral ou Integral) e, se precisar, marque **Somente Sem Responsável Acadêmico** para achar alunos sem esse cadastro.
+3. Em **Organização**, escolha **Classificado por**: *Aluno*, *Turma*, *Matrícula*, *Resp. Financeiro* ou *Resp. Acadêmico*, e informe um **Título** (opcional).
+4. Use o botão verde (Excel) ou o azul (Imprimir/PDF) no canto inferior direito. Sem resultado: *"Nenhum registro encontrado para os filtros selecionados."*
+
+![Relação de Responsáveis: filtros e organização](../assets/images/relatorios/responsaveis-filtros.jpg)
+
 ### Alunos por Turma
 Lista os alunos de uma ou mais turmas. Opções:
 - **Tipo de turma:** *Somente Turmas Regulares* ou *Somente Turmas Auxiliares*.
@@ -163,3 +173,4 @@ A turma precisa ser **reprocessada** após as alterações (ver [Processamento d
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 07/10/2026 | **Alunos por Turma:** novo campo de **Título**, nova coluna **Matrícula / Sit**, dados de plano, convênio e vencimento, responsável sob o nome, bloqueios para **Turmas Auxiliares**; retirados **Nível** e **Mês de Aniversário**. Incluída a **Relação de Assinaturas**. |
+| 30/10/2026 | Novo relatório **Responsáveis** (filtros Turmas, Turno e Somente Sem Responsável Acadêmico; PDF e Excel). |

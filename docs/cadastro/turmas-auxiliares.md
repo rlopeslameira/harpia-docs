@@ -53,7 +53,22 @@ Cadastro
 | Botão | O que faz |
 |-------|-----------|
 | **Pesquisar** | Lista os alunos conforme os filtros |
-| **Opções** | Ações da linha (vincular/desvincular) |
+| **Opções** | Abre um menu com **Imprimir** (relação de alunos por turma auxiliar) |
+
+---
+
+## Imprimir a relação de alunos por turma auxiliar
+
+> Esta tela segue o padrão descrito em [Como imprimir relações nos cadastros](../getting-started/imprimir-relacoes.md).
+
+1. Filtre a **Turma Regular** e/ou a **Turma Auxiliar** desejadas (os filtros da tela valem para o relatório).
+2. Clique em **Opções → Imprimir**.
+3. Na janela **Filtro para impressão**, escolha **Imprime Linha para Assinatura/Obs** (**Sim/Não**, padrão Não) e, se quiser, um **Título**.
+4. Clique no ícone de impressora. O relatório abre em **Relação de Alunos por Turma Auxiliar**.
+
+Sem alunos: *"Nenhum registro encontrado para gerar o relatório."*
+
+![Janela Filtro para impressão de Alunos por Turma Auxiliar](../assets/images/cadastro/turmas-auxiliares-filtro-impressao.jpg)
 
 ---
 
@@ -112,3 +127,4 @@ Um agrupamento paralelo à turma regular (reforço, optativa, atividade), sem tr
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Novo relatório **Relação de Alunos por Turma Auxiliar** em **Opções → Imprimir**. |

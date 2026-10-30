@@ -56,7 +56,7 @@ Tabelas
 | **Novo** | Cadastra uma nova fonte |
 | **Pesquisar** | Busca fontes |
 | **Gravar** | Salva a fonte |
-| **Opções** | Editar/desabilitar |
+| **Ícones da linha** | Editar ou desabilitar o registro (lápis e demais ícones ao lado de cada registro) |
 
 ---
 
@@ -118,3 +118,4 @@ Prefira **desabilitar** — a exclusão pode ser impedida por lançamentos vincu
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 30/10/2026 | Terminologia padronizada: ações de cada registro descritas como **ícones da linha** (não há botão **Opções** no topo desta tela). |
