@@ -26,11 +26,16 @@ Notas
 ## Como utilizar
 
 1. Abra **Notas por Turma**.
-2. Selecione a **Turma**, a **Disciplina** e a **Matéria** (se houver).
-3. Selecione a **Avaliação/Recuperação** (o período/etapa).
-4. A lista de alunos aparece com a coluna de **Nota**.
-5. Informe a **Nota** de cada aluno e, quando aplicável, marque **Fez Avaliação?**.
-6. Clique em **Gravar**.
+2. No painel **Seleção**, escolha a **Turma**, a **Disciplina**, a **Matéria** (se a disciplina
+   tiver matérias) e a **Avaliação / Recuperação**. A lista de alunos aparece automaticamente.
+3. Digite a **Nota** de cada aluno. Use **Enter** ou **↓** para ir ao próximo aluno e **↑** para voltar.
+   Aceita vírgula ou ponto (7,5 ou 7.5).
+4. Quando o aluno não fez a avaliação, escolha **Não** em **Fez avaliação?** — a nota passa a 0.
+5. Os alunos alterados ficam marcados à esquerda; o rodapé mostra quantos ainda não foram gravados.
+6. Clique em **Gravar notas**.
+
+Para lançar a mesma avaliação em outra disciplina, basta trocar a disciplina: a avaliação
+continua selecionada.
 
 ---
 
@@ -38,14 +43,18 @@ Notas
 
 | Campo/Coluna | Descrição |
 |--------------|-----------|
-| Selecione a Turma | Turma |
-| Selecione a Disciplina | Disciplina |
-| Selecione a Matéria | Matéria (quando a disciplina tem matérias) |
-| Selecione a Avaliação/Recuperação | Etapa avaliativa |
-| Nº de Ordem / Matrícula / Nome | Identificação do aluno |
-| Nota | Nota lançada (máx. 10,00) |
-| Conceitos | Conceito (quando a turma usa conceito) |
-| Fez Avaliação? | Indica se o aluno realizou a avaliação |
+| Turma | Turma (somente turmas com alunos matriculados) |
+| Disciplina | Disciplinas ofertadas para a turma |
+| Matéria | Aparece só quando a disciplina tem matérias; obrigatória nesse caso |
+| Avaliação / Recuperação | Etapa avaliativa que será lançada |
+| Buscar aluno | Filtra a lista por nome, matrícula ou nº de ordem |
+| Nº / Aluno | Nº de ordem, nome e matrícula |
+| Nota | Nota da avaliação (0 a 10, até 2 casas decimais) |
+| Fez avaliação? | Sim, Não, Sem lançamento ou Ignorar |
+| Conceito | Conceito do aluno (quando a turma lança por conceito, no lugar de Nota) |
+
+No cabeçalho da seleção aparecem a forma de lançamento da turma (**nota** ou **conceito**) e,
+para matérias, o **tipo de cálculo** da disciplina (Soma ou Média).
 
 ---
 
@@ -53,7 +62,8 @@ Notas
 
 | Botão | O que faz |
 |-------|-----------|
-| **Gravar** | Salva as notas da turma |
+| **Gravar notas** | Salva somente os alunos alterados |
+| **Descartar** | Desfaz as alterações ainda não gravadas e recarrega as notas |
 
 ---
 
@@ -65,19 +75,23 @@ Notas
 
 ## Regras importantes
 
-- **Turma**, **Disciplina** e **Avaliação** são obrigatórias; matéria é obrigatória se a
-  disciplina tiver matérias.
-- **A nota máxima permitida é 10,00.**
-- Disciplinas com **matérias** exigem a seleção da matéria.
+- Só aparecem alunos com situação **Matriculado**.
+- **A nota máxima permitida é 10,00**; notas negativas ou com letras não são aceitas.
+- Digitar uma nota marca **Fez avaliação? = Sim**. Apagar a nota volta para **Sem lançamento**.
+- **Não** grava a nota 0. **Sem lançamento** deixa a nota em branco. **Ignorar** mantém a nota como está.
+- Ao trocar turma, disciplina, matéria ou avaliação com alterações não gravadas, o sistema pede
+  confirmação antes de descartá-las.
+- Gravar marca a turma como pendente de processamento do boletim.
 
 ---
 
 ## Mensagens do sistema
 
-- *"Selecione Turma!"* / *"Selecione Disciplina!"* / *"Selecione Materia!"* / *"Selecione Avaliação!"*
-- *"Informe a Matéria"*
-- *"Nota máxima permitida é 10.00"*
-- *"Erro ao salvar o registro"*
+- *"A nota máxima é 10."* / *"A nota não pode ser negativa."* / *"Use apenas números, por exemplo 7,5."*
+  (aparecem embaixo do campo de nota)
+- *"Corrija as notas destacadas em vermelho antes de gravar."*
+- *"X de N alunos não foram gravados (…)"* — no lançamento por conceito, os demais foram gravados;
+  os que falharam continuam marcados para nova tentativa.
 
 ---
 
@@ -108,8 +122,8 @@ cada aluno e gravar.
 
 ## Erros comuns
 
-- **"Nota máxima permitida é 10.00"** → revise a nota digitada.
-- **"Informe a Matéria"** → selecione a matéria da disciplina.
+- **Campo de nota em vermelho** → corrija o valor (0 a 10) antes de gravar.
+- **A lista não aparece** → verifique se a matéria foi selecionada (disciplinas com matérias).
 
 ---
 
@@ -132,3 +146,4 @@ Não. Aqui você lança a turma toda; para ajustes pontuais use [Notas por Aluno
 | Data | Alteração |
 |------|-----------|
 | 30/07/2026 | Página criada. |
+| 02/11/2026 | Novo layout: seleção em painel, busca de aluno, navegação por teclado, gravação só dos alterados e regra de "Fez avaliação?". |
