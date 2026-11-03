@@ -28,10 +28,11 @@ Gerenciador
 
 1. Abra **Usuários**.
 2. Clique em **Novo**.
-3. Informe o **Nome**, o **E-mail (Login)** e o **Operador**.
-4. Vincule o **Perfil** (permissões) e a **Unidade**.
-5. Defina a **Senha** inicial de acesso e, se for o caso, marque **Usuário Master** e/ou **Operador de Caixa Master**.
-6. Clique em **Gravar**.
+3. Em **Identificação**, informe o **Nome completo** e o **Operador** e, se quiser, a foto (**Alterar Foto**).
+4. Em **Dados de acesso**, informe o **E-mail (login)** e a **Senha** inicial (use o ícone de olho para conferir o que foi digitado).
+5. Em **Situação e privilégios**, confira **Usuário ativo** (já vem ligado) e, se for o caso, ligue **Usuário Master** e/ou **Operador de Caixa Master** — cada opção explica o que concede.
+6. Em **Perfis de acesso nesta unidade**, escolha o perfil e clique em **Adicionar** (repita para mais perfis; o ícone de lixeira remove).
+7. Clique em **Cadastrar usuário** (ou **Salvar alterações**, na edição).
 
 > **Segurança:** a senha é definida pelo administrador para o **primeiro acesso**. Oriente o
 > usuário a trocá-la e nunca compartilhe senhas. Conceda **Usuário Master** apenas quando
@@ -43,15 +44,15 @@ Gerenciador
 
 | Campo | Descrição | Obrigatório | Observações |
 |-------|-----------|-------------|-------------|
-| Nome | Nome do usuário | Sim | |
-| E-mail (Login) | E-mail usado para entrar | Sim | É o login |
+| Nome completo | Nome do usuário | Sim | |
+| E-mail (login) | E-mail usado para entrar | Sim | É o login; não pode ser alterado após o cadastro |
 | Operador | Identificação do operador | Não | Liga ao funcionário |
-| Perfil | Perfil de permissões | Sim | Ver [Perfil](perfil.md) |
+| Perfil | Perfis de permissões da unidade atual (um ou mais) | Não | Ver [Perfil](perfil.md) |
 | Unidade | Unidade/empresa do usuário | Sim | Multi-tenant |
-| Senha | Senha de acesso | Sim | Definida pelo administrador |
+| Senha | Senha de acesso | Sim | Definida pelo administrador; diferencia maiúsculas e minúsculas; até 30 caracteres |
 | Usuário Master | Acesso total de administração | Não | Conceder com critério |
 | Operador de Caixa Master | Permite consultar o caixa de **todos** os operadores | Não | Ver [Consulta de Caixas](../financeiro/consulta-de-caixas.md) |
-| Ativado | Situação do acesso | Não | Desative em vez de excluir |
+| Usuário ativo | Situação do acesso | Não | Novo usuário já vem ativo; desative em vez de excluir |
 
 ---
 
@@ -61,14 +62,17 @@ Gerenciador
 |-------|-----------|
 | **Novo** | Cadastra um novo usuário |
 | **Pesquisar** | Busca usuários |
-| **Gravar** | Salva o usuário |
+| **Cadastrar usuário** / **Salvar alterações** | Salva o usuário |
+| **Excluir usuário** | Na exclusão, confirma a remoção do usuário e de seus perfis (não pode ser desfeita) |
 | **Opções** | Editar/ativar/desativar |
 
 ---
 
 ## Filtros e colunas
 
-Colunas: **Nome**, **E-mail (Login)**, **Unidade**, **Ativado**. Usuários que são **Operador de Caixa Master** mostram um ícone verde de **cifrão ($)** na linha.
+Filtros: **Nome** (parte do nome) e **Situação** (Todos, Ativos ou Inativos). Acima da lista aparece o total de usuários exibidos, ativos e inativos.
+
+Colunas: **Usuário** (foto, nome e operador), **E-mail (login)**, **Situação** (Ativo/Inativo) e **Privilégios** — etiquetas **Master** e **Caixa Master** (Operador de Caixa Master). Em cada linha: **Editar** (lápis), **Ver perfis** e **Excluir** (lixeira), conforme a permissão.
 
 ---
 
@@ -138,7 +142,7 @@ O administrador, por esta tela. Oriente a troca no primeiro acesso.
 
 - [ ] Lista de usuários.
 - [ ] Formulário (perfil, unidade, senha, Operador de Caixa Master).
-- [ ] Lista com o ícone $ do Operador de Caixa Master.
+- [ ] Lista com as etiquetas de privilégio (Master / Caixa Master).
 
 ---
 
@@ -148,3 +152,4 @@ O administrador, por esta tela. Oriente a troca no primeiro acesso.
 |------|-----------|
 | 30/07/2026 | Página criada. |
 | 07/10/2026 | Incluído **Operador de Caixa Master** (campo, ícone $ na lista e regra de consulta) e gravação de usuário sem perfil. |
+| 02/11/2026 | Formulário reorganizado em seções (Identificação, Dados de acesso, Situação e privilégios, Perfis), senha mascarada com opção de exibir e novos rótulos dos botões. Lista com filtro de Situação, resumo de totais e etiquetas de privilégio. |
