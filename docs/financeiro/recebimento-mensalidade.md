@@ -119,6 +119,7 @@ O **[recibo](recibo.md)** traz, além dos dados do aluno e da parcela:
 - **Caixa:** o **caixa de hoje** também não pode estar encerrado para gravar (*"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."*). Com aviso de caixa pendente, o recebimento fica bloqueado (veja a [Ficha Financeira](ficha-financeira.md)).
 - **O Valor Pago não pode ser menor que a soma de Juros e Multa.**
 - Se o **caixa estiver encerrado** para a data informada, o recebimento é **bloqueado**.
+- Se **não existir caixa** do operador para a **Data do Pagamento** (data anterior a hoje), o sistema **abre o caixa desse dia** automaticamente ao gravar. Ele fica pendente até ser encerrado em [Encerramento de Caixa](encerramento-caixa.md).
 - No recebimento com valor a menor, **é preciso distribuir todo o valor informado** entre as parcelas.
 
 ---
@@ -219,3 +220,4 @@ Use o [Estorno](#) na própria movimentação; o número do recibo é registrado
 | 07/08/2026 | Recibo passa a exibir a linha **Total** e, nos pagamentos por cartão, a **máquina/tipo do cartão** na Forma de Pagto. Correção da gravação do recebimento de **adiantamento** (sem impacto no fluxo de uso). |
 | 21/08/2026 | Cartões marcados como **RPU** passam a aparecer com a marcação **- RPU** na descrição do dropdown e mantêm o campo **Qtd. Parcelas** desabilitado em 1. No **estorno**, o **número do recibo** voltou a ser exibido, e o estorno de pagamentos parcelados passou a reverter **todos os lançamentos** da operação. |
 | 07/10/2026 | Campo **Bom Para** retirado; regras de **cortesia**, fonte por forma de pagamento (cartão/PIX), cartão obrigatório, taxa parcelada de cartão, recibo de adiantamento e bloqueio do caixa de hoje. |
+| 06/11/2026 | Ao gravar com Data do Pagamento sem caixa, o sistema abre o caixa do operador nesse dia. |
