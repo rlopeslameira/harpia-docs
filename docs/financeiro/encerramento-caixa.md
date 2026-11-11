@@ -74,7 +74,7 @@ financeira poderá ser registrada nesta data."*
 ## Resultados
 
 - **Entradas:** abastecimento, recebimentos em dinheiro e em cartão (Meu Caixa e Outras Fontes).
-- **Saídas:** sangrias, estornos e contas pagas.
+- **Saídas:** sangrias, estornos, contas pagas e faturas de cartão institucional quitadas no período.
 - **Resumo:** pagamento de mensalidade, baixa, outros recebimentos, estornos, sangria, **Fatura de Cartão Institucional** e contas a pagar.
 - **Total Geral** do dia. Ao encerrar, o valor é gravado por dia.
 - O caixa do período fica **encerrado** e bloqueado para novos lançamentos.
@@ -84,10 +84,11 @@ financeira poderá ser registrada nesta data."*
 ## Regras importantes
 
 - **Depois de encerrado, nenhuma movimentação pode ser registrada na data.** Nas telas de recebimento/pagamento aparece *"Caixa Encerrado para a ..."* ou *"O caixa de hoje (dd/MM/aaaa) está encerrado! Não é permitido lançar valores."* — veja a [regra no módulo](README.md#regras-gerais-do-módulo).
-- O caixa de um dia **existe** quando o operador teve **movimentação** nele (recebimento, pagamento, abastecimento ou sangria). Dia sem movimentação é *"inexistente"* e não é gravado — exceto quando um [Recebimento de Mensalidade](recebimento-mensalidade.md) é gravado com Data do Pagamento desse dia: o caixa é aberto automaticamente.
+- O caixa de um dia **existe** quando o operador teve **movimentação** nele (recebimento, pagamento, abastecimento, sangria ou quitação de fatura de cartão institucional). Dia sem movimentação é *"inexistente"* e não é gravado — exceto quando um [Recebimento de Mensalidade](recebimento-mensalidade.md) é gravado com Data do Pagamento desse dia: o caixa é aberto automaticamente.
 - **Transferência de Fonte** e **taxas de cartão** não contam no caixa.
 - Só entram nos totais as formas **Dinheiro** e **Cartão**.
-- Contas a pagar com baixa no período pagas com **cartão institucional de crédito** somam na linha **Dinheiro** das Saídas (não em **Cartão**, mesmo que a forma de pagamento do cartão seja do tipo Cartão), porque o valor sai da fonte e não da maquininha. No Resumo aparecem em **Fatura de Cartão Institucional** no lugar de **A Pagar**, para o mesmo valor não ser contado duas vezes. O **Total Geral** não muda. Ver [Fatura de Cartão](fatura-cartao.md).
+- Conta a pagar paga com **cartão institucional de crédito** entra no caixa **do dia da baixa** como qualquer pagamento em cartão: **Cartão / Outras Fontes** nas Saídas e **A Pagar** no Resumo. Nesse dia nada saiu da fonte.
+- A saída do dinheiro acontece no **dia da quitação da fatura** ([Fatura de Cartão](fatura-cartao.md)): a fatura quitada soma em **Dinheiro / Outras Fontes** nas Saídas e na linha **Fatura de Cartão Institucional** do Resumo, no caixa do operador que confirmou a quitação. Estornar a quitação ([Fatura de Cartão Quitada](fatura-cartao-quitada.md)) tira esse valor do caixa do dia em que a quitação havia sido confirmada.
 - Encerrar um caixa com total zerado, mas com movimentação, **também fecha** o dia (senão ele continuaria pendente).
 - **Operador de Caixa Master** (marcação no cadastro de [Usuários](../gerenciador/usuarios.md)) pode escolher um período e qualquer operador; os demais, um dia e só o próprio caixa.
 - Reabrir apaga a marca de encerramento do período; reabra com critério.
