@@ -61,6 +61,15 @@ o sistema avisa: *"Nenhuma movimentação encontrada no período. Verifique se o
 
 ![Prévia com lançamentos, totais do período e aviso de dias sem saldo processado](../assets/images/relatorios/movimentacao-financeira-previa.jpg)
 
+### Lançamentos de Entrada de Caixa
+
+Lista as **entradas (receitas)** lançadas no Caixa e nos Bancos, para conferência. Não inclui taxas de cartão nem transferências entre fontes.
+
+1. Abra **Relatórios → Financeiro → Lançamentos de Entrada de Caixa**.
+2. Informe o **Período (Data do Lançamento)** — obrigatório, no máximo **366 dias**.
+3. Se quiser, filtre por **Operador**, **Conta/Fonte** e **Forma de pagamento**. Marque **Incluir lançamentos estornados** para vê-los na lista (aparecem com "(ESTORNADO)").
+4. Clique em **Visualizar**. A tela mostra os lançamentos (Data, Rec/Doc, Operador, Nome, Referente, Fonte, Forma Pagto e Valor) e, abaixo, a síntese: **filtros aplicados**, **totais por forma de pagamento**, **totais por fonte** e o **total geral** (valor, multa, juros e desconto). Mudar qualquer filtro limpa a prévia.
+
 ### Relação de Outros Recebimentos
 
 Lista as receitas lançadas em [Outros Recebimentos](../financeiro/outros-recebimentos.md).
