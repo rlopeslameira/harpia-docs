@@ -95,3 +95,27 @@ Documentos-fonte fora deste repositório (Projeto "Harpia Educacional" no Claude
 - Impactos e restrições: formulários novos e revisados devem usar o componente; telas com barras em layout próprio
   migram conforme forem tocadas.
 
+
+## D-011 — Relatório Lançamentos de Entrada de Caixa segue o critério do Encerramento de Caixa
+- Data: 2026-11-16 · Status: Ativa · Origem: Rodrigo
+- Contexto: a primeira versão listava todo `DiarioFinanceiro` com `Opcao = 'INC'`, o que incluía pagamentos de Contas a
+  Pagar (`Tarefa = 'APAGAR'`), filtrava por Ano/Sequencial e escondia recebimentos estornados depois — não batia com o caixa do dia.
+- Decisão: entrada = `Tarefa` em `OUTPAG, BAIAUT, RECPAG, RECADI, RECMEN` com `Opcao = 'INC'`, pelo dia do lançamento, sem
+  filtro de período letivo e sem taxa de cartão; o estorno de recebimento (`Opcao = 'EST'`) aparece no dia em que foi feito,
+  com valor negativo, e o recebimento original permanece no dia dele (marcado como estornado). APAGAR (inclusive estornos)
+  e TRFFON ficam de fora. BAIAUT recompõe o valor pago com multa, juros e complementares. O relatório gera PDF e Excel
+  e **não** é bloqueado pelo parâmetro `PER_DIACAIXA` (caixa aberto).
+- Implementação: `path-api/app/Services/Relatorios/LancamentosEntradaCaixaService.ts` (lista de tarefas espelha
+  `harpia-ui/src/utilities/calculoCaixa.ts` — mudar uma exige mudar a outra).
+
+## D-012 — Filtros do relatório Lançamentos de Entrada de Caixa (paridade com o Mais Escola)
+- Data: 2026-11-16 · Status: Ativa · Origem: Rodrigo (complementa D-011)
+- Decisão: a tela reproduz os filtros do relatório do Mais Escola, exceto Convênio, ordenação por Campus/Sala e por
+  Banco, tipo Detalhado/Listagem/Planilha, "Selecionar TODAS as bandeiras" e "Agrupar por Fonte/Forma".
+  Regras confirmadas: **Considerar** Mensalidades = `RECPAG, RECADI, RECMEN, BAIAUT`, Outros = `OUTPAG`; **Baixas** =
+  Todas / Só baixa automática (`BAIAUT`) / Sem baixa automática; **Exibir somente estornos com a mesma data de
+  lançamento** (marcado por padrão) mantém o estorno só quando o recebimento original foi lançado no mesmo dia do
+  estorno — com a opção marcada, estornos de recebimentos de outros dias não aparecem e o total do dia pode diferir do
+  Encerramento de Caixa; **Exibir Nome do Responsável** = responsável financeiro (`AlunosResponsavel.Tipo = 'FIN'`).
+- Mapeamento: Código Pagto. = `PlanosPagamentoId`; cartão (Máquina - Banco - Bandeira) = `CartoesId`; Banco da geração
+  do boleto = `Mensalidades.BancoId` da mensalidade do lançamento; Conta = `ContaValorId`; Operador aceita vários.

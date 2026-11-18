@@ -63,12 +63,58 @@ o sistema avisa: *"Nenhuma movimentação encontrada no período. Verifique se o
 
 ### Lançamentos de Entrada de Caixa
 
-Lista as **entradas (receitas)** lançadas no Caixa e nos Bancos, para conferência. Não inclui taxas de cartão nem transferências entre fontes.
+Lista os **recebimentos** (mensalidades, outros recebimentos e baixas automáticas) lançados no Caixa e nos Bancos — o mesmo critério do [Encerramento de Caixa](../financeiro/encerramento-caixa.md). Não inclui pagamentos de Contas a Pagar, taxas de cartão nem transferências entre fontes.
 
 1. Abra **Relatórios → Financeiro → Lançamentos de Entrada de Caixa**.
-2. Informe o **Período (Data do Lançamento)** — obrigatório, no máximo **366 dias**.
-3. Se quiser, filtre por **Operador**, **Conta/Fonte** e **Forma de pagamento**. Marque **Incluir lançamentos estornados** para vê-los na lista (aparecem com "(ESTORNADO)").
-4. Clique em **Visualizar**. A tela mostra os lançamentos (Data, Rec/Doc, Operador, Nome, Referente, Fonte, Forma Pagto e Valor) e, abaixo, a síntese: **filtros aplicados**, **totais por forma de pagamento**, **totais por fonte** e o **total geral** (valor, multa, juros e desconto). Mudar qualquer filtro limpa a prévia.
+2. Nenhum filtro é obrigatório. Os períodos **Lançamento**, **Pagamento** e **Disponível em** podem ter no máximo **366 dias** cada; o de lançamento já vem com a data de hoje (limpe-o para não filtrar por data).
+3. Se quiser, use os demais filtros (tabela abaixo) e as **Configurações**.
+4. Clique em **Visualizar**. A tela mostra os lançamentos (Data, Rec/Doc, Operador, Nome, Referente, Fonte, Forma Pagto e Valor) e, abaixo, os **filtros aplicados**, os **totais por forma de pagamento**, os **totais por fonte** e o **total geral** (entradas, estornos e líquido). Mudar qualquer filtro limpa a prévia.
+5. Com a prévia carregada, use **Imprimir** para gerar o PDF ou **Excel** para baixar a planilha (abas Lançamentos, Resumo, Por Forma e Por Fonte).
+
+O PDF (**Lançamentos de Caixa**) lista cada lançamento com Dat. Lanc., Dat. Pag., Dat. Dis., Nome do Aluno, Operador, Referente a, Código de Pagamento (CPAG), Forma de Pagamento (no cartão: Máquina-Bandeira-Tipo-Parcelas-RPU, ex.: "ITAU-MASTERCARD-Parcelado-6x"), Fonte, Cheque/Documento, Valor Recebido e Recibo, com o **Sub Total** no fim. Depois vêm o **Total Geral**, os **Dados Selecionados** (todos os filtros, em branco quando não usados), os **Totais por Acréscimos** (valores complementares por conta), os **Totais por Forma de Pagamento** e os **Totais por Modalidade de Cartão** (Parcelado, Crédito, Débito, PIX e o total).
+
+**Estornos:** o estorno de um recebimento aparece no dia em que foi feito, em vermelho e com valor negativo. O recebimento original continua no dia em que foi recebido, com "(ESTORNADO)" no Referente. Com **Exibir somente estornos com a mesma data de lançamento** marcado (padrão), só aparecem os estornos de recebimentos lançados no mesmo dia; desmarque para ver todos os estornos do período (assim o total do dia bate com o Encerramento de Caixa).
+
+| Campo | Descrição |
+|---|---|
+| Lançamento / Pagamento / Disponível em | Períodos pela data do lançamento, do pagamento ou do disponível. |
+| Ano/Seq. | Período letivo em que o lançamento foi registrado. Vazio = todos. |
+| Turma | Turma do aluno no lançamento. |
+| Fonte Pagto. / Forma Pagto. | Conta (caixa ou banco) e forma de pagamento. |
+| Cartão (Máquina - Banco - Bandeira) | Disponível quando a forma de pagamento é cartão: filtra a máquina. |
+| Conta | Conta do plano de contas do recebimento. |
+| Aluno | Recebimentos de um aluno (pela matrícula). |
+| Parcela ... a ... | Faixa de parcelas. |
+| Código Pagto. | Código (plano) de pagamento. |
+| Baixas | Todas, só baixa automática de boleto ou sem baixa automática. |
+| Banco da geração do boleto | Banco em que o boleto da mensalidade foi gerado. |
+| Operador | Um ou mais operadores que fizeram o lançamento. |
+| Considerar | Somente Mensalidades (inclui baixa automática), Somente "Outros Recebimentos" ou Ambos. |
+| Ordenar por | Data de Lançamento (agrupado por dia) ou Nº Recibo. |
+| Exibir Nome do Responsável | Mostra o responsável financeiro abaixo do nome do aluno. |
+| Título | Título extra no cabeçalho do PDF. |
+
+### Sintético por Código de Pagamento
+
+Mostra, para o período letivo selecionado, **quantos alunos há em cada código (plano) de pagamento**, separados por situação acadêmica.
+
+1. Abra **Relatórios → Financeiro → Sintético por Código de Pagamento**.
+2. Em **Exibir**, escolha *Somente códigos desabilitados*, *Somente códigos habilitados* (já vem marcado) ou *Todos os códigos*.
+3. Se quiser, marque **Somente com alunos matriculados** (esconde os códigos sem nenhum aluno *Matriculado*) e digite um **Título** para o cabeçalho do PDF.
+4. Clique em **Gerar Relatório**. A prévia lista cada código com as colunas **Fichado**, **Matríc**, **Cancel**, **Aband**, **Transf**, **Tranc** e **Total**, e o **TOTAL** no fim.
+5. Use **Imprimir** (PDF) ou **Excel** (planilha com os mesmos dados). Os botões aparecem depois de gerar; mudar **Exibir** ou **Somente com alunos matriculados** limpa a prévia.
+
+| Coluna | Situação do aluno no período |
+|---|---|
+| Fichado | Registrado |
+| Matríc | Matriculado |
+| Cancel | Cancelado |
+| Aband | Abandono |
+| Transf | Transferido (inclui *Transferido - final de ano*) |
+| Tranc | Trancado |
+| Total | Soma das colunas acima |
+
+Alunos com situação *Não renovou* não entram em nenhuma coluna nem no **Total**. No Harpia não existe pré-matrícula, por isso não há coluna *Pré-Mat*. Os códigos são os do **Ano** do período selecionado.
 
 ### Relação de Outros Recebimentos
 

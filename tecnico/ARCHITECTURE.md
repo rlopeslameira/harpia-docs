@@ -79,6 +79,7 @@ Grupos com contrato próprio:
 | Atendente IA | `GET /ia/status`, `GET /ia/sugestoes`, `POST /ia/chat` | `iaGuard`: exige `codigo` + `usuarioid`, limita por minuto/dia, `IA_ATIVO` |
 | Schema p/ IA | `GET /ia/bd/{schema,tabelas,tabela,busca}` | só metadados; bloqueado em produção |
 | Relatórios | `POST/GET /gerarRelatorio`, `POST /v3/report/{preview,pdf}` | payload em `path-api/app/Controllers/Http/reports/documentacao_relatorios.md` |
+| Relatórios financeiros (dados) | `GET /relatorios/financeiro/lancamentos-entrada-caixa`, `GET /relatorios/financeiro/razao`, `GET /relatorios/financeiro/sinteticoCodigoPagamento` | controller em `Controllers/Http/relatorios/` + yup + `Services/Relatorios/`; uma consulta alimenta prévia, PDF e Excel. RAZÃO: [RELATORIO-RAZAO.md](RELATORIO-RAZAO.md) |
 | Documentos Word | `/documentosWord*` | gera DOCX/PDF/ZIP a partir de modelo com `{{CAMPO}}` |
 | Asaas | `POST /asaas/boleto`, `POST /asaas/webhook` | |
 | Catraca | `POST /controlid/*` | |
@@ -108,6 +109,7 @@ Grupos com contrato próprio:
 
 - **Controller-centric**: regra de negócio no controller; services para lógica reutilizável/isolável.
 - **Middlewares globais de normalização** (`UpperCase`, `SanitizeDates`) — impactam todo campo novo.
+  `UpperCase` também converte a **query string** (exceto rotas com `report`): enums de filtro em maiúsculas.
 - **Front: par lista + formulário** por entidade, design system `SC*` sobre PrimeReact + react-hook-form,
   tokens de cor em `theme.css`.
 - **Processamentos pesados no cliente** (ex.: boletim), com plano de migração para services no servidor.
