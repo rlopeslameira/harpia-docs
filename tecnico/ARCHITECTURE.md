@@ -83,6 +83,7 @@ Grupos com contrato próprio:
 | Documentos Word | `/documentosWord*` | gera DOCX/PDF/ZIP a partir de modelo com `{{CAMPO}}` |
 | Asaas | `POST /asaas/boleto`, `POST /asaas/webhook` | |
 | Catraca | `POST /controlid/*` | |
+| Menu (admin/agentes) | `GET /menu?SistemaId=x`, `GET /menu/:MenuId`, `GET /menucompleto`, `GET /modulos`, `POST /menu`, `PUT /menu/:MenuId`, `DELETE /menu/:MenuId` | CRUD da tabela `Menu` para agentes configurarem o menu sem edição manual. `POST` insere **só** a linha em `Menu` (não cria `PerfilMenu`); `DELETE` remove em transação o menu, os descendentes por `MenuIdReferencia` (recursivo) e suas permissões em `PerfilMenu`. Chave na URL, mas `MenuId` no body/query também é aceito. `UpperCase` preserva a caixa nessas rotas para não quebrar `Caminho`/`Icone`. |
 | Dev | `/dev/resetFinanceiroAluno/*` | bloqueado em produção, fora de localhost e para não-Master |
 
 ## Autenticação e autorização

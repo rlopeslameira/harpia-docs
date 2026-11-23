@@ -119,3 +119,17 @@ Documentos-fonte fora deste repositório (Projeto "Harpia Educacional" no Claude
   Encerramento de Caixa; **Exibir Nome do Responsável** = responsável financeiro (`AlunosResponsavel.Tipo = 'FIN'`).
 - Mapeamento: Código Pagto. = `PlanosPagamentoId`; cartão (Máquina - Banco - Bandeira) = `CartoesId`; Banco da geração
   do boleto = `Mensalidades.BancoId` da mensalidade do lançamento; Conta = `ContaValorId`; Operador aceita vários.
+
+## D-013 — Botões padronizados das telas de relatório
+- Data: 2026-11-18 · Status: Ativa · Origem: Rodrigo (confirmado na conversa da tarefa)
+- Contexto: as telas em `harpia-ui/src/pages/Impressao/Relatorio_*.tsx` misturavam botões só com ícone e tooltip
+  (`react-icons` `SlPrinter`/`SiMicrosoftexcel`), cores fixas (`#0772B3`, `bg-green-400/500`), rótulos divergentes
+  ("Imprimir", "Gerar Relatório", "Visualizar", "Excel") e larguras inline.
+- Decisão: adotar **rótulo + ícone PrimeIcons**, cores exclusivamente por variáveis de `theme.css` e um componente único
+  de design system: `SCRelatorioActions` (`harpia-ui/src/components/form/relatorioActions/`), exportado por `components/index.ts`.
+  Padrão: **Exportar Excel** (`pi pi-file-excel`, `--success`), **Imprimir** (`pi pi-print`, `--primary`) e
+  **Gerar Relatório** (`pi pi-eye`, `--info`, ação principal/submit). Cada ação só é renderizada quando informada
+  (`excel` / `imprimir` / `gerar`), recebendo `onClick`, `type`, `disabled`, `loading` e `tooltip` do chamador.
+- Impactos e restrições: aplicado a todas as telas `Relatorio_*`; os fluxos com prévia passaram a usar "Gerar Relatório"
+  no lugar de "Visualizar". Botões de filtro (Pesquisar/Limpar) e de diálogo (Fechar/Cancelar/Confirmar) não fazem
+  parte deste componente. Não altera contratos de API nem o manual do usuário.
